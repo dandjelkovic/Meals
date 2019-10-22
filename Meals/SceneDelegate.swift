@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Meals
 //
-//  Created by Dalibor Andjelkovic on 22.10.19.
+//  Created by Dalibor Andjelkovic on 21.10.19.
 //  Copyright © 2019 Dalibor Andjelkovic. All rights reserved.
 //
 

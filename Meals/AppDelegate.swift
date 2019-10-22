@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Meals
 //
-//  Created by Dalibor Andjelkovic on 22.10.19.
+//  Created by Dalibor Andjelkovic on 21.10.19.
 //  Copyright © 2019 Dalibor Andjelkovic. All rights reserved.
 //
 
@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var persistentContainer: NSPersistentCloudKitContainer = {
         /*
          The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
+         creates and returns a container, having Meals the store for the
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */

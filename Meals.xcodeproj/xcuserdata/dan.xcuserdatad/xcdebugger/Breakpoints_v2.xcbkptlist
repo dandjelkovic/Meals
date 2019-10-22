@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2E4D46E6-FE51-4440-9B11-6C1AB565B618"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D6D012B-8519-40DE-AB3A-8ADB30F52DDF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "Meals/Domains/Statistics.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Log">
+                  <ActionContent
+                     message = "@daysByRowOfThree.count@"
+                     conveyanceType = "0">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "0D6D012B-8519-40DE-AB3A-8ADB30F52DDF - 3e2026339e41cddd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Array&lt;Meals.Day&gt;&gt;, Swift.Array&lt;Meals.Day&gt;, SwiftUI.HStack&lt;Meals.StatisticsRow&gt;&gt; in Meals.Statistics.body.getter : some"
+                  moduleName = "Meals"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dan/Projects/Meals/Meals/Domains/Statistics.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "0D6D012B-8519-40DE-AB3A-8ADB30F52DDF - d5cd98daf5cf58ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Meals.Day&gt;) -&gt; SwiftUI.HStack&lt;Meals.StatisticsRow&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Array&lt;Meals.Day&gt;&gt;, Swift.Array&lt;Meals.Day&gt;, SwiftUI.HStack&lt;Meals.StatisticsRow&gt;&gt; in Meals.Statistics.body.getter : some"
+                  moduleName = "Meals"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dan/Projects/Meals/Meals/Domains/Statistics.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

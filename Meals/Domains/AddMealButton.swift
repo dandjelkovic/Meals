@@ -11,6 +11,7 @@ import CoreData
 
 struct AddMealButton: View {
     var weight: Weight
+    var type: Type
     var context: NSManagedObjectContext
     
     var body: some View {
@@ -18,6 +19,7 @@ struct AddMealButton: View {
             let newMealEntry = Meal(context: self.context)
             newMealEntry.weight = self.weight
             newMealEntry.timestamp = Current.date()
+            newMealEntry.type = self.type
             if self.context.hasChanges {
                 do {
                     try self.context.save()
@@ -26,10 +28,21 @@ struct AddMealButton: View {
                 }
             }
         }) {
-            Image(systemName: "plus.rectangle")
-            Text(verbatim: weight.shortStringValue)
-                .font(.callout)
-                .padding()
+            //            Image(systemName: "plus.rectangle")
+            VStack {
+                Text(verbatim: weight.shortStringValue)
+                    .bold()
+                Text(verbatim: type.stringValue)
+                    .font(Font.system(size: 11))
+                .padding(2)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 2)
+                            .stroke(Color.blue, lineWidth: 1)
+                )
+            }
+            .font(.callout)
+            .padding()
+
         }
     }
 }

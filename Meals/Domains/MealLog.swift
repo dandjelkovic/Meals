@@ -13,6 +13,7 @@ struct MealLog: View {
     var managedObjectContext
     @FetchRequest(entity: Meal.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Meal.timestamp, ascending: false)])
     var meals: FetchedResults<Meal>
+    var days = [Day]()
     
     var body: some View {
         VStack {
@@ -20,22 +21,42 @@ struct MealLog: View {
             .frame(width: UIScreen.main.bounds.width, height: 40, alignment: .center)
             Spacer()
             List {
-                ForEach(meals, id: \.self) { meal in
-                    MealCell(meal: meal)
+                ForEach(days, id: \.self) { day in
+                    Section(header: Text(day.dateString)) {
+                        ForEach(day.meals, id: \.self) { meal in
+                            MealCell(meal: meal)
+                        }
+                        .onDelete { indexSet in
+                            self.deleteMealEntry(at: indexSet)
+                        }
+                    }
                 }
-                .onDelete { indexSet in
-                    self.deleteMealEntry(at: indexSet)
-                }
+            }//.listStyle(GroupedListStyle())
+            Divider()
+            HStack {
+                VStack(alignment: .center, spacing: 5) {
+                    AddMealButton(weight: .light, type: .vegan, context: self.managedObjectContext)
+                    Divider()
+                    AddMealButton(weight: .medium, type: .vegan, context: self.managedObjectContext)
+                    Divider()
+                    AddMealButton(weight: .heavy, type: .vegan, context: self.managedObjectContext)
+                }.frame(width: 120, height: nil, alignment: .center)
+                VStack(alignment: .center, spacing: 5) {
+                    AddMealButton(weight: .light, type: .vegetarian, context: self.managedObjectContext)
+                    Divider()
+                    AddMealButton(weight: .medium, type: .vegetarian, context: self.managedObjectContext)
+                    Divider()
+                    AddMealButton(weight: .heavy, type: .vegetarian, context: self.managedObjectContext)
+                }.frame(width: 120, height: nil, alignment: .center)
+                VStack(alignment: .center, spacing: 5) {
+                    AddMealButton(weight: .light, type: .meat, context: self.managedObjectContext)
+                    Divider()
+                    AddMealButton(weight: .medium, type: .meat, context: self.managedObjectContext)
+                    Divider()
+                    AddMealButton(weight: .heavy, type: .meat, context: self.managedObjectContext)
+                }.frame(width: 120, height: nil, alignment: .center)
+
             }
-            Spacer()
-            HStack(alignment: .center, spacing: 10) {
-                AddMealButton(weight: .light, context: self.managedObjectContext)
-                Divider()
-                AddMealButton(weight: .medium, context: self.managedObjectContext)
-                Divider()
-                AddMealButton(weight: .heavy, context: self.managedObjectContext)
-            }
-            .frame(width: UIScreen.main.bounds.width, height: 40, alignment: .center)
         }
     }
 

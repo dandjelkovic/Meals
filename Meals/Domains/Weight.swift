@@ -36,13 +36,13 @@ enum Weight: String {
         switch self {
         case .heavy:
 //            return Image(systemName: "battery.100")
-            return Image(systemName: "person.3")
+            return Image(systemName: "person.3.fill")
         case .medium:
 //            return Image(systemName: "battery.25")
-            return Image(systemName: "person.2")
+            return Image(systemName: "person.2.fill")
         case .light:
 //            return Image(systemName: "battery.0")
-            return Image(systemName: "person")
+            return Image(systemName: "person.fill")
         }
     }
 

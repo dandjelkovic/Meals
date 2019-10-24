@@ -25,6 +25,18 @@ public class Meal: NSManagedObject {
         }
     }
 
+    var type: Type {
+        set {
+            typeString = newValue.stringValue
+        }
+        get {
+            guard let typeString = typeString else {
+                return Type.vegan
+            }
+            return Type(rawValue: typeString)
+        }
+    }
+
     var dateString: String {
         set {
             timestamp = Current.dateFormatter.date(from: newValue)

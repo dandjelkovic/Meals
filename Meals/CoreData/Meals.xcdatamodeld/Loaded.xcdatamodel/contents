@@ -3,9 +3,10 @@
     <entity name="Meal" representedClassName="Meal" syncable="YES">
         <attribute name="timestamp" attributeType="Date" defaultDateTimeInterval="593359740" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="typeString" optional="YES" attributeType="String"/>
         <attribute name="weightString" attributeType="String" defaultValueString=""/>
     </entity>
     <elements>
-        <element name="Meal" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Meal" positionX="-63" positionY="-18" width="128" height="103"/>
     </elements>
 </model>

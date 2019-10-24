@@ -2,7 +2,7 @@
 //  Meal+CoreDataProperties.swift
 //  Meals
 //
-//  Created by Dalibor Andjelkovic on 21.10.19.
+//  Created by Dalibor Andjelkovic on 24.10.19.
 //  Copyright © 2019 Dalibor Andjelkovic. All rights reserved.
 //
 //
@@ -18,7 +18,8 @@ extension Meal {
     }
 
     @NSManaged public var timestamp: Date?
-    @NSManaged public var weightString: String?
     @NSManaged public var title: String?
+    @NSManaged public var weightString: String?
+    @NSManaged public var typeString: String?
 
 }

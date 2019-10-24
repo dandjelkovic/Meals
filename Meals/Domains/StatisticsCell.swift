@@ -7,17 +7,30 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct StatisticsCell: View {
-    var days: [Day]
-    var index: Int
-    
+    var day: Day
+    private var opacity: Double {
+        min(Double(day.meals.count)/10.0, 1)
+    }
+
     var body: some View {
-        if self.days.count > index {
-            return Text(self.days[index].dateString)
-        } else {
-            return Text("No data")
-        }
+        VStack() {
+            Text(self.day.dateString)
+            Path(CGRect(x: 0, y: 0, width: 100, height: 10))
+                .fill(
+                    Color(
+                        Color.RGBColorSpace.displayP3,
+                        red: 1.0,
+                        green: 0.0,
+                        blue: 0.0,
+                        opacity: opacity
+                    )
+            )
+        }.padding(20)
+
+
     }
 }
 

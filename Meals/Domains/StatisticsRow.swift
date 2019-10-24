@@ -12,8 +12,11 @@ struct StatisticsRow: View {
     var days = [Day]()
 
     var body: some View {
-        ForEach(0...days.count, id: \.self) { index in
-            StatisticsCell(days: self.days, index: index)
+        VStack {
+            ForEach(0..<days.count, id: \.self) { index in
+                StatisticsCell(day: self.days[index])
+                .background(((index + 1) % 2) == 0 ? Color.secondary : Color.clear)
+            }
         }
     }
 }

@@ -10,6 +10,8 @@ import SwiftUI
 import Foundation
 
 struct Statistics: View {
+//    @Environment(\.managedObjectContext)
+//    var context
     @FetchRequest(
         entity: Meal.entity(),
         sortDescriptors: [
@@ -21,6 +23,7 @@ struct Statistics: View {
         var daysDictionary = [Date: [Meal]]()
         var dates = [Date]()
 
+        print(meals)
         meals.forEach { meal in
             let components = Calendar.current.dateComponents([.year,.month,.day], from: meal.timestamp!)
             dates.append(Calendar.current.date(from: components)!)
@@ -51,11 +54,9 @@ struct Statistics: View {
     }
 
     var body: some View {
-        VStack{
-            ForEach(daysByRowOfThree, id: \.self) { _ in
-                HStack {
-                    return StatisticsRow(days: self.days)
-                }
+        HStack(alignment: .top, spacing: 0) {
+            ForEach(daysByRowOfThree, id: \.self) { sortedDays in
+                StatisticsRow(days: sortedDays)
             }
         }
     }

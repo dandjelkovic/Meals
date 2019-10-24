@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct MealLog: View {
-    @Environment(\.managedObjectContext) var managedObjectContext
+    @Environment(\.managedObjectContext)
+    var managedObjectContext
     @FetchRequest(entity: Meal.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Meal.timestamp, ascending: false)])
     var meals: FetchedResults<Meal>
     

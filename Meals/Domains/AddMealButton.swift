@@ -18,10 +18,12 @@ struct AddMealButton: View {
             let newMealEntry = Meal(context: self.context)
             newMealEntry.weight = self.weight
             newMealEntry.timestamp = Current.date()
-            do {
-                try self.context.save()
-            } catch {
-                print(error.localizedDescription)
+            if self.context.hasChanges {
+                do {
+                    try self.context.save()
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
         }) {
             Image(systemName: "plus.rectangle")

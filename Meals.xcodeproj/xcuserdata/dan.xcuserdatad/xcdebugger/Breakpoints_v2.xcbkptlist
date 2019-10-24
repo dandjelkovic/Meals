@@ -7,56 +7,111 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0D6D012B-8519-40DE-AB3A-8ADB30F52DDF"
+            uuid = "FA6E9DD5-0E85-4C75-9760-CFC807DD19E5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
-            continueAfterRunningActions = "Yes"
-            filePath = "Meals/Domains/Statistics.swift"
+            continueAfterRunningActions = "No"
+            filePath = "Meals/Domains/StatisticsRow.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "body"
             landmarkType = "24">
-            <Actions>
-               <BreakpointActionProxy
-                  ActionExtensionID = "Xcode.BreakpointAction.Log">
-                  <ActionContent
-                     message = "@daysByRowOfThree.count@"
-                     conveyanceType = "0">
-                  </ActionContent>
-               </BreakpointActionProxy>
-            </Actions>
             <Locations>
                <Location
-                  uuid = "0D6D012B-8519-40DE-AB3A-8ADB30F52DDF - 3e2026339e41cddd"
+                  uuid = "FA6E9DD5-0E85-4C75-9760-CFC807DD19E5 - f58117a9ab0f688a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Array&lt;Meals.Day&gt;&gt;, Swift.Array&lt;Meals.Day&gt;, SwiftUI.HStack&lt;Meals.StatisticsRow&gt;&gt; in Meals.Statistics.body.getter : some"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.background&lt;A where A1: SwiftUI.View&gt;(_: A1, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in Meals.StatisticsRow.body.getter : some"
                   moduleName = "Meals"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dan/Projects/Meals/Meals/Domains/Statistics.swift"
+                  urlString = "file:///Users/dan/Projects/Meals/Meals/Domains/StatisticsRow.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "92">
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "46">
                </Location>
                <Location
-                  uuid = "0D6D012B-8519-40DE-AB3A-8ADB30F52DDF - d5cd98daf5cf58ea"
+                  uuid = "FA6E9DD5-0E85-4C75-9760-CFC807DD19E5 - e80d7de7f167604b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;Meals.Day&gt;) -&gt; SwiftUI.HStack&lt;Meals.StatisticsRow&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;Swift.Array&lt;Meals.Day&gt;&gt;, Swift.Array&lt;Meals.Day&gt;, SwiftUI.HStack&lt;Meals.StatisticsRow&gt;&gt; in Meals.Statistics.body.getter : some"
+                  symbolName = "closure #1 (Swift.Int) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.background&lt;A where A1: SwiftUI.View&gt;(_: A1, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.background&lt;A where A1: SwiftUI.View&gt;(_: A1, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt; in Meals.StatisticsRow.body.getter : some"
                   moduleName = "Meals"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dan/Projects/Meals/Meals/Domains/Statistics.swift"
+                  urlString = "file:///Users/dan/Projects/Meals/Meals/Domains/StatisticsRow.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "24">
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "157">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "136646D4-0B57-4FF4-BA53-763AB953A63F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Meals/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "sceneDidEnterBackground(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08D02FEC-8D63-4393-ADB9-C1AA113E6D52"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Meals/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "persistentContainer"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "08D02FEC-8D63-4393-ADB9-C1AA113E6D52 - 58b6ba55d30c6c3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSPersistentStoreDescription, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 () -&gt; Swift.Optional&lt;__C.NSPersistentContainer&gt; in Meals.AppDelegate.persistentContainer.getter : Swift.Optional&lt;__C.NSPersistentContainer&gt;"
+                  moduleName = "Meals"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dan/Projects/Meals/Meals/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  uuid = "08D02FEC-8D63-4393-ADB9-C1AA113E6D52 - 20c82343f6f9680d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSPersistentStoreDescription, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 () -&gt; Swift.Optional&lt;__C.NSPersistentContainer&gt; in MealsTests.AppDelegate.persistentContainer.getter : Swift.Optional&lt;__C.NSPersistentContainer&gt;"
+                  moduleName = "MealsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dan/Projects/Meals/Meals/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "106">
                </Location>
             </Locations>
          </BreakpointContent>

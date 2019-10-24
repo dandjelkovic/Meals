@@ -26,6 +26,8 @@
 		37CB341C235F142200AAB41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CB341B235F142200AAB41D /* Assets.xcassets */; };
 		37CB341E235F16C300AAB41D /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB341D235F16C300AAB41D /* Statistics.swift */; };
 		37CB3422235F191500AAB41D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB3421235F191500AAB41D /* Day.swift */; };
+		37F155602361919B00FDF8CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB3419235F140800AAB41D /* AppDelegate.swift */; };
+		37F155612361969500FDF8CA /* Meals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37468211235F122000380AFC /* Meals.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,12 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				37CB3419235F140800AAB41D /* AppDelegate.swift */,
+				37CB3415235F13E000AAB41D /* SceneDelegate.swift */,
 				37CB341B235F142200AAB41D /* Assets.xcassets */,
 				37468218235F122100380AFC /* Common */,
 				3746820F235F122000380AFC /* CoreData */,
 				37CB3417235F13F400AAB41D /* ContentView.swift */,
 				37468214235F122100380AFC /* Domains */,
-				37CB3415235F13E000AAB41D /* SceneDelegate.swift */,
 				374681F7235F11F700380AFC /* LaunchScreen.storyboard */,
 				374681FA235F11F700380AFC /* Info.plist */,
 				374681F4235F11F700380AFC /* Preview Content */,
@@ -152,9 +154,9 @@
 				37468216235F122100380AFC /* Weight.swift */,
 				37468217235F122100380AFC /* MealCell.swift */,
 				37CB341D235F16C300AAB41D /* Statistics.swift */,
+				37C5935D235F3A7200EAEEB7 /* StatisticsRow.swift */,
 				37C5935B235F37EB00EAEEB7 /* StatisticsCell.swift */,
 				37C5935F235F452500EAEEB7 /* MealLog.swift */,
-				37C5935D235F3A7200EAEEB7 /* StatisticsRow.swift */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -290,7 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37F155602361919B00FDF8CA /* AppDelegate.swift in Sources */,
 				37468204235F11F700380AFC /* MealsTests.swift in Sources */,
+				37F155612361969500FDF8CA /* Meals.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

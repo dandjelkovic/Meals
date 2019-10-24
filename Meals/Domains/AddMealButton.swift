@@ -32,13 +32,7 @@ struct AddMealButton: View {
             VStack {
                 Text(verbatim: weight.shortStringValue)
                     .bold()
-                Text(verbatim: type.stringValue)
-                    .font(Font.system(size: 11))
-                .padding(2)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 2)
-                            .stroke(Color.blue, lineWidth: 1)
-                )
+                TypeTag(type: type)
             }
             .font(.callout)
             .padding()

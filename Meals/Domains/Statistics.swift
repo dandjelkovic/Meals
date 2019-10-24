@@ -10,13 +10,6 @@ import SwiftUI
 import Foundation
 
 struct Statistics: View {
-    @FetchRequest(
-        entity: Meal.entity(),
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \Meal.timestamp, ascending: false)
-        ]
-    )
-    var meals: FetchedResults<Meal>
     var days = [Day]()
     var body: some View {
         List {

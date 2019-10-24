@@ -15,9 +15,9 @@ enum Type {
         case .vegan:
             return "vegan"
         case .vegetarian:
-            return "vegetarisch"
+            return "vegetarian"
         case .meat:
-            return "fleisch"
+            return "meat"
         }
     }
 

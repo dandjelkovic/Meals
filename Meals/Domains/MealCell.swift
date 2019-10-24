@@ -15,6 +15,7 @@ struct MealCell: View {
         HStack {
             meal.weight.image.frame(width: 50, height: 50)
             Text(meal.weight.stringValue)
+            TypeTag(type: meal.type)
             Text(meal.dateString)
                 .foregroundColor(.gray)
                 .font(.system(size: 12))

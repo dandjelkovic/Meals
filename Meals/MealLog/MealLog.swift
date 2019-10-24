@@ -23,11 +23,12 @@ struct MealLog: View {
             List {
                 ForEach(days, id: \.self) { day in
                     Section(header: Text(day.dateString)) {
-                        ForEach(day.meals, id: \.self) { meal in
+                        ForEach(day.meals, id: \.id) { meal in
                             MealCell(meal: meal)
                         }
                         .onDelete { indexSet in
-                            self.deleteMealEntry(at: indexSet)
+                            guard let indexFirst = indexSet.first else { return }
+                            self.deleteMealEntry(day.meals[indexFirst])
                         }
                     }
                 }
@@ -60,11 +61,8 @@ struct MealLog: View {
         }
     }
 
-    private func deleteMealEntry(at offsets: IndexSet) {
-        offsets.forEach { index in
-            let meal = meals[index]
-            managedObjectContext.delete(meal)
-        }
+    private func deleteMealEntry(_ meal: Meal) {
+        managedObjectContext.delete(meal)
         do {
             try managedObjectContext.save()
         } catch {

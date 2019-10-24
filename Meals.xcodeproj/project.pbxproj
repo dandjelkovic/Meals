@@ -28,6 +28,7 @@
 		37F155682361B06D00FDF8CA /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155672361B06D00FDF8CA /* Type.swift */; };
 		37F1556C2361B25900FDF8CA /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */; };
 		37F1556E2361D93B00FDF8CA /* TypeTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1556D2361D93B00FDF8CA /* TypeTag.swift */; };
+		37F155712362244900FDF8CA /* Meal+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155702362244900FDF8CA /* Meal+Identifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		37F155672361B06D00FDF8CA /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Meal+CoreDataProperties.swift"; path = "../../Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		37F1556D2361D93B00FDF8CA /* TypeTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTag.swift; sourceTree = "<group>"; };
+		37F155702362244900FDF8CA /* Meal+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+Identifiable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +116,8 @@
 				37468218235F122100380AFC /* Common */,
 				3746820F235F122000380AFC /* CoreData */,
 				37CB3417235F13F400AAB41D /* ContentView.swift */,
-				37468214235F122100380AFC /* Domains */,
+				37F1556F23621DFC00FDF8CA /* MealLog */,
+				37468214235F122100380AFC /* Statistics */,
 				374681F7235F11F700380AFC /* LaunchScreen.storyboard */,
 				374681FA235F11F700380AFC /* Info.plist */,
 				374681F4235F11F700380AFC /* Preview Content */,
@@ -145,32 +148,40 @@
 				37468211235F122000380AFC /* Meals.xcdatamodeld */,
 				37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */,
 				37468213235F122000380AFC /* Meal+CoreDataClass.swift */,
+				37F155702362244900FDF8CA /* Meal+Identifiable.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		37468214235F122100380AFC /* Domains */ = {
+		37468214235F122100380AFC /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				37468215235F122100380AFC /* AddMealButton.swift */,
-				37F1556D2361D93B00FDF8CA /* TypeTag.swift */,
-				37CB3421235F191500AAB41D /* Day.swift */,
-				37468216235F122100380AFC /* Weight.swift */,
-				37F155672361B06D00FDF8CA /* Type.swift */,
-				37468217235F122100380AFC /* MealCell.swift */,
 				37CB341D235F16C300AAB41D /* Statistics.swift */,
 				37C5935B235F37EB00EAEEB7 /* StatisticsCell.swift */,
-				37C5935F235F452500EAEEB7 /* MealLog.swift */,
+				37F1556D2361D93B00FDF8CA /* TypeTag.swift */,
 			);
-			path = Domains;
+			path = Statistics;
 			sourceTree = "<group>";
 		};
 		37468218235F122100380AFC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				37CB3421235F191500AAB41D /* Day.swift */,
+				37F155672361B06D00FDF8CA /* Type.swift */,
+				37468216235F122100380AFC /* Weight.swift */,
 				37468219235F122100380AFC /* World.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		37F1556F23621DFC00FDF8CA /* MealLog */ = {
+			isa = PBXGroup;
+			children = (
+				37468215235F122100380AFC /* AddMealButton.swift */,
+				37468217235F122100380AFC /* MealCell.swift */,
+				37C5935F235F452500EAEEB7 /* MealLog.swift */,
+			);
+			path = MealLog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 				37468222235F122100380AFC /* Weight.swift in Sources */,
 				37CB3416235F13E000AAB41D /* SceneDelegate.swift in Sources */,
 				37468220235F122100380AFC /* Meal+CoreDataClass.swift in Sources */,
+				37F155712362244900FDF8CA /* Meal+Identifiable.swift in Sources */,
 				37C5935C235F37EB00EAEEB7 /* StatisticsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

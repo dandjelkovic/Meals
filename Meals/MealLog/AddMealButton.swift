@@ -31,7 +31,7 @@ struct AddMealButton: View {
             //            Image(systemName: "plus.rectangle")
             VStack {
                 Text(verbatim: weight.shortStringValue)
-                    .bold()
+                    .font(.system(size: 20))
                 TypeTag(type: type)
             }
             .font(.callout)

@@ -21,6 +21,17 @@ enum Weight: String {
         }
     }
 
+    public var intValue: Int  {
+        switch self {
+        case .heavy:
+            return 3
+        case .medium:
+            return 2
+        case .light:
+            return 1
+        }
+    }
+
     public var shortStringValue: String  {
         switch self {
         case .heavy:
@@ -32,18 +43,13 @@ enum Weight: String {
         }
     }
 
-    public var image: Image {
-        switch self {
-        case .heavy:
-//            return Image(systemName: "battery.100")
-            return Image(systemName: "person.3.fill")
-        case .medium:
-//            return Image(systemName: "battery.25")
-            return Image(systemName: "person.2.fill")
-        case .light:
-//            return Image(systemName: "battery.0")
-            return Image(systemName: "person.fill")
-        }
+    public var image: some View {
+        return
+            HStack(alignment: .center, spacing: 0) {
+                ForEach(1...self.intValue, id: \.self) {_ in
+                    Image(systemName: "flame")
+                }
+            }.frame(width: 80, height: nil, alignment: .center)
     }
 
     public init(rawValue: String) {

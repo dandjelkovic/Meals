@@ -12,17 +12,18 @@ public struct Day: Hashable {
     private var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM"
+//        dateFormatter.dateStyle = .short
         dateFormatter.timeZone = TimeZone.current
 
         return dateFormatter
     }
     var date: Date
     var dateString: String {
-        dateFormatter.string(from: date)
+        "\(weekday.1) \(dateFormatter.string(from: date))"
     }
     var weekday: (Int, String) {
         let weekdayCount = Calendar.current.component(.weekday, from: self.date)
-        let weekdayName = Current.dateFormatter.weekdaySymbols[weekdayCount]
+        let weekdayName = Current.dateFormatter.weekdaySymbols[weekdayCount - 1]
         //TODO: weekday is shifted by one
         return (weekdayCount, weekdayName)
     }

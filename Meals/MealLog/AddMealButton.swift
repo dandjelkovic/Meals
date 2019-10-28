@@ -28,10 +28,9 @@ struct AddMealButton: View {
                 }
             }
         }) {
-            //            Image(systemName: "plus.rectangle")
             VStack {
-                Text(verbatim: weight.shortStringValue)
-                    .font(.system(size: 20))
+//                Text(verbatim: weight.shortStringValue).font(.system(size: 20))
+                weight.image
                 TypeTag(type: type)
             }
             .font(.callout)

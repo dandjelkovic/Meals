@@ -57,11 +57,7 @@ class MealsTests: XCTestCase {
         super.tearDown()
     }
 
-    func testdaysByRowOfThree() {
-        let statisticsView = Statistics()
-        XCTAssertEqual(statisticsView.daysByRowOfThree.count, 3)
-        
-    }
+
 
 
 }

@@ -21,6 +21,11 @@
                BlueprintName = "MealsTests"
                ReferencedContainer = "container:Meals.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "TestAppLaunch">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

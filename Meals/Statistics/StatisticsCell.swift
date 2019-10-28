@@ -34,13 +34,13 @@ struct StatisticsCell: View {
             HStack {
                 Text("\(Type.vegetarian.stringValue):").frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[1], id: \.self) {_ in
-                    Image(systemName: "circle.fill").foregroundColor(.yellow)
+                    Image(systemName: "rhombus.fill").foregroundColor(.yellow)
                 }
             }
             HStack {
                 Text("\(Type.meat.stringValue):").frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[2], id: \.self) {_ in
-                    Image(systemName: "circle.fill").foregroundColor(.red)
+                    Image(systemName: "stop.fill").foregroundColor(.red)
                 }
             }
             //            Text(String(opacity))

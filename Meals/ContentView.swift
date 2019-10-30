@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedTab = 0
     @FetchRequest(
         entity: Meal.entity(),
         sortDescriptors: [
@@ -40,17 +41,19 @@ struct ContentView: View {
     }
 
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             MealLog(days: days)
-            .tabItem {
-                Image(systemName: "book")
-                Text("Meals")
+                .tabItem {
+                    Image(systemName: "book")
+                    Text("Meals")
             }
+            .tag(0)
             Statistics(days: days)
                 .tabItem {
                     Image(systemName: "chart.bar")
                     Text("Statistics")
             }
+            .tag(1)
         }
     }
 

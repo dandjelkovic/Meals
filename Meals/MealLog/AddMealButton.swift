@@ -31,7 +31,7 @@ struct AddMealButton: View {
             VStack {
                 weight.image
                 Text(type.stringValue)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color(UIColor.label))
                     .bold()
                     .font(.system(size: 12))
             }

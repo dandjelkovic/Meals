@@ -15,7 +15,6 @@ struct Statistics: View {
         List {
             ForEach(self.days, id: \.self) { day in
                 StatisticsCell(day: day)
-                //.background(((index + 1) % 2) == 0 ? Color.secondary : Color.clear)
             }
         }
     }

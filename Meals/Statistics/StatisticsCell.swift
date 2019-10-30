@@ -28,32 +28,21 @@ struct StatisticsCell: View {
             HStack {
                 Text("\(Type.vegan.stringValue):").frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[0], id: \.self) {_ in
-                    Image(systemName: "circle.fill").foregroundColor(.green)
+                    Image(systemName: "circle.fill").foregroundColor(Type.vegan.color)
                 }
             }
             HStack {
                 Text("\(Type.vegetarian.stringValue):").frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[1], id: \.self) {_ in
-                    Image(systemName: "rhombus.fill").foregroundColor(.yellow)
+                    Image(systemName: "rhombus.fill").foregroundColor(Type.vegetarian.color)
                 }
             }
             HStack {
                 Text("\(Type.meat.stringValue):").frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[2], id: \.self) {_ in
-                    Image(systemName: "stop.fill").foregroundColor(.red)
+                    Image(systemName: "stop.fill").foregroundColor(Type.meat.color)
                 }
             }
-            //            Text(String(opacity))
-            //            Path(CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - 100, height: 10))
-            //                .fill(
-            //                    Color(
-            //                        Color.RGBColorSpace.displayP3,
-            //                        red: 1.0,
-            //                        green: 0.0,
-            //                        blue: 0.0,
-            //                        opacity: opacity
-            //                    )
-            //            )
         }.padding(Edge.Set(.bottom), 20)
 
 

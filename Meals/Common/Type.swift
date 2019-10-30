@@ -35,6 +35,17 @@ enum Type {
 //        }
 //    }
 
+    public var color: Color  {
+        switch self {
+        case .meat:
+            return Color(UIColor(named: "Weight heavy")!)
+        case .vegetarian:
+            return Color(UIColor(named: "Weight medium")!)
+        case .vegan:
+            return Color(UIColor(named: "Weight light")!)
+        }
+    }
+
     public init(rawValue: String) {
         switch rawValue {
         case "vegan":

@@ -29,11 +29,12 @@ struct AddMealButton: View {
             }
         }) {
             VStack {
-//                Text(verbatim: weight.shortStringValue).font(.system(size: 20))
                 weight.image
-                TypeTag(type: type)
+                Text(type.stringValue)
+                    .foregroundColor(.black)
+                    .bold()
+                    .font(.system(size: 12))
             }
-            .font(.callout)
             .padding()
 
         }

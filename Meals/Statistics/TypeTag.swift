@@ -14,7 +14,7 @@ struct TypeTag: View {
 
     var body: some View {
         Text(verbatim: self.type.stringValue)
-            .font(Font.system(size: 11))
+            .font(Font.system(size: 12))
         .foregroundColor(color)
             .padding(2)
             .overlay(

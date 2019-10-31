@@ -63,9 +63,9 @@
 		37CB341B235F142200AAB41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37CB341D235F16C300AAB41D /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		37CB3421235F191500AAB41D /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		37F155652361A91F00FDF8CA /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
+		37F155652361A91F00FDF8CA /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersistentContainer.swift; path = CoreData/PersistentContainer.swift; sourceTree = "<group>"; };
 		37F155672361B06D00FDF8CA /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
-		37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Meal+CoreDataProperties.swift"; path = "../../Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		37F1556D2361D93B00FDF8CA /* TypeTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTag.swift; sourceTree = "<group>"; };
 		37F155702362244900FDF8CA /* Meal+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+Identifiable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */

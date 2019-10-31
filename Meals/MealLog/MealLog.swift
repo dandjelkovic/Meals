@@ -34,6 +34,7 @@ struct MealLog: View {
                 }
             }//.listStyle(GroupedListStyle())
             Divider()
+            Text("What did you eat?").bold()
             HStack {
                 VStack(alignment: .center, spacing: 5) {
                     AddMealButton(weight: .light, type: .vegan, context: self.managedObjectContext)

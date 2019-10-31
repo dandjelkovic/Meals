@@ -13,9 +13,10 @@ struct MealCell: View {
 
     var body: some View {
         HStack {
-            meal.weight.image.frame(width: 50, height: 50)
+//            meal.weight.image.frame(width: 50, height: 50)
+            meal.type.icon
             Text(meal.weight.stringValue)
-            TypeTag(type: meal.type)
+//            TypeTag(type: meal.type)
             Text(meal.dateString)
                 .foregroundColor(.gray)
                 .font(.system(size: 12))

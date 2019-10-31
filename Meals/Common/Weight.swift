@@ -47,20 +47,22 @@ enum Weight: String {
         return
             HStack(alignment: .center, spacing: 0) {
                 ForEach(1...self.intValue, id: \.self) {_ in
-                    Image(systemName: "flame").foregroundColor(self.color)
+//                    Image(systemName: "flame").foregroundColor(self.color)
+                    Text("🍽")
                 }
             }.frame(width: 80, height: nil, alignment: .center)
     }
 
     public var color: Color  {
-        switch self {
-        case .heavy:
-            return Color(UIColor(named: "Weight heavy")!)
-        case .medium:
-            return Color(UIColor(named: "Weight medium")!)
-        case .light:
-            return Color(UIColor(named: "Weight light")!)
-        }
+        return Color(UIColor.label)
+//        switch self {
+//        case .heavy:
+//            return Color(UIColor(named: "Weight heavy")!)
+//        case .medium:
+//            return Color(UIColor(named: "Weight medium")!)
+//        case .light:
+//            return Color(UIColor(named: "Weight light")!)
+//        }
     }
 
     public init(rawValue: String) {

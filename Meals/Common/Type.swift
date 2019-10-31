@@ -21,19 +21,16 @@ enum Type {
         }
     }
 
-//    public var image: Image {
-//        switch self {
-//        case .vegan:
-//            //            return Image(systemName: "battery.100")
-//            return Image(systemName: "person.3")
-//        case .vegetarian:
-//            //            return Image(systemName: "battery.25")
-//            return Image(systemName: "person.2")
-//        case .meat:
-//            //            return Image(systemName: "battery.0")
-//            return Image(systemName: "hare")
-//        }
-//    }
+    public var icon: some View {
+        switch self {
+        case .vegan:
+            return Text("🌽")
+        case .vegetarian:
+            return Text("🥗")
+        case .meat:
+            return Text("🍖")
+        }
+    }
 
     public var color: Color  {
         switch self {

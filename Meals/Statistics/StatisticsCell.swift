@@ -28,24 +28,22 @@ struct StatisticsCell: View {
             HStack {
                 Text("\(Type.vegan.stringValue):").frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[0], id: \.self) {_ in
-                    Image(systemName: "circle.fill").foregroundColor(Type.vegan.color)
+                    Image(systemName: "circle.fill").foregroundColor(Type.vegan.color).frame(width: 12, height: nil, alignment: .center)
                 }
             }
             HStack {
                 Text("\(Type.vegetarian.stringValue):").frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[1], id: \.self) {_ in
-                    Image(systemName: "rhombus.fill").foregroundColor(Type.vegetarian.color)
+                    Image(systemName: "rhombus.fill").foregroundColor(Type.vegetarian.color).frame(width: 12, height: nil, alignment: .center)
                 }
             }
             HStack {
                 Text("\(Type.meat.stringValue):").frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[2], id: \.self) {_ in
-                    Image(systemName: "stop.fill").foregroundColor(Type.meat.color)
+                    Image(systemName: "stop.fill").foregroundColor(Type.meat.color).frame(width: 12, height: nil, alignment: .center)
                 }
             }
         }.padding(Edge.Set(.bottom), 20)
-
-
     }
 }
 

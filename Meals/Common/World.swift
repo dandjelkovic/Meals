@@ -18,6 +18,14 @@ public struct World {
         return dateFormatter
     }
 
+    var datetimeForBackup: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy_HHmmss"
+        dateFormatter.timeZone = TimeZone.current
+
+        return dateFormatter
+    }
+
     var timeFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"

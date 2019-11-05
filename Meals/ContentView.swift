@@ -54,6 +54,12 @@ struct ContentView: View {
                     Text("Statistics")
             }
             .tag(1)
+            Settings()
+                .tabItem {
+                    Image(systemName: "line.horizontal.3")
+                    Text("Settings")
+            }
+            .tag(2)
         }
     }
 

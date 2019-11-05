@@ -36,7 +36,6 @@ struct AddMealButton: View {
                     .font(.system(size: 12))
             }
             .padding()
-
         }
     }
 }

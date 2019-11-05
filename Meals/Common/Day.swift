@@ -23,9 +23,19 @@ public struct Day: Hashable {
     }
     var weekday: (Int, String) {
         let weekdayCount = Calendar.current.component(.weekday, from: self.date)
-        let weekdayName = Current.dateFormatter.weekdaySymbols[weekdayCount - 1]
+        let weekdayName = Current.datetimeFormatter.weekdaySymbols[weekdayCount - 1]
         //TODO: weekday is shifted by one
         return (weekdayCount, weekdayName)
     }
     var meals: [Meal]
+    var singular: Bool {
+        meals.count == 1
+    }
+
+    var plural: Bool {
+        !singular
+    }
+    var mealsString: String {
+        singular ? "meal" : "meals"
+    }
 }

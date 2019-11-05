@@ -37,12 +37,21 @@ public class Meal: NSManagedObject {
         }
     }
 
-    var dateString: String {
+    var datetimeString: String {
         set {
-            timestamp = Current.dateFormatter.date(from: newValue)
+            timestamp = Current.datetimeFormatter.date(from: newValue)
         }
         get {
-            return Current.dateFormatter.string(from: timestamp!)
+            return Current.datetimeFormatter.string(from: timestamp!)
+        }
+    }
+
+    var timeString: String {
+        set {
+            timestamp = Current.timeFormatter.date(from: newValue)
+        }
+        get {
+            return Current.timeFormatter.string(from: timestamp!)
         }
     }
 

@@ -18,23 +18,32 @@ struct StatisticsCell: View {
             day.meals.filter{ meal in meal.type == Type.meat }.count
         ]
     }
-    private var sumCaloriesMin: String {
+    private var sumCaloriesMin: Int {
         let weightsArray = day.meals.map{ $0.weight }
-        let sum = weightsArray.reduce(0, {$0 + $1.minCalories})
-        return String("\(sum) kCal")
+        return weightsArray.reduce(0, {$0 + $1.minCalories})
     }
     
-    private var sumCaloriesMax: String {
+    private var sumCaloriesMax: Int {
         let weightsArray = day.meals.map{ $0.weight }
-        let sum = weightsArray.reduce(0, {$0 + $1.maxCalories})
-        return String("\(sum) kCal")
+        return weightsArray.reduce(0, {$0 + $1.maxCalories})
+    }
+    private var sumCaloriesMinString: String {
+        return String("\(sumCaloriesMin) kCal")
+    }
+
+    private var sumCaloriesMaxString: String {
+        return String("\(sumCaloriesMax) kCal")
+    }
+    private var averageCalories: String {
+        return String((sumCaloriesMax + sumCaloriesMin) / 2) + " kCal"
     }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text(self.day.dateString).font(.largeTitle)
+            Text(self.day.dateString).font(.title)
             HStack {
-                Text("\(Type.vegan.stringValue):").frame(width: 120, height: nil, alignment: .trailing)
+                Text("\(Type.vegan.stringValue):")
+                    .frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[0], id: \.self) {_ in
                     Image(systemName: "circle.fill").foregroundColor(Type.vegan.color).frame(width: 12, height: nil, alignment: .center)
                 }
@@ -51,8 +60,19 @@ struct StatisticsCell: View {
                     Image(systemName: "stop.fill").foregroundColor(Type.meat.color).frame(width: 12, height: nil, alignment: .center)
                 }
             }
-            Text("Sum: \(sumCaloriesMin) - \(sumCaloriesMax) calories")
-        }.padding(Edge.Set(.bottom), 20)
+            GeometryReader { geometry in
+                HStack {
+                    Text("\(self.day.meals.count) \(self.day.mealsString) from \(self.sumCaloriesMin) to \(self.sumCaloriesMax) calories. Average:")
+                        .foregroundColor(Color(UIColor.systemGray))
+                        .italic()
+                    Text(self.averageCalories)
+                        .bold()
+                }
+                .font(.footnote)
+                .frame(width: geometry.size.width, height: nil, alignment: .trailing)
+                .padding(Edge.Set(.top), 10)
+            }
+        }.padding(Edge.Set(.bottom), 10)
     }
 }
 

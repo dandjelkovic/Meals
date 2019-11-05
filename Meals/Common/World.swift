@@ -10,9 +10,17 @@ import Foundation
 
 public struct World {
     var date = { Date() }
-    var dateFormatter: DateFormatter {
+    var datetimeFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy HH:mm"
+        dateFormatter.timeZone = TimeZone.current
+
+        return dateFormatter
+    }
+
+    var timeFormatter: DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
         dateFormatter.timeZone = TimeZone.current
 
         return dateFormatter

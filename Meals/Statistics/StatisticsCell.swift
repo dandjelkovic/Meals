@@ -11,15 +11,23 @@ import Foundation
 
 struct StatisticsCell: View {
     var day: Day
-    private var opacity: Double {
-        min(Double(day.meals.count)/10.0, 1)
-    }
     private var typeCounts: [Int] {
         return [
             day.meals.filter{ meal in meal.type == Type.vegan }.count,
             day.meals.filter{ meal in meal.type == Type.vegetarian }.count,
             day.meals.filter{ meal in meal.type == Type.meat }.count
         ]
+    }
+    private var sumCaloriesMin: String {
+        let weightsArray = day.meals.map{ $0.weight }
+        let sum = weightsArray.reduce(0, {$0 + $1.minCalories})
+        return String("\(sum) kCal")
+    }
+    
+    private var sumCaloriesMax: String {
+        let weightsArray = day.meals.map{ $0.weight }
+        let sum = weightsArray.reduce(0, {$0 + $1.maxCalories})
+        return String("\(sum) kCal")
     }
 
     var body: some View {
@@ -43,6 +51,7 @@ struct StatisticsCell: View {
                     Image(systemName: "stop.fill").foregroundColor(Type.meat.color).frame(width: 12, height: nil, alignment: .center)
                 }
             }
+            Text("Sum: \(sumCaloriesMin) - \(sumCaloriesMax) calories")
         }.padding(Edge.Set(.bottom), 20)
     }
 }

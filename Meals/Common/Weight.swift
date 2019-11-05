@@ -64,6 +64,25 @@ enum Weight: String {
 //            return Color(UIColor(named: "Weight light")!)
 //        }
     }
+    
+    public var calories: ClosedRange<Int> {
+        switch self {
+        case .heavy:
+            return 650...1000
+         case .medium:
+            return 300...650
+         case .light:
+            return 200...300
+         }
+    }
+    
+    public var minCalories: Int {
+        return calories.min() ?? 0
+    }
+    
+    public var maxCalories: Int {
+        return calories.max() ?? 0
+    }
 
     public init(rawValue: String) {
         switch rawValue {

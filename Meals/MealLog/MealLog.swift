@@ -7,12 +7,15 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct MealLog: View {
-    @Environment(\.managedObjectContext)
-    var managedObjectContext
-    @FetchRequest(entity: Meal.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Meal.timestamp, ascending: false)])
-    var meals: FetchedResults<Meal>
+    private var realm: Realm {
+        return try! Realm()
+    }
+    var meals: Results<Meal> {
+        realm.objects(Meal.self)
+    }
     var days = [Day]()
     
     var body: some View {
@@ -47,9 +50,9 @@ struct MealLog: View {
                         }
                         HStack {
                             Spacer()
-                            AddMealButton(weight: .light, type: .vegan, context: self.managedObjectContext)
-                            AddMealButton(weight: .medium, type: .vegan, context: self.managedObjectContext)
-                            AddMealButton(weight: .heavy, type: .vegan, context: self.managedObjectContext)
+                            AddMealButton(weight: .light, type: .vegan)
+                            AddMealButton(weight: .medium, type: .vegan)
+                            AddMealButton(weight: .heavy, type: .vegan)
                             Spacer()
                         }.frame(width: nil, height: nil, alignment: .center)
                     }
@@ -65,9 +68,9 @@ struct MealLog: View {
                         }
                         HStack {
                             Spacer()
-                            AddMealButton(weight: .light, type: .vegetarian, context: self.managedObjectContext)
-                            AddMealButton(weight: .medium, type: .vegetarian, context: self.managedObjectContext)
-                            AddMealButton(weight: .heavy, type: .vegetarian, context: self.managedObjectContext)
+                            AddMealButton(weight: .light, type: .vegetarian)
+                            AddMealButton(weight: .medium, type: .vegetarian)
+                            AddMealButton(weight: .heavy, type: .vegetarian)
                             Spacer()
                             }.frame(width: nil, height: nil, alignment: .center)
                     }
@@ -83,9 +86,9 @@ struct MealLog: View {
                         }
                         HStack {
                             Spacer()
-                            AddMealButton(weight: .light, type: .meat, context: self.managedObjectContext)
-                            AddMealButton(weight: .medium, type: .meat, context: self.managedObjectContext)
-                            AddMealButton(weight: .heavy, type: .meat, context: self.managedObjectContext)
+                            AddMealButton(weight: .light, type: .meat)
+                            AddMealButton(weight: .medium, type: .meat)
+                            AddMealButton(weight: .heavy, type: .meat)
                             Spacer()
                         }.frame(width: nil, height: nil, alignment: .center)
                     }
@@ -95,17 +98,19 @@ struct MealLog: View {
     }
 
     private func deleteMealEntry(_ meal: Meal) {
-        managedObjectContext.delete(meal)
         do {
-            try managedObjectContext.save()
+            let realm = try Realm()
+            try realm.write {
+                realm.delete(meal)
+            }
         } catch {
             print(error.localizedDescription)
         }
     }
 }
 
-struct MealLog_Previews: PreviewProvider {
-    static var previews: some View {
-        MealLog()
-    }
-}
+//struct MealLog_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MealLog()
+//    }
+//}

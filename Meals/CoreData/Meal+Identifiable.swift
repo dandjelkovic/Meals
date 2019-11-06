@@ -6,8 +6,10 @@
 //  Copyright © 2019 Dalibor Andjelkovic. All rights reserved.
 //
 
+import Foundation
+
 extension Meal: Identifiable {
     public var id: String {
-        return self.objectID.uriRepresentation().absoluteString
+        return ProcessInfo().globallyUniqueString
     }
 }

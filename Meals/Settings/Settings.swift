@@ -13,7 +13,6 @@ struct Settings: View {
     @State var exportSheetPresented = false
 
     var exportURL: URL? = FileExporter().exportDatabase()
-    let exporter = FileExporter()
 
     var body: some View {
         VStack {

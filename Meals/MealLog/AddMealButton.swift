@@ -7,25 +7,26 @@
 //
 
 import SwiftUI
-import CoreData
+import RealmSwift
 
 struct AddMealButton: View {
     var weight: Weight
     var type: Type
-    var context: NSManagedObjectContext
-    
+
     var body: some View {
         Button( action: {
-            let newMealEntry = Meal(context: self.context)
+            let newMealEntry = Meal()
             newMealEntry.weight = self.weight
             newMealEntry.timestamp = Current.date()
             newMealEntry.type = self.type
-            if self.context.hasChanges {
-                do {
-                    try self.context.save()
-                } catch {
-                    print(error.localizedDescription)
+            do {
+                let realm = try Realm()
+                try realm.write {
+                    realm.add(newMealEntry)
                 }
+            }
+            catch {
+                print(error.localizedDescription)
             }
         }) {
             VStack {

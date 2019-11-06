@@ -21,14 +21,14 @@ enum Type {
         }
     }
 
-    public var icon: some View {
+    public var icon: Image {
         switch self {
         case .vegan:
-            return Text("🌽")
+            return Image("icons8-veganes-essen-64")
         case .vegetarian:
-            return Text("🥗")
+            return Image("icons8-vegetarian-64")
         case .meat:
-            return Text("🍖")
+            return Image("icons8-hamburger-64")
         }
     }
 

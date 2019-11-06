@@ -29,13 +29,12 @@ struct AddMealButton: View {
             }
         }) {
             VStack {
-                weight.image
-                Text(type.stringValue)
-                    .foregroundColor(Color(UIColor.label))
-                    .bold()
-                    .font(.system(size: 12))
-            }
-            .padding()
+//                Spacer()
+                type.icon
+                    .resizable()
+                    .frame(width: 20 * CGFloat(weight.intValue), height: 20 * CGFloat(weight.intValue))
+//                Spacer()
+            }.frame(width: 60, height: nil, alignment: .center)
         }
     }
 }

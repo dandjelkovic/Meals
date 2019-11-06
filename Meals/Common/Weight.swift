@@ -47,7 +47,6 @@ enum Weight: String {
         return
             HStack(alignment: .center, spacing: 0) {
                 ForEach(1...self.intValue, id: \.self) {_ in
-//                    Image(systemName: "flame").foregroundColor(self.color)
                     Text("🍽")
                 }
             }.frame(width: 80, height: nil, alignment: .center)

@@ -18,7 +18,7 @@ struct MealLog: View {
     var body: some View {
         VStack {
             Text("Meals").font(.largeTitle)
-            .frame(width: UIScreen.main.bounds.width, height: 40, alignment: .center)
+                .frame(width: UIScreen.main.bounds.width, height: 40, alignment: .center)
             Spacer()
             List {
                 ForEach(days, id: \.self) { day in
@@ -32,32 +32,64 @@ struct MealLog: View {
                         }
                     }
                 }
-            }//.listStyle(GroupedListStyle())
+            }
             Divider()
             Text("What did you eat?").bold()
-            HStack {
-                VStack(alignment: .center, spacing: 5) {
-                    AddMealButton(weight: .light, type: .vegan, context: self.managedObjectContext)
-                    Divider()
-                    AddMealButton(weight: .medium, type: .vegan, context: self.managedObjectContext)
-                    Divider()
-                    AddMealButton(weight: .heavy, type: .vegan, context: self.managedObjectContext)
-                }.frame(width: 120, height: nil, alignment: .center)
-                VStack(alignment: .center, spacing: 5) {
-                    AddMealButton(weight: .light, type: .vegetarian, context: self.managedObjectContext)
-                    Divider()
-                    AddMealButton(weight: .medium, type: .vegetarian, context: self.managedObjectContext)
-                    Divider()
-                    AddMealButton(weight: .heavy, type: .vegetarian, context: self.managedObjectContext)
-                }.frame(width: 120, height: nil, alignment: .center)
-                VStack(alignment: .center, spacing: 5) {
-                    AddMealButton(weight: .light, type: .meat, context: self.managedObjectContext)
-                    Divider()
-                    AddMealButton(weight: .medium, type: .meat, context: self.managedObjectContext)
-                    Divider()
-                    AddMealButton(weight: .heavy, type: .meat, context: self.managedObjectContext)
-                }.frame(width: 120, height: nil, alignment: .center)
-
+            VStack {
+                HStack {
+                    GeometryReader { geometry in
+                        VStack {
+                            Spacer()
+                            TypeTag(type: .vegan, color: Type.vegan.color)
+                                .padding(2)
+                                .frame(width: geometry.size.width / 2 - 90, height: nil, alignment: .leading)
+                            Spacer()
+                        }
+                        HStack {
+                            Spacer()
+                            AddMealButton(weight: .light, type: .vegan, context: self.managedObjectContext)
+                            AddMealButton(weight: .medium, type: .vegan, context: self.managedObjectContext)
+                            AddMealButton(weight: .heavy, type: .vegan, context: self.managedObjectContext)
+                            Spacer()
+                        }.frame(width: nil, height: nil, alignment: .center)
+                    }
+                }.frame(width: nil, height: 64, alignment: .center)
+                HStack {
+                    GeometryReader { geometry in
+                        VStack {
+                            Spacer()
+                            TypeTag(type: .vegetarian, color: Type.vegetarian.color)
+                                .padding(2)
+                                .frame(width:geometry.size.width / 2 - 90, height: nil, alignment: .leading)
+                            Spacer()
+                        }
+                        HStack {
+                            Spacer()
+                            AddMealButton(weight: .light, type: .vegetarian, context: self.managedObjectContext)
+                            AddMealButton(weight: .medium, type: .vegetarian, context: self.managedObjectContext)
+                            AddMealButton(weight: .heavy, type: .vegetarian, context: self.managedObjectContext)
+                            Spacer()
+                            }.frame(width: nil, height: nil, alignment: .center)
+                    }
+                }.frame(width: nil, height: 64, alignment: .center)
+                HStack {
+                    GeometryReader { geometry in
+                        VStack {
+                            Spacer()
+                            TypeTag(type: .meat, color: Type.meat.color)
+                                .padding(2)
+                                .frame(width: geometry.size.width / 2 - 90, height: nil, alignment: .leading)
+                            Spacer()
+                        }
+                        HStack {
+                            Spacer()
+                            AddMealButton(weight: .light, type: .meat, context: self.managedObjectContext)
+                            AddMealButton(weight: .medium, type: .meat, context: self.managedObjectContext)
+                            AddMealButton(weight: .heavy, type: .meat, context: self.managedObjectContext)
+                            Spacer()
+                        }.frame(width: nil, height: nil, alignment: .center)
+                    }
+                }.frame(width: nil, height: 64, alignment: .center)
             }
         }
     }

@@ -45,19 +45,31 @@ struct StatisticsCell: View {
                 Text("\(Type.vegan.stringValue):")
                     .frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[0], id: \.self) {_ in
-                    Image(systemName: "circle.fill").foregroundColor(Type.vegan.color).frame(width: 12, height: nil, alignment: .center)
+                    Type.vegan.icon
+                        .resizable()
+                        //                    Image(systemName: "circle.fill")
+                        .foregroundColor(Type.vegan.color)
+                        .frame(width: 16, height: 16, alignment: .center)
                 }
             }
             HStack {
                 Text("\(Type.vegetarian.stringValue):").frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[1], id: \.self) {_ in
-                    Image(systemName: "rhombus.fill").foregroundColor(Type.vegetarian.color).frame(width: 12, height: nil, alignment: .center)
+                    Type.vegetarian.icon
+                        .resizable()
+                        //                    Image(systemName: "rhombus.fill")
+                        .foregroundColor(Type.vegetarian.color)
+                        .frame(width: 16, height: 16, alignment: .center)
                 }
             }
             HStack {
                 Text("\(Type.meat.stringValue):").frame(width: 120, height: nil, alignment: .trailing)
                 ForEach(0..<typeCounts[2], id: \.self) {_ in
-                    Image(systemName: "stop.fill").foregroundColor(Type.meat.color).frame(width: 12, height: nil, alignment: .center)
+                    Type.meat.icon
+                        .resizable()
+                        //                    Image(systemName: "stop.fill")
+                        .foregroundColor(Type.meat.color)
+                        .frame(width: 16, height: 16, alignment: .center)
                 }
             }
             GeometryReader { geometry in

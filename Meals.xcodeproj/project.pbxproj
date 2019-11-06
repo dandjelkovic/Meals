@@ -165,7 +165,6 @@
 			children = (
 				37CB341D235F16C300AAB41D /* Statistics.swift */,
 				37C5935B235F37EB00EAEEB7 /* StatisticsCell.swift */,
-				37F1556D2361D93B00FDF8CA /* TypeTag.swift */,
 				3764E9AC2371A6D600971781 /* FileExporter.swift */,
 			);
 			path = Statistics;
@@ -176,6 +175,7 @@
 			children = (
 				37CB3421235F191500AAB41D /* Day.swift */,
 				37F155672361B06D00FDF8CA /* Type.swift */,
+				37F1556D2361D93B00FDF8CA /* TypeTag.swift */,
 				37468216235F122100380AFC /* Weight.swift */,
 				37468219235F122100380AFC /* World.swift */,
 				3764E9AE2371BBF500971781 /* ActivityViewController.swift */,

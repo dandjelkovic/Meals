@@ -14,6 +14,8 @@ struct MealCell: View {
     var body: some View {
         HStack {
             meal.type.icon
+                .resizable()
+                .frame(width: 24, height: 24)
             Text(meal.weight.stringValue)
             Spacer()
             Text(meal.timeString)

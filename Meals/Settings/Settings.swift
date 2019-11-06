@@ -16,13 +16,18 @@ struct Settings: View {
     let exporter = FileExporter()
 
     var body: some View {
-        Button( action: {
-            self.actionSheetPresented = true
-        }) {
-            Text("Backup as CSV file").bold().padding(20).border(Color.secondary)
-        }.sheet(isPresented: $actionSheetPresented, content: {
-            ActivityViewController(items: [self.exportURL as Any])
-        })
+        VStack {
+            Button( action: {
+                self.actionSheetPresented = true
+            }) {
+                Text("Backup as CSV file").bold().padding(20).border(Color.secondary)
+            }.sheet(isPresented: $actionSheetPresented, content: {
+                ActivityViewController(items: [self.exportURL as Any])
+            })
+            Divider()
+            Text("Icons by https://icons8.de/")
+        }
+
     }
 }
 

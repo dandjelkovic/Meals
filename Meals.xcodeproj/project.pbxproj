@@ -15,6 +15,7 @@
 		37468222235F122100380AFC /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468216235F122100380AFC /* Weight.swift */; };
 		37468223235F122100380AFC /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468217235F122100380AFC /* MealCell.swift */; };
 		37468224235F122100380AFC /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468219235F122100380AFC /* World.swift */; };
+		3751F71B23741A1F00E958FD /* MealState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3751F71A23741A1F00E958FD /* MealState.swift */; };
 		3764E9A92371A6AF00971781 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764E9A82371A6AF00971781 /* Settings.swift */; };
 		3764E9AD2371A6D600971781 /* FileExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764E9AC2371A6D600971781 /* FileExporter.swift */; };
 		3764E9AF2371BBF500971781 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764E9AE2371BBF500971781 /* ActivityViewController.swift */; };
@@ -58,6 +59,7 @@
 		37468216235F122100380AFC /* Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		37468217235F122100380AFC /* MealCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
 		37468219235F122100380AFC /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		3751F71A23741A1F00E958FD /* MealState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealState.swift; sourceTree = "<group>"; };
 		3764E9A82371A6AF00971781 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		3764E9AC2371A6D600971781 /* FileExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExporter.swift; sourceTree = "<group>"; };
 		3764E9AE2371BBF500971781 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +127,7 @@
 				37CB3415235F13E000AAB41D /* SceneDelegate.swift */,
 				37CB341B235F142200AAB41D /* Assets.xcassets */,
 				37468218235F122100380AFC /* Common */,
-				3746820F235F122000380AFC /* CoreData */,
+				3746820F235F122000380AFC /* State */,
 				37CB3417235F13F400AAB41D /* ContentView.swift */,
 				37F1556F23621DFC00FDF8CA /* MealLog */,
 				37468214235F122100380AFC /* Statistics */,
@@ -154,13 +156,14 @@
 			path = MealsTests;
 			sourceTree = "<group>";
 		};
-		3746820F235F122000380AFC /* CoreData */ = {
+		3746820F235F122000380AFC /* State */ = {
 			isa = PBXGroup;
 			children = (
 				37468213235F122000380AFC /* Meal.swift */,
 				37F155702362244900FDF8CA /* Meal+Identifiable.swift */,
+				3751F71A23741A1F00E958FD /* MealState.swift */,
 			);
-			path = CoreData;
+			path = State;
 			sourceTree = "<group>";
 		};
 		37468214235F122100380AFC /* Statistics */ = {
@@ -398,6 +401,7 @@
 				37F155682361B06D00FDF8CA /* Type.swift in Sources */,
 				3764E9AF2371BBF500971781 /* ActivityViewController.swift in Sources */,
 				37CB341E235F16C300AAB41D /* Statistics.swift in Sources */,
+				3751F71B23741A1F00E958FD /* MealState.swift in Sources */,
 				37CB3418235F13F400AAB41D /* ContentView.swift in Sources */,
 				37C59360235F452500EAEEB7 /* MealLog.swift in Sources */,
 				37F1556E2361D93B00FDF8CA /* TypeTag.swift in Sources */,

@@ -10,12 +10,6 @@ import SwiftUI
 import RealmSwift
 
 struct MealLog: View {
-    private var realm: Realm {
-        return try! Realm()
-    }
-    var meals: Results<Meal> {
-        realm.objects(Meal.self)
-    }
     var days = [Day]()
     
     var body: some View {
@@ -31,7 +25,14 @@ struct MealLog: View {
                         }
                         .onDelete { indexSet in
                             guard let indexFirst = indexSet.first else { return }
-                            self.deleteMealEntry(day.meals[indexFirst])
+                            do {
+                                let realm = try Realm()
+                                try realm.write {
+                                    realm.delete(day.meals[indexFirst])
+                                }
+                            } catch {
+                                print(error.localizedDescription)
+                            }
                         }
                     }
                 }
@@ -94,17 +95,6 @@ struct MealLog: View {
                     }
                 }.frame(width: nil, height: 64, alignment: .center)
             }
-        }
-    }
-
-    private func deleteMealEntry(_ meal: Meal) {
-        do {
-            let realm = try Realm()
-            try realm.write {
-                realm.delete(meal)
-            }
-        } catch {
-            print(error.localizedDescription)
         }
     }
 }

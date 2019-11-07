@@ -8,27 +8,21 @@
 
 import Foundation
 import SwiftUI
-import RealmSwift
 
 struct ContentView: View {
     @State var selectedTab = 0
+    @EnvironmentObject var mealState: MealState
 
-    private var realm: Realm {
-        return try! Realm()
-    }
-    var meals: Results<Meal> {
-        realm.objects(Meal.self)
-    }
     var days: [Day] {
         var daysDictionary = [Date: [Meal]]()
         var dates = [Date]()
 
-        meals.forEach { meal in
+        mealState.meals.forEach { meal in
             let components = Calendar.current.dateComponents([.year,.month,.day], from: meal.timestamp)
             dates.append(Calendar.current.date(from: components)!)
         }
         dates.forEach { date in
-            daysDictionary[date] = meals.filter {
+            daysDictionary[date] = mealState.meals.filter {
                 let components = Calendar.current.dateComponents([.year,.month,.day], from: $0.timestamp)
                 return date == Calendar.current.date(from: components)
             }
@@ -47,7 +41,7 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "book")
                     Text("Meals")
-            }
+                }
             .tag(0)
             Statistics(days: days)
                 .tabItem {

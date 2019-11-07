@@ -10,7 +10,7 @@
 import Foundation
 import RealmSwift
 
-public class Meal: Object {
+public final class Meal: Object {
 
     @objc dynamic var weightString: String? = nil
     @objc dynamic var typeString: String? = nil

@@ -19,15 +19,17 @@ struct AddMealButton: View {
             newMealEntry.weight = self.weight
             newMealEntry.timestamp = Current.date()
             newMealEntry.type = self.type
-            do {
-                let realm = try Realm()
-                try realm.write {
-                    realm.add(newMealEntry)
+            Current.setupSyncedRealm { realm in
+                do {
+                    try realm.write {
+                        realm.add(newMealEntry)
+                    }
+                }
+                catch {
+                    print(error.localizedDescription)
                 }
             }
-            catch {
-                print(error.localizedDescription)
-            }
+
         }) {
             VStack {
 //                Spacer()

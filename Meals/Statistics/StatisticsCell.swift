@@ -19,18 +19,18 @@ struct StatisticsCell: View {
           return Calendar.current.date(byAdding: components, to: dayStart)!
         }()
         return [
-            mealState
-                .mealsResult
+            (mealState
+                .mealsResult?
                 .filter("typeString = '\(Type.vegan.stringValue)' AND timestamp BETWEEN %@", [dayStart, dayEnd])
-                .count,
+                .count ?? 0),
             mealState
-                .mealsResult
+                .mealsResult?
                 .filter("typeString = '\(Type.vegetarian.stringValue)' AND timestamp BETWEEN %@", [dayStart, dayEnd])
-                .count,
+                .count ?? 0,
             mealState
-                .mealsResult
+                .mealsResult?
                 .filter("typeString = '\(Type.meat.stringValue)' AND timestamp BETWEEN %@", [dayStart, dayEnd])
-                .count
+                .count ?? 0
         ]
     }
     private var sumCaloriesMin: Int {

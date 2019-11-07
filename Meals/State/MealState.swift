@@ -11,20 +11,22 @@ import Combine
 import RealmSwift
 
 final class MealState: ObservableObject {
-    @Published var meals: [Meal]
-    @Published var mealsResult: RealmSwift.Results<Meal>
+    @Published var meals = [Meal]()
+    @Published var mealsResult: RealmSwift.Results<Meal>?
     private var mealsToken: NotificationToken?
+    private var realm: Realm!
 
     init() {
-        let realm = try! Realm()
-        let results = realm.objects(Meal.self).sorted(byKeyPath: "timestamp", ascending: false)
-        mealsResult = results
-        meals = Array(results)
-        activateMealsToken()
+        Current.setupSyncedRealm { realm in
+            let results = realm.objects(Meal.self).sorted(byKeyPath: "timestamp", ascending: false)
+            self.mealsResult = results
+            self.meals = Array(results)
+            self.realm = realm
+            self.activateMealsToken()
+        }
     }
 
     private func activateMealsToken() {
-        let realm = try! Realm()
         let results = realm.objects(Meal.self).sorted(byKeyPath: "timestamp", ascending: false)
         mealsToken = results.observe { _ in
             // When there is a change, replace the old channels array with a new one.

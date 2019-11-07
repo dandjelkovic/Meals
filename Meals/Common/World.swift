@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 public struct World {
     var date = { Date() }
@@ -32,6 +33,20 @@ public struct World {
         dateFormatter.timeZone = TimeZone.current
 
         return dateFormatter
+    }
+
+    func setupSyncedRealm(completion: @escaping (Realm) -> Void) {
+        let serverURL = URL(string: "https://synergized-frozen-tuna.de1a.cloud.realm.io/")!
+        let realmURL = URL(string: "realms://synergized-frozen-tuna.de1a.cloud.realm.io/~/realmtasks")!
+        let credentials = ("meals", "neix5feivegah7Ae")
+
+        SyncUser.logIn(with: .usernamePassword(username: credentials.0, password: credentials.1), server: serverURL) { (user, error) in
+            guard user != nil else {
+                fatalError(String(describing: error))
+            }
+            let configuration = SyncUser.current!.configuration(realmURL: realmURL, fullSynchronization: false, enableSSLValidation: true, urlPrefix: nil)
+            completion(try! Realm(configuration: configuration))
+        }
     }
 }
 

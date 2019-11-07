@@ -25,13 +25,14 @@ struct MealLog: View {
                         }
                         .onDelete { indexSet in
                             guard let indexFirst = indexSet.first else { return }
-                            do {
-                                let realm = try Realm()
-                                try realm.write {
-                                    realm.delete(day.meals[indexFirst])
+                            Current.setupSyncedRealm { realm in
+                                do {
+                                    try realm.write {
+                                        realm.delete(day.meals[indexFirst])
+                                    }
+                                } catch {
+                                    print(error.localizedDescription)
                                 }
-                            } catch {
-                                print(error.localizedDescription)
                             }
                         }
                     }

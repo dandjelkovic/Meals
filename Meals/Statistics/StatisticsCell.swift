@@ -10,12 +10,27 @@ import SwiftUI
 import Foundation
 
 struct StatisticsCell: View {
+    @EnvironmentObject var mealState: MealState
     var day: Day
     private var typeCounts: [Int] {
+        let dayStart = Calendar.current.startOfDay(for: day.date)
+        let dayEnd: Date = {
+          let components = DateComponents(day: 1, second: -1)
+          return Calendar.current.date(byAdding: components, to: dayStart)!
+        }()
         return [
-            day.meals.filter{ meal in meal.type == Type.vegan }.count,
-            day.meals.filter{ meal in meal.type == Type.vegetarian }.count,
-            day.meals.filter{ meal in meal.type == Type.meat }.count
+            mealState
+                .mealsResult
+                .filter("typeString = '\(Type.vegan.stringValue)' AND timestamp BETWEEN %@", [dayStart, dayEnd])
+                .count,
+            mealState
+                .mealsResult
+                .filter("typeString = '\(Type.vegetarian.stringValue)' AND timestamp BETWEEN %@", [dayStart, dayEnd])
+                .count,
+            mealState
+                .mealsResult
+                .filter("typeString = '\(Type.meat.stringValue)' AND timestamp BETWEEN %@", [dayStart, dayEnd])
+                .count
         ]
     }
     private var sumCaloriesMin: Int {
@@ -47,7 +62,6 @@ struct StatisticsCell: View {
                 ForEach(0..<typeCounts[0], id: \.self) {_ in
                     Type.vegan.icon
                         .resizable()
-                        //                    Image(systemName: "circle.fill")
                         .foregroundColor(Type.vegan.color)
                         .frame(width: 16, height: 16, alignment: .center)
                 }
@@ -57,7 +71,6 @@ struct StatisticsCell: View {
                 ForEach(0..<typeCounts[1], id: \.self) {_ in
                     Type.vegetarian.icon
                         .resizable()
-                        //                    Image(systemName: "rhombus.fill")
                         .foregroundColor(Type.vegetarian.color)
                         .frame(width: 16, height: 16, alignment: .center)
                 }
@@ -67,7 +80,6 @@ struct StatisticsCell: View {
                 ForEach(0..<typeCounts[2], id: \.self) {_ in
                     Type.meat.icon
                         .resizable()
-                        //                    Image(systemName: "stop.fill")
                         .foregroundColor(Type.meat.color)
                         .frame(width: 16, height: 16, alignment: .center)
                 }

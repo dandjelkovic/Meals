@@ -12,11 +12,13 @@ import RealmSwift
 
 final class MealState: ObservableObject {
     @Published var meals: [Meal]
+    @Published var mealsResult: RealmSwift.Results<Meal>
     private var mealsToken: NotificationToken?
 
     init() {
         let realm = try! Realm()
         let results = realm.objects(Meal.self).sorted(byKeyPath: "timestamp", ascending: false)
+        mealsResult = results
         meals = Array(results)
         activateMealsToken()
     }

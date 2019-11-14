@@ -40,9 +40,9 @@ struct MealLog: View {
                     GeometryReader { geometry in
                         VStack {
                             Spacer()
-                            TypeTag(type: .vegan, color: Type.vegan.color)
+                            Text("\(Type.vegan.stringValue.capitalized)?")
                                 .padding(2)
-                                .frame(width: geometry.size.width / 2 - 90, height: nil, alignment: .leading)
+                                .frame(width: geometry.size.width / 2 - 90,alignment: .leading)
                             Spacer()
                         }
                         HStack {
@@ -51,16 +51,16 @@ struct MealLog: View {
                             AddMealButton(weight: .medium, type: .vegan, context: self.managedObjectContext)
                             AddMealButton(weight: .heavy, type: .vegan, context: self.managedObjectContext)
                             Spacer()
-                        }.frame(width: nil, height: nil, alignment: .center)
+                        }.frame(alignment: .center)
                     }
-                }.frame(width: nil, height: 64, alignment: .center)
+                }.frame( height: 64, alignment: .center)
                 HStack {
                     GeometryReader { geometry in
                         VStack {
                             Spacer()
-                            TypeTag(type: .vegetarian, color: Type.vegetarian.color)
+                            Text("\(Type.vegetarian.stringValue.capitalized)?")
                                 .padding(2)
-                                .frame(width:geometry.size.width / 2 - 90, height: nil, alignment: .leading)
+                                .frame(width:geometry.size.width / 2 - 90, alignment: .leading)
                             Spacer()
                         }
                         HStack {
@@ -69,16 +69,16 @@ struct MealLog: View {
                             AddMealButton(weight: .medium, type: .vegetarian, context: self.managedObjectContext)
                             AddMealButton(weight: .heavy, type: .vegetarian, context: self.managedObjectContext)
                             Spacer()
-                            }.frame(width: nil, height: nil, alignment: .center)
+                        }.frame(alignment: .center)
                     }
-                }.frame(width: nil, height: 64, alignment: .center)
+                }.frame( height: 64, alignment: .center)
                 HStack {
                     GeometryReader { geometry in
                         VStack {
                             Spacer()
-                            TypeTag(type: .meat, color: Type.meat.color)
+                            Text("\(Type.meat.stringValue.capitalized)?")
                                 .padding(2)
-                                .frame(width: geometry.size.width / 2 - 90, height: nil, alignment: .leading)
+                                .frame(width: geometry.size.width / 2 - 90, alignment: .leading)
                             Spacer()
                         }
                         HStack {
@@ -87,9 +87,9 @@ struct MealLog: View {
                             AddMealButton(weight: .medium, type: .meat, context: self.managedObjectContext)
                             AddMealButton(weight: .heavy, type: .meat, context: self.managedObjectContext)
                             Spacer()
-                        }.frame(width: nil, height: nil, alignment: .center)
+                        }.frame(alignment: .center)
                     }
-                }.frame(width: nil, height: 64, alignment: .center)
+                }.frame( height: 64, alignment: .center)
             }
         }
     }

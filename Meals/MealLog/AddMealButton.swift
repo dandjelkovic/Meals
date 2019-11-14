@@ -29,12 +29,10 @@ struct AddMealButton: View {
             }
         }) {
             VStack {
-//                Spacer()
                 type.icon
                     .resizable()
                     .frame(width: 20 * CGFloat(weight.intValue), height: 20 * CGFloat(weight.intValue))
-//                Spacer()
-            }.frame(width: 60, height: nil, alignment: .center)
+            }.frame(width: 60, alignment: .center)
         }
     }
 }

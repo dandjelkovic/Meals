@@ -49,7 +49,7 @@ enum Weight: String {
                 ForEach(1...self.intValue, id: \.self) {_ in
                     Text("🍽")
                 }
-            }.frame(width: 80, height: nil, alignment: .center)
+            }.frame(width: 80, alignment: .center)
     }
 
     public var color: Color  {

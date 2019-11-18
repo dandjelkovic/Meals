@@ -42,26 +42,21 @@ struct StatisticsCell: View {
         HStack {
             VStack {
                 HStack {
-                    ForEach(0..<typeCounts[0], id: \.self) {_ in
-                        Type.vegan.icon
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
-                }.frame(height: 24, alignment: .center)
+                    Type.vegan.iconScaledBy(count: typeCounts[0])
+                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+//                    Spacer()
+                }
                 HStack {
-                    ForEach(0..<typeCounts[1], id: \.self) {_ in
-                        Type.vegetarian.icon
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
-                }.frame(height: 24, alignment: .center)
-                HStack {
-                    ForEach(0..<typeCounts[2], id: \.self) {_ in
-                        Type.meat.icon
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    }
-                }.frame(height: 24, alignment: .center)
+//                    Spacer()
+                    Type.vegetarian.iconScaledBy(count: typeCounts[1])
+//                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+//                    Spacer()
+//                }
+//                HStack {
+//                    Spacer()
+                    Type.meat.iconScaledBy(count: typeCounts[2])
+                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                }
             }.frame(width: 120).clipped()
             VStack {
                 HStack {

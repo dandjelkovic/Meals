@@ -100,5 +100,68 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "273D302E-F2BE-4C82-96B0-D831FE6D6BF9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Meals/Common/Type.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "iconLengthFor(count:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "273D302E-F2BE-4C82-96B0-D831FE6D6BF9 - 964e0e401b0685de"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Meals.Type.(iconLengthFor in _C099B1ACE12D0C9FF3DA69FD067A2C1D)(count: Swift.Int) -&gt; CoreGraphics.CGFloat"
+                  moduleName = "Meals"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dan/Projects/Meals/Meals/Common/Type.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "91">
+               </Location>
+               <Location
+                  uuid = "273D302E-F2BE-4C82-96B0-D831FE6D6BF9 - 964e0e401b0685de"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Meals.Type.(iconLengthFor in _C099B1ACE12D0C9FF3DA69FD067A2C1D)(count: Swift.Int) -&gt; CoreGraphics.CGFloat"
+                  moduleName = "Meals"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dan/Projects/Meals/Meals/Common/Type.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "273D302E-F2BE-4C82-96B0-D831FE6D6BF9 - 964e0e401b0685de"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Meals.Type.(iconLengthFor in _C099B1ACE12D0C9FF3DA69FD067A2C1D)(count: Swift.Int) -&gt; CoreGraphics.CGFloat"
+                  moduleName = "Meals"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dan/Projects/Meals/Meals/Common/Type.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "149">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

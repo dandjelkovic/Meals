@@ -32,6 +32,19 @@ enum Type {
         }
     }
 
+    public func iconScaledBy(count: Int) -> some View {
+        let length = iconLengthFor(count: count)
+        print(length)
+        switch self {
+        case .vegan:
+            return icon.resizable().frame(width: length, height: length)
+        case .vegetarian:
+            return icon.resizable().frame(width: length, height: length)
+        case .meat:
+            return icon.resizable().frame(width: length, height: length)
+        }
+    }
+
     public var color: Color  {
         switch self {
         case .meat:
@@ -53,6 +66,22 @@ enum Type {
             self = .meat
         default:
             self = .vegan
+        }
+    }
+
+    private func iconLengthFor(count: Int) -> CGFloat {
+        guard count != 0 else {
+            return 0
+        }
+        switch count {
+        case 1:
+            return 12
+        case 2:
+            return 24
+        case 3:
+            return 36
+        default:
+            return 36
         }
     }
 }

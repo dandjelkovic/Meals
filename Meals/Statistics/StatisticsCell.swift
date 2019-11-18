@@ -11,11 +11,11 @@ import Foundation
 
 struct StatisticsCell: View {
     var day: Day
-    private var typeCounts: [Int] {
+    private var typeCounts: [Type: Int] {
         return [
-            day.meals.filter{ meal in meal.type == Type.vegan }.count,
-            day.meals.filter{ meal in meal.type == Type.vegetarian }.count,
-            day.meals.filter{ meal in meal.type == Type.meat }.count
+            Type.vegan: day.meals.filter{ meal in meal.type == Type.vegan }.count,
+            Type.vegetarian: day.meals.filter{ meal in meal.type == Type.vegetarian }.count,
+            Type.meat: day.meals.filter{ meal in meal.type == Type.meat }.count
         ]
     }
     private var sumCaloriesMin: Int {
@@ -42,22 +42,18 @@ struct StatisticsCell: View {
         HStack {
             VStack {
                 HStack {
-                    Type.vegan.iconScaledBy(count: typeCounts[0])
-                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
-//                    Spacer()
+                    Type.vegan.iconScaledBy(count: typeCounts[Type.vegan]!)
+                        .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 0))
                 }
                 HStack {
-//                    Spacer()
-                    Type.vegetarian.iconScaledBy(count: typeCounts[1])
-//                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-//                    Spacer()
-//                }
-//                HStack {
-//                    Spacer()
-                    Type.meat.iconScaledBy(count: typeCounts[2])
+                    Type.vegetarian.iconScaledBy(count: typeCounts[Type.vegetarian]!)
+                    Type.meat.iconScaledBy(count: typeCounts[Type.meat]!)
                         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                 }
-            }.frame(width: 120).clipped()
+            }
+            .frame(width: 120, height: 100)
+            .clipped()
+            .background(CirlceBackground())
             VStack {
                 HStack {
                     Text(self.day.dateString).font(.headline)
@@ -74,6 +70,14 @@ struct StatisticsCell: View {
             }
         }
         .padding(Edge.Set(.bottom), 5)
+    }
+}
+
+struct CirlceBackground: View {
+    var body: some View {
+        Circle()
+            .fill(Color(UIColor.systemGray5))
+            .frame(width: 100, height: 100)
     }
 }
 

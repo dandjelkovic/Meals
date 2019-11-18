@@ -34,7 +34,6 @@ enum Type {
 
     public func iconScaledBy(count: Int) -> some View {
         let length = iconLengthFor(count: count)
-        print(length)
         switch self {
         case .vegan:
             return icon.resizable().frame(width: length, height: length)

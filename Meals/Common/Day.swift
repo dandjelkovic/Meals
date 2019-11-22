@@ -11,8 +11,8 @@ import Foundation
 public struct Day: Hashable {
     private var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM"
-//        dateFormatter.dateStyle = .short
+//        dateFormatter.dateFormat = "dd.MM"
+        dateFormatter.dateStyle = .short
         dateFormatter.timeZone = TimeZone.current
 
         return dateFormatter

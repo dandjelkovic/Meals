@@ -52,7 +52,7 @@ struct StatisticsCell: View {
                         .padding(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 10))
                 }
             }
-            .frame(width: 120, height: 100)
+            .frame(width: 100, height: 100)
             .clipped()
             .background(CirlceBackground())
             VStack {

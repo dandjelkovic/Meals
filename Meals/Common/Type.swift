@@ -74,13 +74,11 @@ enum Type {
         }
         switch count {
         case 1:
-            return 12
+            return 20
         case 2:
-            return 24
-        case 3:
-            return 36
+            return 30
         default:
-            return 36
+            return 40
         }
     }
 }

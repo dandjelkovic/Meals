@@ -47,8 +47,9 @@ struct StatisticsCell: View {
                 }
                 HStack {
                     Type.vegetarian.iconScaledBy(count: typeCounts[Type.vegetarian]!)
+                        .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 0))
                     Type.meat.iconScaledBy(count: typeCounts[Type.meat]!)
-                        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+                        .padding(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 10))
                 }
             }
             .frame(width: 120, height: 100)

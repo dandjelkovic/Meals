@@ -13,11 +13,11 @@ enum Weight: String {
     public var stringValue: String  {
         switch self {
         case .heavy:
-            return "Schwere Mahlzeit"
+            return "Heavy meal"
         case .medium:
-            return "Mittlere Mahlzeit"
+            return "Normal meal"
         case .light:
-            return "Leichte Mahlzeit"
+            return "Light meal"
         }
     }
 
@@ -32,17 +32,6 @@ enum Weight: String {
         }
     }
 
-    public var shortStringValue: String  {
-        switch self {
-        case .heavy:
-            return "Schwer"
-        case .medium:
-            return "Mittel"
-        case .light:
-            return "Leicht"
-        }
-    }
-
     public var image: some View {
         return
             HStack(alignment: .center, spacing: 0) {
@@ -50,18 +39,6 @@ enum Weight: String {
                     Text("🍽")
                 }
             }.frame(width: 80, alignment: .center)
-    }
-
-    public var color: Color  {
-        return Color(UIColor.label)
-//        switch self {
-//        case .heavy:
-//            return Color(UIColor(named: "Weight heavy")!)
-//        case .medium:
-//            return Color(UIColor(named: "Weight medium")!)
-//        case .light:
-//            return Color(UIColor(named: "Weight light")!)
-//        }
     }
     
     public var calories: ClosedRange<Int> {
@@ -85,11 +62,11 @@ enum Weight: String {
 
     public init(rawValue: String) {
         switch rawValue {
-        case "Schwere Mahlzeit":
+        case "Heavy meal", "Schwere Mahlzeit":
             self = .heavy
-        case "Mittlere Mahlzeit":
+        case "Normal meal", "Mittlere Mahlzeit":
             self = .medium
-        case "Leichte Mahlzeit":
+        case "Light meal", "Leichte Mahlzeit":
             self = .light
         default:
             self = .light

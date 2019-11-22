@@ -56,7 +56,7 @@ struct ContentView: View {
             .tag(1)
             Settings()
                 .tabItem {
-                    Image(systemName: "line.horizontal.3")
+                    Image(systemName: "slider.horizontal.3")
                     Text("Settings")
             }
             .tag(2)

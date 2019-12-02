@@ -33,6 +33,7 @@ public struct World {
 
         return dateFormatter
     }
+    let userDefaults = UserDefaults.standard
 }
 
 #if DEBUG

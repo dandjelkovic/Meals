@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectedTab = 0
+    @State private var selectedTab = 0
     @FetchRequest(
         entity: Meal.entity(),
         sortDescriptors: [

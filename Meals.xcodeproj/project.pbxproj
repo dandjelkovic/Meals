@@ -69,7 +69,7 @@
 		37CB341B235F142200AAB41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37CB341D235F16C300AAB41D /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		37CB3421235F191500AAB41D /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		37F155652361A91F00FDF8CA /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersistentContainer.swift; path = CoreData/PersistentContainer.swift; sourceTree = "<group>"; };
+		37F155652361A91F00FDF8CA /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		37F155672361B06D00FDF8CA /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		37F1556D2361D93B00FDF8CA /* TypeTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTag.swift; sourceTree = "<group>"; };
@@ -115,19 +115,19 @@
 		374681E8235F11F600380AFC /* Meals */ = {
 			isa = PBXGroup;
 			children = (
+				374681FA235F11F700380AFC /* Info.plist */,
 				37CB3419235F140800AAB41D /* AppDelegate.swift */,
+				37CB3417235F13F400AAB41D /* ContentView.swift */,
 				37CB3415235F13E000AAB41D /* SceneDelegate.swift */,
-				37F155652361A91F00FDF8CA /* PersistentContainer.swift */,
 				37CB341B235F142200AAB41D /* Assets.xcassets */,
 				37468218235F122100380AFC /* Common */,
 				3746820F235F122000380AFC /* CoreData */,
-				37CB3417235F13F400AAB41D /* ContentView.swift */,
-				37F1556F23621DFC00FDF8CA /* MealLog */,
-				37468214235F122100380AFC /* Statistics */,
-				3764E9A72371A67600971781 /* Settings */,
 				374681F7235F11F700380AFC /* LaunchScreen.storyboard */,
-				374681FA235F11F700380AFC /* Info.plist */,
+				37F1556F23621DFC00FDF8CA /* MealLog */,
+				3755896723954C2F00213C08 /* Models */,
 				374681F4235F11F700380AFC /* Preview Content */,
+				3764E9A72371A67600971781 /* Settings */,
+				37468214235F122100380AFC /* Statistics */,
 			);
 			path = Meals;
 			sourceTree = "<group>";
@@ -152,10 +152,11 @@
 		3746820F235F122000380AFC /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				37468211235F122000380AFC /* Meals.xcdatamodeld */,
-				37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */,
 				37468213235F122000380AFC /* Meal+CoreDataClass.swift */,
+				37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */,
 				37F155702362244900FDF8CA /* Meal+Identifiable.swift */,
+				37468211235F122000380AFC /* Meals.xcdatamodeld */,
+				37F155652361A91F00FDF8CA /* PersistentContainer.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -173,14 +174,21 @@
 		37468218235F122100380AFC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				37CB3421235F191500AAB41D /* Day.swift */,
-				37F155672361B06D00FDF8CA /* Type.swift */,
 				37F1556D2361D93B00FDF8CA /* TypeTag.swift */,
-				37468216235F122100380AFC /* Weight.swift */,
 				37468219235F122100380AFC /* World.swift */,
 				3764E9AE2371BBF500971781 /* ActivityViewController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		3755896723954C2F00213C08 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37CB3421235F191500AAB41D /* Day.swift */,
+				37F155672361B06D00FDF8CA /* Type.swift */,
+				37468216235F122100380AFC /* Weight.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3764E9A72371A67600971781 /* Settings */ = {

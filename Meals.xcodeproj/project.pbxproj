@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373AAE972399391000E142AD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373AAE952399391000E142AD /* Interface.storyboard */; };
+		373AAE992399391100E142AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373AAE982399391100E142AD /* Assets.xcassets */; };
+		373AAEA02399391100E142AD /* TrackOnWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 373AAE9F2399391100E142AD /* TrackOnWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		373AAEA52399391100E142AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAEA42399391100E142AD /* ContentView.swift */; };
+		373AAEA72399391100E142AD /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAEA62399391100E142AD /* HostingController.swift */; };
+		373AAEA92399391200E142AD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAEA82399391100E142AD /* ExtensionDelegate.swift */; };
+		373AAEAB2399391200E142AD /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAEAA2399391200E142AD /* NotificationController.swift */; };
+		373AAEAD2399391200E142AD /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAEAC2399391200E142AD /* NotificationView.swift */; };
+		373AAEAF2399391200E142AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373AAEAE2399391200E142AD /* Assets.xcassets */; };
+		373AAEB22399391200E142AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373AAEB12399391200E142AD /* Preview Assets.xcassets */; };
+		373AAEB72399391200E142AD /* TrackOnWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 373AAE932399391000E142AD /* TrackOnWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		373AAEC0239939C400E142AD /* AddMealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468215235F122100380AFC /* AddMealButton.swift */; };
+		373AAEC1239939DF00E142AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CB341B235F142200AAB41D /* Assets.xcassets */; };
+		373AAEC2239939FA00E142AD /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155672361B06D00FDF8CA /* Type.swift */; };
+		373AAEC3239939FA00E142AD /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468216235F122100380AFC /* Weight.swift */; };
+		373AAEC523993B3400E142AD /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468213235F122000380AFC /* Meal+CoreDataClass.swift */; };
+		373AAEC623993B3400E142AD /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */; };
+		373AAEC723993B3400E142AD /* Meal+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155702362244900FDF8CA /* Meal+Identifiable.swift */; };
+		373AAEC823993B3400E142AD /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155652361A91F00FDF8CA /* PersistentContainer.swift */; };
+		373AAEC923993B3D00E142AD /* Meals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37468211235F122000380AFC /* Meals.xcdatamodeld */; };
+		373AAECA23993B5900E142AD /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468219235F122100380AFC /* World.swift */; };
+		373AAECC23993BF900E142AD /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAECB23993BF900E142AD /* AddMealView.swift */; };
+		373AAECD23993BF900E142AD /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAECB23993BF900E142AD /* AddMealView.swift */; };
 		374681F6235F11F700380AFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374681F5235F11F700380AFC /* Preview Assets.xcassets */; };
 		374681F9235F11F700380AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374681F7235F11F700380AFC /* LaunchScreen.storyboard */; };
 		37468204235F11F700380AFC /* MealsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468203235F11F700380AFC /* MealsTests.swift */; };
@@ -35,6 +58,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		373AAEA12399391100E142AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 374681DE235F11F600380AFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 373AAE9E2399391100E142AD;
+			remoteInfo = "TrackOnWatch Extension";
+		};
+		373AAEB52399391200E142AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 374681DE235F11F600380AFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 373AAE922399391000E142AD;
+			remoteInfo = TrackOnWatch;
+		};
 		37468200235F11F700380AFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 374681DE235F11F600380AFC /* Project object */;
@@ -44,7 +81,47 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		373AAEB82399391200E142AD /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				373AAEB72399391200E142AD /* TrackOnWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373AAEBB2399391200E142AD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				373AAEA02399391100E142AD /* TrackOnWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		373AAE932399391000E142AD /* TrackOnWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackOnWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		373AAE962399391000E142AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		373AAE982399391100E142AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		373AAE9A2399391100E142AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		373AAE9F2399391100E142AD /* TrackOnWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TrackOnWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		373AAEA42399391100E142AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		373AAEA62399391100E142AD /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		373AAEA82399391100E142AD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		373AAEAA2399391200E142AD /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		373AAEAC2399391200E142AD /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		373AAEAE2399391200E142AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		373AAEB12399391200E142AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		373AAEB32399391200E142AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		373AAEB42399391200E142AD /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		373AAECB23993BF900E142AD /* AddMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealView.swift; sourceTree = "<group>"; };
 		374681E6235F11F600380AFC /* Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		374681F5235F11F700380AFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		374681F8235F11F700380AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +154,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		373AAE9C2399391100E142AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		374681E3235F11F600380AFC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,11 +178,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		373AAE942399391000E142AD /* TrackOnWatch */ = {
+			isa = PBXGroup;
+			children = (
+				373AAE952399391000E142AD /* Interface.storyboard */,
+				373AAE982399391100E142AD /* Assets.xcassets */,
+				373AAE9A2399391100E142AD /* Info.plist */,
+			);
+			path = TrackOnWatch;
+			sourceTree = "<group>";
+		};
+		373AAEA32399391100E142AD /* TrackOnWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				373AAEA42399391100E142AD /* ContentView.swift */,
+				373AAEA62399391100E142AD /* HostingController.swift */,
+				373AAEA82399391100E142AD /* ExtensionDelegate.swift */,
+				373AAEAA2399391200E142AD /* NotificationController.swift */,
+				373AAEAC2399391200E142AD /* NotificationView.swift */,
+				373AAEAE2399391200E142AD /* Assets.xcassets */,
+				373AAEB32399391200E142AD /* Info.plist */,
+				373AAEB42399391200E142AD /* PushNotificationPayload.apns */,
+				373AAEB02399391200E142AD /* Preview Content */,
+			);
+			path = "TrackOnWatch Extension";
+			sourceTree = "<group>";
+		};
+		373AAEB02399391200E142AD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				373AAEB12399391200E142AD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		374681DD235F11F600380AFC = {
 			isa = PBXGroup;
 			children = (
 				374681E8235F11F600380AFC /* Meals */,
 				37468202235F11F700380AFC /* MealsTests */,
+				373AAE942399391000E142AD /* TrackOnWatch */,
+				373AAEA32399391100E142AD /* TrackOnWatch Extension */,
 				374681E7235F11F600380AFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,6 +228,8 @@
 			children = (
 				374681E6235F11F600380AFC /* Meals.app */,
 				374681FF235F11F700380AFC /* MealsTests.xctest */,
+				373AAE932399391000E142AD /* TrackOnWatch.app */,
+				373AAE9F2399391100E142AD /* TrackOnWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,6 +324,7 @@
 		37F1556F23621DFC00FDF8CA /* MealLog */ = {
 			isa = PBXGroup;
 			children = (
+				373AAECB23993BF900E142AD /* AddMealView.swift */,
 				37468215235F122100380AFC /* AddMealButton.swift */,
 				37468217235F122100380AFC /* MealCell.swift */,
 				37C5935F235F452500EAEEB7 /* MealLog.swift */,
@@ -212,6 +335,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		373AAE922399391000E142AD /* TrackOnWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373AAEBF2399391200E142AD /* Build configuration list for PBXNativeTarget "TrackOnWatch" */;
+			buildPhases = (
+				373AAE912399391000E142AD /* Resources */,
+				373AAEBB2399391200E142AD /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				373AAEA22399391100E142AD /* PBXTargetDependency */,
+			);
+			name = TrackOnWatch;
+			productName = TrackOnWatch;
+			productReference = 373AAE932399391000E142AD /* TrackOnWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		373AAE9E2399391100E142AD /* TrackOnWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373AAEBE2399391200E142AD /* Build configuration list for PBXNativeTarget "TrackOnWatch Extension" */;
+			buildPhases = (
+				373AAE9B2399391100E142AD /* Sources */,
+				373AAE9C2399391100E142AD /* Frameworks */,
+				373AAE9D2399391100E142AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TrackOnWatch Extension";
+			productName = "TrackOnWatch Extension";
+			productReference = 373AAE9F2399391100E142AD /* TrackOnWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		374681E5235F11F600380AFC /* Meals */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37468208235F11F700380AFC /* Build configuration list for PBXNativeTarget "Meals" */;
@@ -219,10 +376,13 @@
 				374681E2235F11F600380AFC /* Sources */,
 				374681E3235F11F600380AFC /* Frameworks */,
 				374681E4235F11F600380AFC /* Resources */,
+				373AAEB82399391200E142AD /* Embed Watch Content */,
+				373AAECE239A56E100E142AD /* Swiftlint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				373AAEB62399391200E142AD /* PBXTargetDependency */,
 			);
 			name = Meals;
 			productName = Meals;
@@ -253,10 +413,16 @@
 		374681DE235F11F600380AFC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Dalibor Andjelkovic";
 				TargetAttributes = {
+					373AAE922399391000E142AD = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					373AAE9E2399391100E142AD = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					374681E5235F11F600380AFC = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -281,11 +447,32 @@
 			targets = (
 				374681E5235F11F600380AFC /* Meals */,
 				374681FE235F11F700380AFC /* MealsTests */,
+				373AAE922399391000E142AD /* TrackOnWatch */,
+				373AAE9E2399391100E142AD /* TrackOnWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		373AAE912399391000E142AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373AAE992399391100E142AD /* Assets.xcassets in Resources */,
+				373AAE972399391000E142AD /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373AAE9D2399391100E142AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373AAEB22399391200E142AD /* Preview Assets.xcassets in Resources */,
+				373AAEC1239939DF00E142AD /* Assets.xcassets in Resources */,
+				373AAEAF2399391200E142AD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		374681E4235F11F600380AFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,7 +492,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		373AAECE239A56E100E142AD /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# use swiftlint if installed via homebrew: brew install swiftlint\nSWIFTLINT_PATH=\"/usr/local/bin/swiftlint\"\nSWIFTLINT_CONFIG_PATH=\".swiftlint.yml\" # see: https://api.github.com/repos/adorsys/csi-coding-guidelines/contents/iOS/.swiftlint.default.yml\n\nif test -f \"$SWIFTLINT_PATH\"; then\n    \"${SWIFTLINT_PATH}\" autocorrect --config ${SWIFTLINT_CONFIG_PATH}\n    \"${SWIFTLINT_PATH}\" lint --config ${SWIFTLINT_CONFIG_PATH}\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		373AAE9B2399391100E142AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373AAEC0239939C400E142AD /* AddMealButton.swift in Sources */,
+				373AAEA72399391100E142AD /* HostingController.swift in Sources */,
+				373AAEA52399391100E142AD /* ContentView.swift in Sources */,
+				373AAEAB2399391200E142AD /* NotificationController.swift in Sources */,
+				373AAEC723993B3400E142AD /* Meal+Identifiable.swift in Sources */,
+				373AAEC523993B3400E142AD /* Meal+CoreDataClass.swift in Sources */,
+				373AAEC923993B3D00E142AD /* Meals.xcdatamodeld in Sources */,
+				373AAEC823993B3400E142AD /* PersistentContainer.swift in Sources */,
+				373AAECA23993B5900E142AD /* World.swift in Sources */,
+				373AAECD23993BF900E142AD /* AddMealView.swift in Sources */,
+				373AAEC2239939FA00E142AD /* Type.swift in Sources */,
+				373AAEC623993B3400E142AD /* Meal+CoreDataProperties.swift in Sources */,
+				373AAEA92399391200E142AD /* ExtensionDelegate.swift in Sources */,
+				373AAEAD2399391200E142AD /* NotificationView.swift in Sources */,
+				373AAEC3239939FA00E142AD /* Weight.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		374681E2235F11F600380AFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,6 +555,7 @@
 				3764E9A92371A6AF00971781 /* Settings.swift in Sources */,
 				37468223235F122100380AFC /* MealCell.swift in Sources */,
 				3764E9AD2371A6D600971781 /* FileExporter.swift in Sources */,
+				373AAECC23993BF900E142AD /* AddMealView.swift in Sources */,
 				37468224235F122100380AFC /* World.swift in Sources */,
 				37468222235F122100380AFC /* Weight.swift in Sources */,
 				37CB3416235F13E000AAB41D /* SceneDelegate.swift in Sources */,
@@ -345,6 +576,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		373AAEA22399391100E142AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 373AAE9E2399391100E142AD /* TrackOnWatch Extension */;
+			targetProxy = 373AAEA12399391100E142AD /* PBXContainerItemProxy */;
+		};
+		373AAEB62399391200E142AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 373AAE922399391000E142AD /* TrackOnWatch */;
+			targetProxy = 373AAEB52399391200E142AD /* PBXContainerItemProxy */;
+		};
 		37468201235F11F700380AFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 374681E5235F11F600380AFC /* Meals */;
@@ -353,6 +594,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		373AAE952399391000E142AD /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				373AAE962399391000E142AD /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		374681F7235F11F700380AFC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -364,6 +613,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		373AAEB92399391200E142AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HH7V8CB5FF;
+				IBSC_MODULE = TrackOnWatch_Extension;
+				INFOPLIST_FILE = TrackOnWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		373AAEBA2399391200E142AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HH7V8CB5FF;
+				IBSC_MODULE = TrackOnWatch_Extension;
+				INFOPLIST_FILE = TrackOnWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		373AAEBC2399391200E142AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TrackOnWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = HH7V8CB5FF;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "TrackOnWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		373AAEBD2399391200E142AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TrackOnWatch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = HH7V8CB5FF;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "TrackOnWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
 		37468206235F11F700380AFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -569,6 +906,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		373AAEBE2399391200E142AD /* Build configuration list for PBXNativeTarget "TrackOnWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373AAEBC2399391200E142AD /* Debug */,
+				373AAEBD2399391200E142AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		373AAEBF2399391200E142AD /* Build configuration list for PBXNativeTarget "TrackOnWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373AAEB92399391200E142AD /* Debug */,
+				373AAEBA2399391200E142AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		374681E1235F11F600380AFC /* Build configuration list for PBXProject "Meals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

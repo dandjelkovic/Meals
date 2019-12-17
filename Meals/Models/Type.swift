@@ -10,7 +10,7 @@ import SwiftUI
 enum Type {
     case vegan, vegetarian, meat
 
-    public var stringValue: String  {
+    public var stringValue: String {
         switch self {
         case .vegan:
             return "vegan"
@@ -44,7 +44,8 @@ enum Type {
         }
     }
 
-    public var color: Color  {
+    // swiftlint:disable force_unwrapping
+    public var color: Color {
         switch self {
         case .meat:
             return Color(UIColor(named: "Weight heavy")!)
@@ -54,6 +55,7 @@ enum Type {
             return Color(UIColor(named: "Weight light")!)
         }
     }
+    // swiftlint:enable force_unwrapping
 
     public init(rawValue: String) {
         switch rawValue {
@@ -69,7 +71,8 @@ enum Type {
     }
 
     private func iconLengthFor(count: Int) -> CGFloat {
-        guard count != 0 else {
+        //swiftlint:disable:next empty_count
+        if count == 0 {
             return 0
         }
         switch count {

@@ -34,6 +34,14 @@ public struct World {
         return dateFormatter
     }
     let userDefaults = UserDefaults.standard
+    var sharedContainer: URL {
+        guard let containerURL = FileManager.default.containerURL(
+            forSecurityApplicationGroupIdentifier: "group.de.dandjelkovic.Meals"
+            ) else {
+            fatalError("invalid group identifier")
+        }
+        return containerURL
+    }
 }
 
 #if DEBUG

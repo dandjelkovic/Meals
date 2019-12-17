@@ -13,10 +13,12 @@ import CloudKit
 
 class PersistentContainer {
     private static var _model: NSManagedObjectModel?
+
     private static func model(name: String) throws -> NSManagedObjectModel {
         if _model == nil {
             _model = try loadModel(name: name, bundle: Bundle.main)
         }
+        //swiftlint:disable:next force_unwrapping
         return _model!
     }
     private static func loadModel(name: String, bundle: Bundle) throws -> NSManagedObjectModel {
@@ -36,6 +38,11 @@ class PersistentContainer {
     }
 
     public static func container(with name: String) -> NSPersistentCloudKitContainer {
-        return NSPersistentCloudKitContainer(name: name, managedObjectModel: try! model(name: name))
+        do {
+            let managedObjectModel = try model(name: name)
+            return NSPersistentCloudKitContainer(name: name, managedObjectModel: managedObjectModel)
+        } catch {
+            fatalError(error.localizedDescription)
+        }
     }
 }

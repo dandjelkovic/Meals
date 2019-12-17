@@ -42,6 +42,7 @@
 		3764E9A92371A6AF00971781 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764E9A82371A6AF00971781 /* Settings.swift */; };
 		3764E9AD2371A6D600971781 /* FileExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764E9AC2371A6D600971781 /* FileExporter.swift */; };
 		3764E9AF2371BBF500971781 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764E9AE2371BBF500971781 /* ActivityViewController.swift */; };
+		3767F7F523A9263A0037C402 /* Int+StringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767F7F423A9263A0037C402 /* Int+StringValue.swift */; };
 		37C5935C235F37EB00EAEEB7 /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5935B235F37EB00EAEEB7 /* StatisticsCell.swift */; };
 		37C59360235F452500EAEEB7 /* MealLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5935F235F452500EAEEB7 /* MealLog.swift */; };
 		37CB3416235F13E000AAB41D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB3415235F13E000AAB41D /* SceneDelegate.swift */; };
@@ -50,6 +51,10 @@
 		37CB341C235F142200AAB41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CB341B235F142200AAB41D /* Assets.xcassets */; };
 		37CB341E235F16C300AAB41D /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB341D235F16C300AAB41D /* Statistics.swift */; };
 		37CB3422235F191500AAB41D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB3421235F191500AAB41D /* Day.swift */; };
+		37E7B96123A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7B95F23A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift */; };
+		37E7B96223A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7B95F23A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift */; };
+		37E7B96323A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7B96023A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift */; };
+		37E7B96423A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7B96023A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift */; };
 		37F155662361A91F00FDF8CA /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155652361A91F00FDF8CA /* PersistentContainer.swift */; };
 		37F155682361B06D00FDF8CA /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155672361B06D00FDF8CA /* Type.swift */; };
 		37F1556C2361B25900FDF8CA /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */; };
@@ -138,6 +143,7 @@
 		3764E9A82371A6AF00971781 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		3764E9AC2371A6D600971781 /* FileExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExporter.swift; sourceTree = "<group>"; };
 		3764E9AE2371BBF500971781 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		3767F7F423A9263A0037C402 /* Int+StringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+StringValue.swift"; sourceTree = "<group>"; };
 		37C5935B235F37EB00EAEEB7 /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
 		37C5935F235F452500EAEEB7 /* MealLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLog.swift; sourceTree = "<group>"; };
 		37CB3415235F13E000AAB41D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +152,8 @@
 		37CB341B235F142200AAB41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37CB341D235F16C300AAB41D /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		37CB3421235F191500AAB41D /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		37E7B95F23A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaloriesCount+CoreDataClass.swift"; sourceTree = "<group>"; };
+		37E7B96023A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaloriesCount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		37F155652361A91F00FDF8CA /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
 		37F155672361B06D00FDF8CA /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -274,6 +282,8 @@
 		3746820F235F122000380AFC /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				37E7B95F23A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift */,
+				37E7B96023A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift */,
 				37468213235F122000380AFC /* Meal+CoreDataClass.swift */,
 				37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */,
 				37F155702362244900FDF8CA /* Meal+Identifiable.swift */,
@@ -299,6 +309,7 @@
 				37F1556D2361D93B00FDF8CA /* TypeTag.swift */,
 				37468219235F122100380AFC /* World.swift */,
 				3764E9AE2371BBF500971781 /* ActivityViewController.swift */,
+				3767F7F423A9263A0037C402 /* Int+StringValue.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -419,6 +430,7 @@
 				TargetAttributes = {
 					373AAE922399391000E142AD = {
 						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1130;
 					};
 					373AAE9E2399391100E142AD = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -521,10 +533,12 @@
 				373AAEC0239939C400E142AD /* AddMealButton.swift in Sources */,
 				373AAEA72399391100E142AD /* HostingController.swift in Sources */,
 				373AAEA52399391100E142AD /* ContentView.swift in Sources */,
+				37E7B96423A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift in Sources */,
 				373AAEAB2399391200E142AD /* NotificationController.swift in Sources */,
 				373AAEC723993B3400E142AD /* Meal+Identifiable.swift in Sources */,
 				373AAEC523993B3400E142AD /* Meal+CoreDataClass.swift in Sources */,
 				373AAEC923993B3D00E142AD /* Meals.xcdatamodeld in Sources */,
+				37E7B96223A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift in Sources */,
 				373AAEC823993B3400E142AD /* PersistentContainer.swift in Sources */,
 				373AAECA23993B5900E142AD /* World.swift in Sources */,
 				373AAECD23993BF900E142AD /* AddMealView.swift in Sources */,
@@ -549,7 +563,9 @@
 				37CB3418235F13F400AAB41D /* ContentView.swift in Sources */,
 				3746821F235F122100380AFC /* Meals.xcdatamodeld in Sources */,
 				37C59360235F452500EAEEB7 /* MealLog.swift in Sources */,
+				37E7B96323A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift in Sources */,
 				37F1556C2361B25900FDF8CA /* Meal+CoreDataProperties.swift in Sources */,
+				3767F7F523A9263A0037C402 /* Int+StringValue.swift in Sources */,
 				37F155662361A91F00FDF8CA /* PersistentContainer.swift in Sources */,
 				37F1556E2361D93B00FDF8CA /* TypeTag.swift in Sources */,
 				3764E9A92371A6AF00971781 /* Settings.swift in Sources */,
@@ -557,6 +573,7 @@
 				3764E9AD2371A6D600971781 /* FileExporter.swift in Sources */,
 				373AAECC23993BF900E142AD /* AddMealView.swift in Sources */,
 				37468224235F122100380AFC /* World.swift in Sources */,
+				37E7B96123A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift in Sources */,
 				37468222235F122100380AFC /* Weight.swift in Sources */,
 				37CB3416235F13E000AAB41D /* SceneDelegate.swift in Sources */,
 				37468220235F122100380AFC /* Meal+CoreDataClass.swift in Sources */,
@@ -618,15 +635,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HH7V8CB5FF;
 				IBSC_MODULE = TrackOnWatch_Extension;
 				INFOPLIST_FILE = TrackOnWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Meals/Models/TrackOnWatch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.1;
@@ -638,15 +663,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HH7V8CB5FF;
 				IBSC_MODULE = TrackOnWatch_Extension;
 				INFOPLIST_FILE = TrackOnWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Meals/Models/TrackOnWatch-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.1;

@@ -11,6 +11,17 @@ import Foundation
 
 struct Statistics: View {
     var days = [Day]()
+
+    private var numberOfAllMeals: String {
+        String(days.map { $0.meals }.joined().count)
+    }
+
+    private var dateOfFirstMeal: String {
+        guard !days.isEmpty else { return "" }
+        return days.sorted { day1, day2 -> Bool in
+            day1.date < day2.date
+        }[0].shortDateString
+    }
     private var multiplierForBars: CGFloat {
         3.5
     }
@@ -20,16 +31,41 @@ struct Statistics: View {
     private var selectableDaysStrings: [String] {
         [
             "day",
-            NumberFormatter.localizedString(from: NSNumber(integerLiteral: selectableDays[selectedNumberOfDays]), number: .spellOut) + " days",
-            "30 days",
+            NumberFormatter.localizedString(
+                from: NSNumber(
+                    integerLiteral: selectableDays[selectedNumberOfDays]
+            ), number: .spellOut)
+                + " days",
+            "30 days"
         ]
     }
     @State private var selectedNumberOfDays = 1
     private var counts: [Int] {
         return [
-            days.prefix(selectableDays[selectedNumberOfDays]).map{ $0.meals }.joined().filter{ meal in meal.type == Type.vegan }.count,
-            days.prefix(selectableDays[selectedNumberOfDays]).map{ $0.meals }.joined().filter{ meal in meal.type == Type.vegetarian }.count,
-            days.prefix(selectableDays[selectedNumberOfDays]).map{ $0.meals }.joined().filter{ meal in meal.type == Type.meat }.count
+            days
+                .prefix(selectableDays[selectedNumberOfDays])
+                .map { $0.meals }
+                .joined()
+                .filter { meal in
+                    meal.type == Type.vegan
+                }
+                .count,
+            days
+                .prefix(selectableDays[selectedNumberOfDays])
+                .map { $0.meals }
+                .joined()
+                .filter { meal in
+                    meal.type == Type.vegetarian
+                }
+                .count,
+            days
+                .prefix(selectableDays[selectedNumberOfDays])
+                .map { $0.meals }
+                .joined()
+                .filter { meal in
+                    meal.type == Type.meat
+                }
+                .count
         ]
     }
     var body: some View {
@@ -42,21 +78,33 @@ struct Statistics: View {
                 }
             }.pickerStyle(SegmentedPickerStyle())
             HStack {
-                Text("\(Type.vegan.stringValue):").frame(width: 100, height: 20, alignment: .leading).padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
-                Rectangle().frame(width: multiplierForBars * CGFloat(counts[0]), height: 20, alignment: .leading).foregroundColor(Type.vegan.color)
+                Text("\(Type.vegan.stringValue):")
+                    .frame(width: 100, height: 20, alignment: .leading)
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                Rectangle()
+                    .frame(width: multiplierForBars * CGFloat(counts[0]), height: 20, alignment: .leading)
+                    .foregroundColor(Type.vegan.color)
                 Text(String(counts[0]))
             }
             HStack {
-                Text("\(Type.vegetarian.stringValue):").frame(width: 100, height: 20, alignment: .leading).padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
-                Rectangle().frame(width: multiplierForBars * CGFloat(counts[1]), height: 20, alignment: .leading).foregroundColor(Type.vegetarian.color)
+                Text("\(Type.vegetarian.stringValue):")
+                    .frame(width: 100, height: 20, alignment: .leading)
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                Rectangle()
+                    .frame(width: multiplierForBars * CGFloat(counts[1]), height: 20, alignment: .leading)
+                    .foregroundColor(Type.vegetarian.color)
                 Text(String(counts[1]))
             }
             HStack {
-                Text("\(Type.meat.stringValue):").frame(width: 100, height: 20, alignment: .leading).padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
-                Rectangle().frame(width: multiplierForBars * CGFloat(counts[2]), height: 20, alignment: .leading).foregroundColor(Type.meat.color)
+                Text("\(Type.meat.stringValue):")
+                    .frame(width: 100, height: 20, alignment: .leading)
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                Rectangle()
+                    .frame(width: multiplierForBars * CGFloat(counts[2]), height: 20, alignment: .leading)
+                    .foregroundColor(Type.meat.color)
                 Text(String(counts[2]))
             }
-            Text("All Meals").font(.title)
+            Text("\(numberOfAllMeals) meals since \(dateOfFirstMeal)").font(.title)
             List(self.days, id: \.self) { day in
                 StatisticsCell(day: day)
             }

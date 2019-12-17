@@ -1,18 +1,95 @@
-{
-  "name": ".swiftlint.default.yml",
-  "path": "iOS/.swiftlint.default.yml",
-  "sha": "142f270034cf724185c60918a21dd1992f968ff4",
-  "size": 1913,
-  "url": "https://api.github.com/repos/adorsys/csi-coding-guidelines/contents/iOS/.swiftlint.default.yml?ref=master",
-  "html_url": "https://github.com/adorsys/csi-coding-guidelines/blob/master/iOS/.swiftlint.default.yml",
-  "git_url": "https://api.github.com/repos/adorsys/csi-coding-guidelines/git/blobs/142f270034cf724185c60918a21dd1992f968ff4",
-  "download_url": "https://raw.githubusercontent.com/adorsys/csi-coding-guidelines/master/iOS/.swiftlint.default.yml",
-  "type": "file",
-  "content": "IyBFbmFibGUgbW9yZSBvcHRpb25hbCBydWxlcwpvcHRfaW5fcnVsZXM6CiAg\nLSBpbXBsaWNpdF9yZXR1cm4KICAtIGxldF92YXJfd2hpdGVzcGFjZQogIC0g\ndW5uZWVkZWRfcGFyZW50aGVzZXNfaW5fY2xvc3VyZV9hcmd1bWVudAogIC0g\nY2xvc3VyZV9zcGFjaW5nCiAgLSBleHBsaWNpdF9pbml0CiAgLSBvdmVycmlk\nZGVuX3N1cGVyX2NhbGwKICAtIGNsb3N1cmVfZW5kX2luZGVudGF0aW9uCiAg\nLSBlbXB0eV9jb3VudAogIC0gZmF0YWxfZXJyb3JfbWVzc2FnZQogIC0gZm9y\nY2VfdW53cmFwcGluZwogIC0gZm9yY2VfdHJ5CiAgLSBmb3JjZV9jYXN0CiAg\nLSBzd2l0Y2hfY2FzZV9vbl9uZXdsaW5lCiAgLSByZWR1bmRhbnRfbmlsX2Nv\nYWxlc2NpbmcKICAtIHByb2hpYml0ZWRfc3VwZXJfY2FsbAogIC0gb3BlcmF0\nb3JfdXNhZ2Vfd2hpdGVzcGFjZQogIC0gbnVtYmVyX3NlcGFyYXRvcgogIC0g\nbmltYmxlX29wZXJhdG9yCiAgLSBpbXBsaWNpdGx5X3Vud3JhcHBlZF9vcHRp\nb25hbAogIC0gYXR0cmlidXRlcwogIC0gZmlyc3Rfd2hlcmUKICAtIG11bHRp\nbGluZV9wYXJhbWV0ZXJzCiAgLSBtdWx0aWxpbmVfYXJndW1lbnRzCiAgLSBk\naXNjb3VyYWdlZF9vcHRpb25hbF9jb2xsZWN0aW9uCiAgLSBkaXNjb3VyYWdl\nZF9vcHRpb25hbF9ib29sZWFuCiAgLSB0cmFpbGluZ19jbG9zdXJlCiAgLSB2\nZXJ0aWNhbF9wYXJhbWV0ZXJfYWxpZ25tZW50X29uX2NhbGwKICAtIG5vX2Zh\nbGx0aHJvdWdoX29ubHkKICAtIGZpbGVfbmFtZQogIC0gZW1wdHlfeGN0ZXN0\nX21ldGhvZAogIC0gY29udmVuaWVuY2VfdHlwZQogIC0gYW55b2JqZWN0X3By\nb3RvY29sCiAgLSBsZWdhY3lfcmFuZG9tCiAgLSBjbG9zdXJlX2JvZHlfbGVu\nZ3RoCiAgLSBpbmVydF9kZWZlcgogIC0gdG9nZ2xlX2Jvb2wKICAtIGlkZW50\naWNhbF9vcGVyYW5kcwogIC0gY29sbGVjdGlvbl9hbGlnbm1lbnQKICAtIHN0\nYXRpY19vcGVyYXRvcgogIC0gbXVsdGlsaW5lX2xpdGVyYWxfYnJhY2tldHMK\nCiMgRXhjbHVkZSBwb2RzIGFuZCB2ZW5kb3Igc291cmNlcwpleGNsdWRlZDoK\nICAtIFBvZHMKICAtIENhcnRoYWdlCiAgLSAuLyovU25hcHNob3RIZWxwZXIu\nc3dpZnQKCiMgQ29uZmlndXJlIHdhcm5pbmcvZXJyb3IgbGV2ZWxzCmZpbGVf\nbGVuZ3RoOgogIHdhcm5pbmc6IDQ1MAogIGVycm9yOiA1MDAKZnVuY3Rpb25f\nYm9keV9sZW5ndGg6CiAgd2FybmluZzogMTAwCiAgZXJyb3I6IDE1MApmdW5j\ndGlvbl9wYXJhbWV0ZXJfY291bnQ6CiAgd2FybmluZzogOQogIGVycm9yOiAx\nMApsaW5lX2xlbmd0aDoKICB3YXJuaW5nOiAxMjAKICBlcnJvcjogMjUwCiAg\naWdub3Jlc19mdW5jdGlvbl9kZWNsYXJhdGlvbnM6IHRydWUKICBpZ25vcmVz\nX2NvbW1lbnRzOiB0cnVlCiAgaWdub3Jlc19pbnRlcnBvbGF0ZWRfc3RyaW5n\nczogdHJ1ZQogIGlnbm9yZXNfdXJsczogdHJ1ZQppZGVudGlmaWVyX25hbWU6\nCiAgbWF4X2xlbmd0aDoKICAgIHdhcm5pbmc6IDQ1CiAgICBlcnJvcjogNjAK\nICBtaW5fbGVuZ3RoOgogICAgd2FybmluZzogMQp0eXBlX25hbWU6CiAgbWF4\nX2xlbmd0aDoKICAgIHdhcm5pbmc6IDQwCiAgICBlcnJvcjogNzAKICBtaW5f\nbGVuZ3RoOgogICAgd2FybmluZzogMwoKIyBDb25maWd1cmUgcnVsZXMgdmlv\nbGF0aW9uIHRvIGJlIHRyZWF0ZWQgYXMgYW4gZXJyb3IKZXhwbGljaXRfaW5p\ndDoKICBzZXZlcml0eTogZXJyb3IKcHJvaGliaXRlZF9zdXBlcl9jYWxsOgog\nIHNldmVyaXR5OiBlcnJvcgpvdmVycmlkZGVuX3N1cGVyX2NhbGw6CiAgc2V2\nZXJpdHk6IGVycm9yCmZvcmNlX3Vud3JhcHBpbmc6CiAgc2V2ZXJpdHk6IGVy\ncm9yCndlYWtfZGVsZWdhdGU6CiAgc2V2ZXJpdHk6IGVycm9yCm11bHRpbGlu\nZV9hcmd1bWVudHM6CiAgb25seV9lbmZvcmNlX2FmdGVyX2ZpcnN0X2Nsb3N1\ncmVfb25fZmlyc3RfbGluZTogdHJ1ZQo=\n",
-  "encoding": "base64",
-  "_links": {
-    "self": "https://api.github.com/repos/adorsys/csi-coding-guidelines/contents/iOS/.swiftlint.default.yml?ref=master",
-    "git": "https://api.github.com/repos/adorsys/csi-coding-guidelines/git/blobs/142f270034cf724185c60918a21dd1992f968ff4",
-    "html": "https://github.com/adorsys/csi-coding-guidelines/blob/master/iOS/.swiftlint.default.yml"
-  }
-}
+disabled_rules:
+  - closure_body_length
+
+# Enable more optional rules
+opt_in_rules:
+  - implicit_return
+  - let_var_whitespace
+  - unneeded_parentheses_in_closure_argument
+  - closure_spacing
+  - explicit_init
+  - overridden_super_call
+  - closure_end_indentation
+  - empty_count
+  - fatal_error_message
+  - force_unwrapping
+  - force_try
+  - force_cast
+  - switch_case_on_newline
+  - redundant_nil_coalescing
+  - prohibited_super_call
+  - operator_usage_whitespace
+  - number_separator
+  - nimble_operator
+  - implicitly_unwrapped_optional
+  - attributes
+  - first_where
+  - multiline_parameters
+  - multiline_arguments
+  - discouraged_optional_collection
+  - discouraged_optional_boolean
+  - trailing_closure
+  - vertical_parameter_alignment_on_call
+  - no_fallthrough_only
+  - file_name
+  - empty_xctest_method
+  - convenience_type
+  - anyobject_protocol
+  - legacy_random
+  - closure_body_length
+  - inert_defer
+  - toggle_bool
+  - identical_operands
+  - collection_alignment
+  - static_operator
+  - multiline_literal_brackets
+
+# Exclude pods and vendor sources
+excluded:
+  - Pods
+  - Carthage
+  - ./*/SnapshotHelper.swift
+
+# Configure warning/error levels
+file_length:
+  warning: 450
+  error: 500
+function_body_length:
+  warning: 100
+  error: 150
+function_parameter_count:
+  warning: 9
+  error: 10
+line_length:
+  warning: 120
+  error: 250
+  ignores_function_declarations: true
+  ignores_comments: true
+  ignores_interpolated_strings: true
+  ignores_urls: true
+identifier_name:
+  max_length:
+    warning: 45
+    error: 60
+  min_length:
+    warning: 1
+type_name:
+  max_length:
+    warning: 40
+    error: 70
+  min_length:
+    warning: 3
+
+# Configure rules violation to be treated as an error
+explicit_init:
+  severity: error
+prohibited_super_call:
+  severity: error
+overridden_super_call:
+  severity: error
+force_unwrapping:
+  severity: error
+weak_delegate:
+  severity: error
+multiline_arguments:
+  only_enforce_after_first_closure_on_first_line: true

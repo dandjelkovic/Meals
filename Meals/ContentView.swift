@@ -23,19 +23,28 @@ struct ContentView: View {
         var dates = [Date]()
 
         meals.forEach { meal in
-            let components = Calendar.current.dateComponents([.year,.month,.day], from: meal.timestamp!)
+            let components = Calendar.current.dateComponents(
+                [.year, .month, .day],
+                //swiftlint:disable:next force_unwrapping
+                from: meal.timestamp!
+            )
+            //swiftlint:disable:next force_unwrapping
             dates.append(Calendar.current.date(from: components)!)
         }
         dates.forEach { date in
             daysDictionary[date] = meals.filter {
-                let components = Calendar.current.dateComponents([.year,.month,.day], from: $0.timestamp!)
+                let components = Calendar.current.dateComponents(
+                    [.year, .month, .day],
+                    //swiftlint:disable:next force_unwrapping
+                    from: $0.timestamp!
+                )
                 return date == Calendar.current.date(from: components)
             }
         }
 
-        return daysDictionary.map { (date, meals) in
-            return Day(date: date, meals: meals)
-        }.sorted { (day1, day2) -> Bool in
+        return daysDictionary.map { date, meals in
+            Day(date: date, meals: meals)
+        }.sorted { day1, day2 -> Bool in
             day1.date > day2.date
         }
     }
@@ -46,23 +55,22 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "book")
                     Text("Meals")
-            }
+                }
             .tag(0)
             Statistics(days: days)
                 .tabItem {
                     Image(systemName: "chart.bar")
                     Text("Statistics")
-            }
+                }
             .tag(1)
             Settings()
                 .tabItem {
                     Image(systemName: "slider.horizontal.3")
                     Text("Settings")
-            }
+                }
             .tag(2)
         }
     }
-
 
 }
 

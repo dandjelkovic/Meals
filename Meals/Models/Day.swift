@@ -21,6 +21,9 @@ public struct Day: Hashable {
     var dateString: String {
         "\(weekday.1) \(dateFormatter.string(from: date))"
     }
+    var shortDateString: String {
+        "\(dateFormatter.string(from: date))"
+    }
     var weekday: (Int, String) {
         let weekdayCount = Calendar.current.component(.weekday, from: self.date)
         let weekdayName = Current.datetimeFormatter.weekdaySymbols[weekdayCount - 1]

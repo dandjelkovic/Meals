@@ -6,11 +6,13 @@
 //  Copyright © 2019 Dalibor Andjelkovic. All rights reserved.
 //
 import SwiftUI
+import CoreData
+import UIKit
 
-enum Weight: String {
+public enum Weight: String {
     case light, medium, heavy
 
-    public var stringValue: String  {
+    public var stringValue: String {
         switch self {
         case .heavy:
             return "Heavy meal"
@@ -21,7 +23,7 @@ enum Weight: String {
         }
     }
 
-    public var intValue: Int  {
+    public var intValue: Int {
         switch self {
         case .heavy:
             return 3
@@ -40,24 +42,29 @@ enum Weight: String {
                 }
             }.frame(width: 80, alignment: .center)
     }
-    
-    public var calories: ClosedRange<Int> {
-        switch self {
-        case .heavy:
-            return 650...1000
-         case .medium:
-            return 300...650
-         case .light:
-            return 200...300
-         }
-    }
-    
-    public var minCalories: Int {
-        return calories.min() ?? 0
-    }
-    
-    public var maxCalories: Int {
-        return calories.max() ?? 0
+
+    public func caloriesCount(context: NSManagedObjectContext) -> Int {
+        let request = NSFetchRequest<CaloriesCount>(entityName: "CaloriesCount")
+
+        do {
+            let objects = try context.fetch(request)
+            if objects.isEmpty {
+                let defaultEntry = CaloriesCount(context: context)
+                defaultEntry.light = CaloriesCount.defaultValues(weight: .light)
+                defaultEntry.medium = CaloriesCount.defaultValues(weight: .medium)
+                defaultEntry.heavy = CaloriesCount.defaultValues(weight: .heavy)
+                do {
+                    try context.save()
+                } catch {
+                    print(error.localizedDescription)
+                }
+                return Int(CaloriesCount.defaultValues(weight: self))
+            }
+            return objects[0].intValue(weight: self)
+        } catch {
+            print(error.localizedDescription)
+        }
+        return 0
     }
 
     public init(rawValue: String) {
@@ -73,4 +80,3 @@ enum Weight: String {
         }
     }
 }
-

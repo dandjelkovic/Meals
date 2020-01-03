@@ -6,7 +6,6 @@
 //  Copyright © 2019 Dalibor Andjelkovic. All rights reserved.
 //
 
-// swiftlint:disable force_unwrapping
 import SwiftUI
 import Foundation
 
@@ -24,7 +23,7 @@ struct StatisticsCell: View {
     }
     private var sumCalories: Int {
         let weightsArray = day.meals.map { $0.weight }
-        return weightsArray.reduce(0, { $0 + $1.caloriesCount(context: managedObjectContext) })
+        return weightsArray.reduce(0) { $0 + $1.caloriesCount(context: managedObjectContext) }
     }
     private var sumCaloriesString: String {
         return String("\(sumCalories) kCal")

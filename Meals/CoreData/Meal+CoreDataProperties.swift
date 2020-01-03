@@ -12,7 +12,8 @@ import CoreData
 
 extension Meal {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Meal> {
+    @nonobjc
+    public class func fetchRequest() -> NSFetchRequest<Meal> {
         return NSFetchRequest<Meal>(entityName: "Meal")
     }
 

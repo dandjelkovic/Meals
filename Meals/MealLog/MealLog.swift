@@ -11,6 +11,7 @@ import SwiftUI
 struct MealLog: View {
     @Environment(\.managedObjectContext)
     var managedObjectContext
+
     @FetchRequest(
         entity: Meal.entity(),
         sortDescriptors: [

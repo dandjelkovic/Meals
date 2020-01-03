@@ -12,7 +12,8 @@ import CoreData
 
 extension CaloriesCount {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<CaloriesCount> {
+    @nonobjc
+    public class func fetchRequest() -> NSFetchRequest<CaloriesCount> {
         return NSFetchRequest<CaloriesCount>(entityName: "CaloriesCount")
     }
 

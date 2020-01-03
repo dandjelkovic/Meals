@@ -13,6 +13,7 @@ struct Settings: View {
         entity: CaloriesCount.entity(),
         sortDescriptors: []
     )
+
     var caloriesCounts: FetchedResults<CaloriesCount>
 
     @State var actionSheetPresented = false

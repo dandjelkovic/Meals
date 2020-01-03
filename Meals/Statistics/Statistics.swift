@@ -32,9 +32,7 @@ struct Statistics: View {
         [
             "day",
             NumberFormatter.localizedString(
-                from: NSNumber(
-                    integerLiteral: selectableDays[selectedNumberOfDays]
-            ), number: .spellOut)
+                from: selectableDays[selectedNumberOfDays] as NSNumber, number: .spellOut)
                 + " days",
             "30 days"
         ]

@@ -12,6 +12,7 @@ import CoreData
 
 //swiftlint:disable force_unwrapping
 class MealsTests: XCTestCase {
+    //swiftlint:disable implicitly_unwrapped_optional
     var managedObjectContext: NSManagedObjectContext!
 
     override func setUp() {

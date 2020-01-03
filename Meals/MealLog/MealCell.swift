@@ -25,8 +25,9 @@ struct MealCell: View {
     }
 }
 
-//struct MealCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        //TODO
-//    }
-//}
+struct MealCell_Previews: PreviewProvider {
+    static var previews: some View {
+        let meal = Meal()
+        return MealCell(meal: meal)
+    }
+}

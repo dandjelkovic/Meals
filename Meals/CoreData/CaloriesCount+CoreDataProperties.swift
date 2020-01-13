@@ -14,7 +14,7 @@ extension CaloriesCount {
 
     @nonobjc
     public class func fetchRequest() -> NSFetchRequest<CaloriesCount> {
-        return NSFetchRequest<CaloriesCount>(entityName: "CaloriesCount")
+        NSFetchRequest<CaloriesCount>(entityName: "CaloriesCount")
     }
 
     @NSManaged public var light: Int16

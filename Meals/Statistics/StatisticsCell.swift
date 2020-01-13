@@ -15,7 +15,7 @@ struct StatisticsCell: View {
 
     var day: Day
     private var typeCounts: [Type: Int] {
-        return [
+        [
             Type.vegan: day.meals.filter { meal in meal.type == Type.vegan }.count,
             Type.vegetarian: day.meals.filter { meal in meal.type == Type.vegetarian }.count,
             Type.meat: day.meals.filter { meal in meal.type == Type.meat }.count
@@ -26,7 +26,7 @@ struct StatisticsCell: View {
         return weightsArray.reduce(0) { $0 + $1.caloriesCount(context: managedObjectContext) }
     }
     private var sumCaloriesString: String {
-        return String("\(sumCalories) kCal")
+        String("\(sumCalories) kCal")
     }
 
     var body: some View {

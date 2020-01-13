@@ -43,7 +43,7 @@ public class Meal: NSManagedObject {
             timestamp = Current.datetimeFormatter.date(from: newValue)
         }
         get {
-            return Current.datetimeFormatter.string(from: timestamp!)
+            Current.datetimeFormatter.string(from: timestamp!)
         }
     }
 
@@ -52,7 +52,7 @@ public class Meal: NSManagedObject {
             timestamp = Current.timeFormatter.date(from: newValue)
         }
         get {
-            return Current.timeFormatter.string(from: timestamp!)
+            Current.timeFormatter.string(from: timestamp!)
         }
     }
 

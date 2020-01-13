@@ -28,7 +28,7 @@ enum Type {
         case .vegetarian:
             return Image("icons8-vegetarian-64")
         case .meat:
-            return Image("icons8-hamburger-64")
+            return Image("icons8-kawaii-steak-64")
         }
     }
 

@@ -49,6 +49,7 @@ struct Settings: View {
 
             }
             Section(header: Text("Backup your data")) {
+                //swiftlint:disable trailing_closure multiple_closures_with_trailing_closure
                 Button(
                     action: {
                         self.actionSheetPresented = true
@@ -63,15 +64,19 @@ struct Settings: View {
                     }
                 )
             }
-            Section(footer: Text("Icons by https://icons8.de/")) {
-                Text("")
+            Section(header: Text("Icons by")) {
+                Button("https://icons8.de/") {
+                    if let url = URL(string: "https://icons8.de/") {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                }
             }
         }
 
     }
 }
 
-struct Export_Previews: PreviewProvider {
+struct Settings_Previews: PreviewProvider {
     static var previews: some View {
         Settings()
     }

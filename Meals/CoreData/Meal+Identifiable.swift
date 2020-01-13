@@ -8,6 +8,6 @@
 
 extension Meal: Identifiable {
     public var id: String {
-        return self.objectID.uriRepresentation().absoluteString
+        self.objectID.uriRepresentation().absoluteString
     }
 }

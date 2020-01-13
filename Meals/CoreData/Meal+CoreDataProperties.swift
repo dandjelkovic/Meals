@@ -14,7 +14,7 @@ extension Meal {
 
     @nonobjc
     public class func fetchRequest() -> NSFetchRequest<Meal> {
-        return NSFetchRequest<Meal>(entityName: "Meal")
+        NSFetchRequest<Meal>(entityName: "Meal")
     }
 
     @NSManaged public var timestamp: Date?

@@ -35,12 +35,11 @@ public enum Weight: String {
     }
 
     public var image: some View {
-        return
-            HStack(alignment: .center, spacing: 0) {
+        HStack(alignment: .center, spacing: 0) {
                 ForEach(1...self.intValue, id: \.self) {_ in
                     Text("🍽")
                 }
-            }.frame(width: 80, alignment: .center)
+        }.frame(width: 80, alignment: .center)
     }
 
     public func caloriesCount(context: NSManagedObjectContext) -> Int {

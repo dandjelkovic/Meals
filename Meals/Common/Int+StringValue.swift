@@ -8,12 +8,12 @@
 
 extension Int {
     var stringValue: String {
-        return String(self)
+        String(self)
     }
 }
 
 extension Int16 {
     var stringValue: String {
-        return String(self)
+        String(self)
     }
 }

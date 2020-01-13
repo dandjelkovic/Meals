@@ -39,7 +39,7 @@ struct Statistics: View {
     }
     @State private var selectedNumberOfDays = 1
     private var counts: [Int] {
-        return [
+        [
             days
                 .prefix(selectableDays[selectedNumberOfDays])
                 .map { $0.meals }

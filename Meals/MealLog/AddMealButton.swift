@@ -30,7 +30,8 @@ struct AddMealButton: View {
                     }
                 }
             }
-            ) {
+        //swiftlint:disable multiple_closures_with_trailing_closure
+        ) {
             VStack {
                 type.icon
                     .resizable()

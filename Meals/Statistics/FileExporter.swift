@@ -11,7 +11,7 @@ import Foundation
 import CoreData
 
 /// ------------------------------------
-/// | timestamp l title | type | weight |
+/// | timestamp | title | type | weight |
 /// ------------------------------------
 
 public struct FileExporter {

@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 import UIKit
 
-public enum Weight: String {
+public enum Weight: String, CaseIterable {
     case light, medium, heavy
 
     public var stringValue: String {

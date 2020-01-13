@@ -43,6 +43,7 @@
 		3764E9AD2371A6D600971781 /* FileExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764E9AC2371A6D600971781 /* FileExporter.swift */; };
 		3764E9AF2371BBF500971781 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764E9AE2371BBF500971781 /* ActivityViewController.swift */; };
 		3767F7F523A9263A0037C402 /* Int+StringValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3767F7F423A9263A0037C402 /* Int+StringValue.swift */; };
+		37B133FF23CCAF450050B376 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B133FE23CCAF450050B376 /* DismissingKeyboard.swift */; };
 		37C5935C235F37EB00EAEEB7 /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5935B235F37EB00EAEEB7 /* StatisticsCell.swift */; };
 		37C59360235F452500EAEEB7 /* MealLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5935F235F452500EAEEB7 /* MealLog.swift */; };
 		37CB3416235F13E000AAB41D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB3415235F13E000AAB41D /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 		37CB341C235F142200AAB41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CB341B235F142200AAB41D /* Assets.xcassets */; };
 		37CB341E235F16C300AAB41D /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB341D235F16C300AAB41D /* Statistics.swift */; };
 		37CB3422235F191500AAB41D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB3421235F191500AAB41D /* Day.swift */; };
+		37CBA12A23CCBAD4005593D6 /* String+extractInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CBA12923CCBAD4005593D6 /* String+extractInt.swift */; };
 		37E7B96123A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7B95F23A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift */; };
 		37E7B96223A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7B95F23A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift */; };
 		37E7B96323A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7B96023A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift */; };
@@ -144,6 +146,7 @@
 		3764E9AC2371A6D600971781 /* FileExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExporter.swift; sourceTree = "<group>"; };
 		3764E9AE2371BBF500971781 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		3767F7F423A9263A0037C402 /* Int+StringValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+StringValue.swift"; sourceTree = "<group>"; };
+		37B133FE23CCAF450050B376 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
 		37C5935B235F37EB00EAEEB7 /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
 		37C5935F235F452500EAEEB7 /* MealLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLog.swift; sourceTree = "<group>"; };
 		37CB3415235F13E000AAB41D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 		37CB341B235F142200AAB41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37CB341D235F16C300AAB41D /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		37CB3421235F191500AAB41D /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		37CBA12923CCBAD4005593D6 /* String+extractInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extractInt.swift"; sourceTree = "<group>"; };
 		37E7B95F23A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaloriesCount+CoreDataClass.swift"; sourceTree = "<group>"; };
 		37E7B96023A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaloriesCount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		37F155652361A91F00FDF8CA /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 				37468219235F122100380AFC /* World.swift */,
 				3764E9AE2371BBF500971781 /* ActivityViewController.swift */,
 				3767F7F423A9263A0037C402 /* Int+StringValue.swift */,
+				37B133FE23CCAF450050B376 /* DismissingKeyboard.swift */,
+				37CBA12923CCBAD4005593D6 /* String+extractInt.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -556,9 +562,11 @@
 			files = (
 				37CB341A235F140800AAB41D /* AppDelegate.swift in Sources */,
 				37468221235F122100380AFC /* AddMealButton.swift in Sources */,
+				37B133FF23CCAF450050B376 /* DismissingKeyboard.swift in Sources */,
 				37CB3422235F191500AAB41D /* Day.swift in Sources */,
 				37F155682361B06D00FDF8CA /* Type.swift in Sources */,
 				3764E9AF2371BBF500971781 /* ActivityViewController.swift in Sources */,
+				37CBA12A23CCBAD4005593D6 /* String+extractInt.swift in Sources */,
 				37CB341E235F16C300AAB41D /* Statistics.swift in Sources */,
 				37CB3418235F13F400AAB41D /* ContentView.swift in Sources */,
 				3746821F235F122100380AFC /* Meals.xcdatamodeld in Sources */,

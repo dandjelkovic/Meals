@@ -13,11 +13,20 @@ struct Settings: View {
         entity: CaloriesCount.entity(),
         sortDescriptors: []
     )
-
     var caloriesCounts: FetchedResults<CaloriesCount>
+
+    @Environment(\.managedObjectContext)
+    var managedObjectContext
+
+    var caloriesCountsString: String {
+        Weight.allCases.map { weight in
+            (caloriesCounts.first?.stringValue(weight: weight) ?? "")
+        }.joined(separator: ", ")
+    }
 
     @State var actionSheetPresented = false
     @State var exportSheetPresented = false
+
     @State var caloriesCountLight = ""
     @State var caloriesCountMedium = ""
     @State var caloriesCountHeavy = ""
@@ -30,23 +39,54 @@ struct Settings: View {
             Section(header: Text("Calories count")) {
                 HStack {
                     Text(Weight.light.stringValue + ":")
-                    TextField(caloriesCounts[0].light.stringValue, text: $caloriesCountLight)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Spacer()
+                    TextField(
+                        caloriesCounts[0].light.stringValue,
+                        text: $caloriesCountLight,
+                        onCommit: {
+                            self.updateCaloriesCount()
+                        }
+                    )
+                        .keyboardType(.default)
+                        .frame(width: 60)
+                        .multilineTextAlignment(.trailing)
                     Text("kCal")
                 }
                 HStack {
                     Text(Weight.medium.stringValue + ":")
-                    TextField(caloriesCounts[0].medium.stringValue, text: $caloriesCountMedium)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Spacer()
+                    TextField(
+                        caloriesCounts[0].medium.stringValue,
+                        text: $caloriesCountMedium,
+                        onCommit: {
+                            self.updateCaloriesCount()
+                        }
+                    )
+                        .keyboardType(.default)
+                        .frame(width: 60)
+                        .multilineTextAlignment(.trailing)
                     Text("kCal")
                 }
                 HStack {
                     Text(Weight.heavy.stringValue + ":")
-                    TextField(caloriesCounts[0].heavy.stringValue, text: $caloriesCountHeavy)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Spacer()
+                    TextField(
+                        caloriesCounts[0].heavy.stringValue,
+                        text: $caloriesCountHeavy,
+                        onCommit: {
+                            self.updateCaloriesCount()
+                        }
+                    )
+                        .keyboardType(.default)
+                        .frame(width: 60)
+                        .multilineTextAlignment(.trailing)
                     Text("kCal")
                 }
 
+            }
+            Section {
+                Text("In database: \(caloriesCountsString)")
+                Text("Default values: \(CaloriesCount.defaultValues(weight: .light)), \(CaloriesCount.defaultValues(weight: .medium)), \(CaloriesCount.defaultValues(weight: .heavy))")
             }
             Section(header: Text("Backup your data")) {
                 //swiftlint:disable trailing_closure multiple_closures_with_trailing_closure
@@ -72,7 +112,41 @@ struct Settings: View {
                 }
             }
         }
+        .onAppear {
+            self.caloriesCountLight = self.caloriesCounts.first?.light.stringValue ?? ""
+            self.caloriesCountMedium = self.caloriesCounts.first?.medium.stringValue ?? ""
+            self.caloriesCountHeavy = self.caloriesCounts.first?.heavy.stringValue ?? ""
+        }
+//        .modifier(DismissingKeyboard())
+    }
 
+    private func updateCaloriesCount() {
+        guard
+            let count = caloriesCounts.first
+        else { return }
+
+        caloriesCountLight = String(caloriesCountLight.extractInt())
+        caloriesCountMedium = String(caloriesCountMedium.extractInt())
+        caloriesCountHeavy = String(caloriesCountHeavy.extractInt())
+
+        count.light = String(caloriesCountLight) != ""
+            ? caloriesCountLight.extractInt16()
+            : CaloriesCount.defaultValues(weight: .light)
+        count.medium = String(caloriesCountMedium) != ""
+            ? caloriesCountMedium.extractInt16()
+            : CaloriesCount.defaultValues(weight: .medium)
+        count.heavy = String(caloriesCountHeavy) != ""
+            ? caloriesCountHeavy.extractInt16()
+            : CaloriesCount.defaultValues(weight: .heavy)
+
+        if self.managedObjectContext.hasChanges {
+            do {
+                try self.managedObjectContext.save()
+
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 

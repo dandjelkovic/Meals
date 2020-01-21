@@ -85,3 +85,7 @@ enum Type {
         }
     }
 }
+
+extension Type: CaseIterable {
+
+}

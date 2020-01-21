@@ -84,10 +84,6 @@ struct Settings: View {
                 }
 
             }
-            Section {
-                Text("In database: \(caloriesCountsString)")
-                Text("Default values: \(CaloriesCount.defaultValues(weight: .light)), \(CaloriesCount.defaultValues(weight: .medium)), \(CaloriesCount.defaultValues(weight: .heavy))")
-            }
             Section(header: Text("Backup your data")) {
                 //swiftlint:disable trailing_closure multiple_closures_with_trailing_closure
                 Button(

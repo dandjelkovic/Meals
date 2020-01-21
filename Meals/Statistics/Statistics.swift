@@ -22,9 +22,7 @@ struct Statistics: View {
             day1.date < day2.date
         }[0].shortDateString
     }
-    private var multiplierForBars: CGFloat {
-        3.5
-    }
+    private let multiplierForBars: CGFloat = 3.5
     private var selectableDays: [Int] {
         [1, 7, 30]
     }
@@ -74,7 +72,9 @@ struct Statistics: View {
                     Text(String(self.selectableDays[index]))
                         .tag(index)
                 }
-            }.pickerStyle(SegmentedPickerStyle())
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .id(1)
             HStack {
                 Text("\(Type.vegan.stringValue):")
                     .frame(width: 100, height: 20, alignment: .leading)
@@ -102,7 +102,12 @@ struct Statistics: View {
                     .foregroundColor(Type.meat.color)
                 Text(String(counts[2]))
             }
-            Text("\(numberOfAllMeals) meals since \(dateOfFirstMeal)").font(.title)
+            HStack {
+                Spacer()
+                Text("\(numberOfAllMeals) meals since \(dateOfFirstMeal)")
+                    .font(.footnote)
+                Spacer()
+            }
             List(self.days, id: \.self) { day in
                 StatisticsCell(day: day)
             }

@@ -24,7 +24,6 @@ struct AddMealButton: View {
                 if self.context.hasChanges {
                     do {
                         try self.context.save()
-
                     } catch {
                         print(error.localizedDescription)
                     }
@@ -35,8 +34,12 @@ struct AddMealButton: View {
             VStack {
                 type.icon
                     .resizable()
-                    .frame(width: 20 * CGFloat(weight.intValue), height: 20 * CGFloat(weight.intValue))
-            }.frame(width: 60, alignment: .center)
+                    .frame(
+                        width: 20 * CGFloat(weight.intValue),
+                        height: 20 * CGFloat(weight.intValue)
+                )
+            }
+            .frame(width: 60, alignment: .center)
         }
     }
 }

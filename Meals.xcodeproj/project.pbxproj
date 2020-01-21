@@ -46,6 +46,7 @@
 		37B133FF23CCAF450050B376 /* DismissingKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B133FE23CCAF450050B376 /* DismissingKeyboard.swift */; };
 		37C5935C235F37EB00EAEEB7 /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5935B235F37EB00EAEEB7 /* StatisticsCell.swift */; };
 		37C59360235F452500EAEEB7 /* MealLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C5935F235F452500EAEEB7 /* MealLog.swift */; };
+		37C89FA423D5A7EC00E7C19D /* EditMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C89FA323D5A7EC00E7C19D /* EditMeal.swift */; };
 		37CB3416235F13E000AAB41D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB3415235F13E000AAB41D /* SceneDelegate.swift */; };
 		37CB3418235F13F400AAB41D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB3417235F13F400AAB41D /* ContentView.swift */; };
 		37CB341A235F140800AAB41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB3419235F140800AAB41D /* AppDelegate.swift */; };
@@ -149,6 +150,7 @@
 		37B133FE23CCAF450050B376 /* DismissingKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissingKeyboard.swift; sourceTree = "<group>"; };
 		37C5935B235F37EB00EAEEB7 /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
 		37C5935F235F452500EAEEB7 /* MealLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealLog.swift; sourceTree = "<group>"; };
+		37C89FA323D5A7EC00E7C19D /* EditMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMeal.swift; sourceTree = "<group>"; };
 		37CB3415235F13E000AAB41D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		37CB3417235F13F400AAB41D /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		37CB3419235F140800AAB41D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				37468215235F122100380AFC /* AddMealButton.swift */,
 				37468217235F122100380AFC /* MealCell.swift */,
 				37C5935F235F452500EAEEB7 /* MealLog.swift */,
+				37C89FA323D5A7EC00E7C19D /* EditMeal.swift */,
 			);
 			path = MealLog;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 			files = (
 				37CB341A235F140800AAB41D /* AppDelegate.swift in Sources */,
 				37468221235F122100380AFC /* AddMealButton.swift in Sources */,
+				37C89FA423D5A7EC00E7C19D /* EditMeal.swift in Sources */,
 				37B133FF23CCAF450050B376 /* DismissingKeyboard.swift in Sources */,
 				37CB3422235F191500AAB41D /* Day.swift in Sources */,
 				37F155682361B06D00FDF8CA /* Type.swift in Sources */,

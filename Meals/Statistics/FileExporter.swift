@@ -20,7 +20,7 @@ public struct FileExporter {
     private let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     static func convert(input: String, CSV: String) {
-        var rows = input.split(separator: "\n").map { String($0) }
+        let rows = input.split(separator: "\n").map { String($0) }
         let content = rows
         content.forEach { line in
             print(line.split(separator: separator))

@@ -35,85 +35,89 @@ struct Settings: View {
     let exporter = FileExporter()
 
     var body: some View {
-        Form {
-            Section(header: Text("Calories count")) {
-                HStack {
-                    Text(Weight.light.stringValue + ":")
-                    Spacer()
-                    TextField(
-                        caloriesCounts[0].light.stringValue,
-                        text: $caloriesCountLight,
-                        onCommit: {
-                            self.updateCaloriesCount()
-                        }
-                    )
-                        .keyboardType(.default)
-                        .frame(width: 60)
-                        .multilineTextAlignment(.trailing)
-                    Text("kCal")
-                }
-                HStack {
-                    Text(Weight.medium.stringValue + ":")
-                    Spacer()
-                    TextField(
-                        caloriesCounts[0].medium.stringValue,
-                        text: $caloriesCountMedium,
-                        onCommit: {
-                            self.updateCaloriesCount()
-                        }
-                    )
-                        .keyboardType(.default)
-                        .frame(width: 60)
-                        .multilineTextAlignment(.trailing)
-                    Text("kCal")
-                }
-                HStack {
-                    Text(Weight.heavy.stringValue + ":")
-                    Spacer()
-                    TextField(
-                        caloriesCounts[0].heavy.stringValue,
-                        text: $caloriesCountHeavy,
-                        onCommit: {
-                            self.updateCaloriesCount()
-                        }
-                    )
-                        .keyboardType(.default)
-                        .frame(width: 60)
-                        .multilineTextAlignment(.trailing)
-                    Text("kCal")
-                }
+        if !caloriesCounts.isEmpty {
+            Form {
+                Section(header: Text("Calories count")) {
+                    HStack {
+                        Text(Weight.light.stringValue + ":")
+                        Spacer()
+                        TextField(
+                            caloriesCounts[0].light.stringValue,
+                            text: $caloriesCountLight,
+                            onCommit: {
+                                self.updateCaloriesCount()
+                            }
+                        )
+                            .keyboardType(.default)
+                            .frame(width: 60)
+                            .multilineTextAlignment(.trailing)
+                        Text("kCal")
+                    }
+                    HStack {
+                        Text(Weight.medium.stringValue + ":")
+                        Spacer()
+                        TextField(
+                            caloriesCounts[0].medium.stringValue,
+                            text: $caloriesCountMedium,
+                            onCommit: {
+                                self.updateCaloriesCount()
+                            }
+                        )
+                            .keyboardType(.default)
+                            .frame(width: 60)
+                            .multilineTextAlignment(.trailing)
+                        Text("kCal")
+                    }
+                    HStack {
+                        Text(Weight.heavy.stringValue + ":")
+                        Spacer()
+                        TextField(
+                            caloriesCounts[0].heavy.stringValue,
+                            text: $caloriesCountHeavy,
+                            onCommit: {
+                                self.updateCaloriesCount()
+                            }
+                        )
+                            .keyboardType(.default)
+                            .frame(width: 60)
+                            .multilineTextAlignment(.trailing)
+                        Text("kCal")
+                    }
 
-            }
-            Section(header: Text("Backup your data")) {
-                //swiftlint:disable trailing_closure multiple_closures_with_trailing_closure
-                Button(
-                    action: {
-                        self.actionSheetPresented = true
-                    }
-                ) {
-                    Text("Backup as CSV file").bold().padding(5).border(Color.secondary)
                 }
-                .sheet(
-                    isPresented: $actionSheetPresented,
-                    content: {
-                        ActivityViewController(items: [self.exportURL as Any])
+                Section(header: Text("Backup your data")) {
+                    //swiftlint:disable trailing_closure multiple_closures_with_trailing_closure
+                    Button(
+                        action: {
+                            self.actionSheetPresented = true
+                        }
+                    ) {
+                        Text("Backup as CSV file").bold().padding(5).border(Color.secondary)
                     }
-                )
-            }
-            Section(header: Text("Icons by")) {
-                Button("https://icons8.de/") {
-                    if let url = URL(string: "https://icons8.de/") {
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    .sheet(
+                        isPresented: $actionSheetPresented,
+                        content: {
+                            ActivityViewController(items: [self.exportURL as Any])
+                        }
+                    )
+                }
+                Section(header: Text("Icons by")) {
+                    Button("https://icons8.de/") {
+                        if let url = URL(string: "https://icons8.de/") {
+                            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        }
                     }
                 }
             }
+            .onAppear {
+                self.caloriesCountLight = self.caloriesCounts.first?.light.stringValue ?? ""
+                self.caloriesCountMedium = self.caloriesCounts.first?.medium.stringValue ?? ""
+                self.caloriesCountHeavy = self.caloriesCounts.first?.heavy.stringValue ?? ""
+            }
+            //        .modifier(DismissingKeyboard())
+        } else {
+            Text("No meals yet").bold()
         }
-        .onAppear {
-            self.caloriesCountLight = self.caloriesCounts.first?.light.stringValue ?? ""
-            self.caloriesCountMedium = self.caloriesCounts.first?.medium.stringValue ?? ""
-            self.caloriesCountHeavy = self.caloriesCounts.first?.heavy.stringValue ?? ""
-        }
-//        .modifier(DismissingKeyboard())
     }
 
     private func updateCaloriesCount() {

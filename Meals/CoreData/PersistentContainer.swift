@@ -18,7 +18,7 @@ class PersistentContainer {
         if _model == nil {
             _model = try loadModel(name: name, bundle: Bundle.main)
         }
-        //swiftlint:disable:next force_unwrapping
+        // swiftlint:disable:next force_unwrapping
         return _model!
     }
     private static func loadModel(name: String, bundle: Bundle) throws -> NSManagedObjectModel {

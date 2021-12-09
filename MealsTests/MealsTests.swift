@@ -10,9 +10,9 @@ import XCTest
 import CoreData
 @testable import Meals
 
-//swiftlint:disable force_unwrapping
+// swiftlint:disable force_unwrapping
 class MealsTests: XCTestCase {
-    //swiftlint:disable implicitly_unwrapped_optional
+    // swiftlint:disable implicitly_unwrapped_optional
     var managedObjectContext: NSManagedObjectContext!
 
     override func setUp() {

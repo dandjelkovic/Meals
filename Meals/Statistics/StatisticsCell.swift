@@ -73,8 +73,8 @@ struct CirlceBackground: View {
     }
 }
 
-//struct StatisticsCell_Previews: PreviewProvider {
+// struct StatisticsCell_Previews: PreviewProvider {
 //    static var previews: some View {
 //        StatisticsCell()
 //    }
-//}
+// }

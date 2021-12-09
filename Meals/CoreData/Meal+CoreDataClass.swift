@@ -15,44 +15,44 @@ import CoreData
 public class Meal: NSManagedObject {
 
     var weight: Weight {
-        set {
-            weightString = newValue.stringValue
-        }
         get {
             guard let weightString = weightString else {
                 return Weight.light
             }
             return Weight(rawValue: weightString)
         }
+        set {
+            weightString = newValue.stringValue
+        }
     }
 
     var type: Type {
-        set {
-            typeString = newValue.stringValue
-        }
         get {
             guard let typeString = typeString else {
                 return Type.vegan
             }
             return Type(rawValue: typeString)
         }
+        set {
+            typeString = newValue.stringValue
+        }
     }
 
     var datetimeString: String {
-        set {
-            timestamp = Current.datetimeFormatter.date(from: newValue)
-        }
         get {
             Current.datetimeFormatter.string(from: timestamp!)
+        }
+        set {
+            timestamp = Current.datetimeFormatter.date(from: newValue)
         }
     }
 
     var timeString: String {
-        set {
-            timestamp = Current.timeFormatter.date(from: newValue)
-        }
         get {
             Current.timeFormatter.string(from: timestamp!)
+        }
+        set {
+            timestamp = Current.timeFormatter.date(from: newValue)
         }
     }
 

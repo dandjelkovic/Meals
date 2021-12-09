@@ -25,17 +25,17 @@ struct ContentView: View {
         meals.forEach { meal in
             let components = Calendar.current.dateComponents(
                 [.year, .month, .day],
-                //swiftlint:disable:next force_unwrapping
+                // swiftlint:disable:next force_unwrapping
                 from: meal.timestamp!
             )
-            //swiftlint:disable:next force_unwrapping
+            // swiftlint:disable:next force_unwrapping
             dates.append(Calendar.current.date(from: components)!)
         }
         dates.forEach { date in
             daysDictionary[date] = meals.filter {
                 let components = Calendar.current.dateComponents(
                     [.year, .month, .day],
-                    //swiftlint:disable:next force_unwrapping
+                    // swiftlint:disable:next force_unwrapping
                     from: $0.timestamp!
                 )
                 return date == Calendar.current.date(from: components)

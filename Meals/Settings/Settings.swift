@@ -86,7 +86,7 @@ struct Settings: View {
 
                 }
                 Section(header: Text("Backup your data")) {
-                    //swiftlint:disable trailing_closure multiple_closures_with_trailing_closure
+                    // swiftlint:disable trailing_closure multiple_closures_with_trailing_closure
                     Button(
                         action: {
                             self.actionSheetPresented = true

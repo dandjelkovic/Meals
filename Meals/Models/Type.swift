@@ -71,7 +71,7 @@ enum Type {
     }
 
     private func iconLengthFor(count: Int) -> CGFloat {
-        //swiftlint:disable:next empty_count
+        // swiftlint:disable:next empty_count
         if count == 0 {
             return 0
         }

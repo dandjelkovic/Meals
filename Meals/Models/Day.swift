@@ -27,7 +27,7 @@ public struct Day: Hashable {
     var weekday: (Int, String) {
         let weekdayCount = Calendar.current.component(.weekday, from: self.date)
         let weekdayName = Current.datetimeFormatter.weekdaySymbols[weekdayCount - 1]
-        //TODO: weekday is shifted by one
+        // TODO: weekday is shifted by one
         return (weekdayCount, weekdayName)
     }
     var meals: [Meal]

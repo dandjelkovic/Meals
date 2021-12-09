@@ -45,7 +45,7 @@ public struct World {
 }
 
 #if DEBUG
-//swiftlint:disable identifier_name
+// swiftlint:disable identifier_name
 public var Current = World()
 #else
 public let Current = World()

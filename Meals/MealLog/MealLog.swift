@@ -17,9 +17,9 @@ struct MealLog: View {
     var body: some View {
         VStack {
             List {
-                ForEach(days, id: \.self) { day in
+                ForEach(days, id: \.id) { day in
                     Section(header: Text(day.dateString)) {
-                        ForEach(day.meals, id: \.id) { meal in
+                        ForEach(day.meals) { meal in
                             MealCell(meal: meal)
                         }
                         .onDelete { indexSet in

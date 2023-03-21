@@ -1,5 +1,5 @@
 //
-//  String+extractInt.swift
+//  String+ExtractInt.swift
 //  Meals
 //
 //  Created by Dalibor Andjelkovic on 13.01.20.

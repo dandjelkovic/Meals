@@ -37,7 +37,7 @@ public struct World {
     var sharedContainer: URL {
         guard let containerURL = FileManager.default.containerURL(
             forSecurityApplicationGroupIdentifier: "group.de.dandjelkovic.Meals"
-            ) else {
+        ) else {
             fatalError("invalid group identifier")
         }
         return containerURL

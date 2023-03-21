@@ -108,7 +108,7 @@ struct Statistics: View {
                     .font(.footnote)
                 Spacer()
             }
-            List(self.days, id: \.self) { day in
+            List(self.days) { day in
                 StatisticsCell(day: day)
             }
         }

@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		373AAE972399391000E142AD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373AAE952399391000E142AD /* Interface.storyboard */; };
 		373AAE992399391100E142AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 373AAE982399391100E142AD /* Assets.xcassets */; };
-		373AAEA02399391100E142AD /* TrackOnWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 373AAE9F2399391100E142AD /* TrackOnWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		373AAEA52399391100E142AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAEA42399391100E142AD /* ContentView.swift */; };
 		373AAEA72399391100E142AD /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAEA62399391100E142AD /* HostingController.swift */; };
 		373AAEA92399391200E142AD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAEA82399391100E142AD /* ExtensionDelegate.swift */; };
@@ -66,13 +65,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		373AAEA12399391100E142AD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 374681DE235F11F600380AFC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 373AAE9E2399391100E142AD;
-			remoteInfo = "TrackOnWatch Extension";
-		};
 		373AAEB52399391200E142AD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 374681DE235F11F600380AFC /* Project object */;
@@ -101,17 +93,6 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		373AAEBB2399391200E142AD /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				373AAEA02399391100E142AD /* TrackOnWatch Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -119,7 +100,6 @@
 		373AAE962399391000E142AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		373AAE982399391100E142AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		373AAE9A2399391100E142AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		373AAE9F2399391100E142AD /* TrackOnWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TrackOnWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		373AAEA42399391100E142AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		373AAEA62399391100E142AD /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		373AAEA82399391100E142AD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
@@ -243,7 +223,6 @@
 				374681E6235F11F600380AFC /* Meals.app */,
 				374681FF235F11F700380AFC /* MealsTests.xctest */,
 				373AAE932399391000E142AD /* TrackOnWatch.app */,
-				373AAE9F2399391100E142AD /* TrackOnWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -360,34 +339,17 @@
 			buildConfigurationList = 373AAEBF2399391200E142AD /* Build configuration list for PBXNativeTarget "TrackOnWatch" */;
 			buildPhases = (
 				373AAE912399391000E142AD /* Resources */,
-				373AAEBB2399391200E142AD /* Embed App Extensions */,
+				373AAE9B2399391100E142AD /* Sources */,
+				373AAE9C2399391100E142AD /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				373AAEA22399391100E142AD /* PBXTargetDependency */,
 			);
 			name = TrackOnWatch;
 			productName = TrackOnWatch;
 			productReference = 373AAE932399391000E142AD /* TrackOnWatch.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		373AAE9E2399391100E142AD /* TrackOnWatch Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 373AAEBE2399391200E142AD /* Build configuration list for PBXNativeTarget "TrackOnWatch Extension" */;
-			buildPhases = (
-				373AAE9B2399391100E142AD /* Sources */,
-				373AAE9C2399391100E142AD /* Frameworks */,
-				373AAE9D2399391100E142AD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "TrackOnWatch Extension";
-			productName = "TrackOnWatch Extension";
-			productReference = 373AAE9F2399391100E142AD /* TrackOnWatch Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
+			productType = "com.apple.product-type.application";
 		};
 		374681E5235F11F600380AFC /* Meals */ = {
 			isa = PBXNativeTarget;
@@ -434,15 +396,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Dalibor Andjelkovic";
 				TargetAttributes = {
 					373AAE922399391000E142AD = {
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1130;
-					};
-					373AAE9E2399391100E142AD = {
-						CreatedOnToolsVersion = 11.2.1;
 					};
 					374681E5235F11F600380AFC = {
 						CreatedOnToolsVersion = 11.1;
@@ -454,7 +413,7 @@
 				};
 			};
 			buildConfigurationList = 374681E1235F11F600380AFC /* Build configuration list for PBXProject "Meals" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -469,7 +428,6 @@
 				374681E5235F11F600380AFC /* Meals */,
 				374681FE235F11F700380AFC /* MealsTests */,
 				373AAE922399391000E142AD /* TrackOnWatch */,
-				373AAE9E2399391100E142AD /* TrackOnWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -480,16 +438,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				373AAE992399391100E142AD /* Assets.xcassets in Resources */,
-				373AAE972399391000E142AD /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		373AAE9D2399391100E142AD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 				373AAEB22399391200E142AD /* Preview Assets.xcassets in Resources */,
 				373AAEC1239939DF00E142AD /* Assets.xcassets in Resources */,
+				373AAE972399391000E142AD /* Interface.storyboard in Resources */,
 				373AAEAF2399391200E142AD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,11 +556,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		373AAEA22399391100E142AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 373AAE9E2399391100E142AD /* TrackOnWatch Extension */;
-			targetProxy = 373AAEA12399391100E142AD /* PBXContainerItemProxy */;
-		};
 		373AAEB62399391200E142AD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 373AAE922399391000E142AD /* TrackOnWatch */;
@@ -647,16 +593,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HH7V8CB5FF;
-				IBSC_MODULE = TrackOnWatch_Extension;
 				INFOPLIST_FILE = TrackOnWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -666,7 +611,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Debug;
 		};
@@ -675,16 +620,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HH7V8CB5FF;
-				IBSC_MODULE = TrackOnWatch_Extension;
 				INFOPLIST_FILE = TrackOnWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -693,55 +637,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Meals/Models/TrackOnWatch-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Release;
-		};
-		373AAEBC2399391200E142AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"TrackOnWatch Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = HH7V8CB5FF;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "TrackOnWatch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
-			};
-			name = Debug;
-		};
-		373AAEBD2399391200E142AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"TrackOnWatch Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = HH7V8CB5FF;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "TrackOnWatch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
 		};
@@ -871,6 +767,7 @@
 				DEVELOPMENT_TEAM = HH7V8CB5FF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Meals/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -893,6 +790,7 @@
 				DEVELOPMENT_TEAM = HH7V8CB5FF;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Meals/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -913,7 +811,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HH7V8CB5FF;
 				INFOPLIST_FILE = MealsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -935,7 +833,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HH7V8CB5FF;
 				INFOPLIST_FILE = MealsTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -952,15 +850,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		373AAEBE2399391200E142AD /* Build configuration list for PBXNativeTarget "TrackOnWatch Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				373AAEBC2399391200E142AD /* Debug */,
-				373AAEBD2399391200E142AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		373AAEBF2399391200E142AD /* Build configuration list for PBXNativeTarget "TrackOnWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

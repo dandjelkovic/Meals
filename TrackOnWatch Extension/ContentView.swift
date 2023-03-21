@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     // swiftlint:disable:next force_cast
-    var managedObjectContext = (WKExtension.shared().delegate as! ExtensionDelegate).persistentContainer.viewContext
+    var managedObjectContext = (WKApplication.shared().delegate as! ExtensionDelegate).persistentContainer.viewContext
 
     var body: some View {
         AddMealView(context: managedObjectContext)

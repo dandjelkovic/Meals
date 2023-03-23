@@ -6,7 +6,6 @@ disabled_rules:
 
 # Enable more optional rules
 opt_in_rules:
-  - implicit_return
   - let_var_whitespace
   - unneeded_parentheses_in_closure_argument
   - closure_spacing
@@ -46,6 +45,7 @@ opt_in_rules:
   - collection_alignment
   - static_operator
   - multiline_literal_brackets
+  - weak_delegate
 
 # Exclude pods and vendor sources
 excluded:

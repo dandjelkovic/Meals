@@ -7,12 +7,22 @@
 //
 
 import SwiftUI
+import WatchConnectivity
 
 @main
-struct MealsOnWatch_Watch_AppApp: App {
+struct MealsOnWatchApp: App {
+    @Environment(\.scenePhase) private var scenePhase
+    let wcSessionDelegator = WCSessionDelegator()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onChange(of: scenePhase) { newScenePhase in
+                    if newScenePhase == .active {
+                        WCSession.default.delegate = wcSessionDelegator
+                        WCSession.default.activate()
+                    }
+                }
         }
     }
 }

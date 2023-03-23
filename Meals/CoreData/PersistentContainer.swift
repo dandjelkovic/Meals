@@ -11,7 +11,7 @@ import SwiftUI
 import CoreData
 import CloudKit
 
-class PersistentContainer {
+enum PersistentContainer {
     private static var _model: NSManagedObjectModel?
 
     private static func model(name: String) throws -> NSManagedObjectModel {
@@ -28,7 +28,7 @@ class PersistentContainer {
 
         guard let model = NSManagedObjectModel(contentsOf: modelURL) else {
             throw CoreDataError.modelLoadingFailed(forURL: modelURL)
-       }
+        }
         return model
     }
 

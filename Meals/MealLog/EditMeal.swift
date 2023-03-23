@@ -13,6 +13,8 @@ import Combine
 struct EditMeal: View {
     @Environment(\.presentationMode)
     var presentationMode
+    @Environment(\.managedObjectContext)
+    var managedObjectContext
 
     @State private var title = ""
     @State private var type = 0
@@ -20,7 +22,7 @@ struct EditMeal: View {
     @State private var weight = 0
 
     var meal: Meal
-    private let mealTypes = Type.allCases
+    private let mealTypes = MealType.allCases
     private let mealWeights = Weight.allCases
 
     var body: some View {

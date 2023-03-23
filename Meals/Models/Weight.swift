@@ -36,9 +36,9 @@ public enum Weight: String, CaseIterable {
 
     public var image: some View {
         HStack(alignment: .center, spacing: 0) {
-                ForEach(1...self.intValue, id: \.self) {_ in
-                    Text("🍽")
-                }
+            ForEach(1...self.intValue, id: \.self) {_ in
+                Text("🍽")
+            }
         }.frame(width: 80, alignment: .center)
     }
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import WatchConnectivity
 
 public struct World {
     var date = { Date() }
@@ -34,14 +35,12 @@ public struct World {
         return dateFormatter
     }
     let userDefaults = UserDefaults.standard
-    var sharedContainer: URL {
-        guard let containerURL = FileManager.default.containerURL(
-            forSecurityApplicationGroupIdentifier: "group.de.dandjelkovic.Meals"
-        ) else {
-            fatalError("invalid group identifier")
-        }
-        return containerURL
+    enum NotificationTypes {
+        case receiveNewMeal
     }
+    let notificationNames = [
+        NotificationTypes.receiveNewMeal: NSNotification.Name(rawValue: "receiveNewMeal")
+    ]
 }
 
 #if DEBUG

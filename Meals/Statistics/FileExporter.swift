@@ -46,7 +46,7 @@ public struct FileExporter {
         let filePath = NSTemporaryDirectory()
             .appending(
                 "Meals-export_\(Current.datetimeForBackup.string(from: Date())).csv"
-        )
+            )
         let fileURL = URL(fileURLWithPath: filePath, isDirectory: false)
         do {
             try data?.write(to: fileURL)

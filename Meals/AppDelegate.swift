@@ -8,12 +8,20 @@
 
 import UIKit
 import CoreData
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    private lazy var wcSessionDelegator: WCSessionDelegator = {
+        WCSessionDelegator()
+    }()
+
     // swiftlint:disable discouraged_optional_collection
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        assert(WCSession.isSupported(), "This sample requires Watch Connectivity support!")
+        WCSession.default.delegate = wcSessionDelegator
+        WCSession.default.activate()
+
         return true
     }
 
@@ -39,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          creates and returns a container, having Meals the store for the
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
-        */
+         */
         let container = PersistentContainer.container(with: "Meals")
         container.loadPersistentStores { storeDescription, error in
             print(storeDescription.debugDescription)

@@ -26,12 +26,12 @@ public class Meal: NSManagedObject {
         }
     }
 
-    var type: Type {
+    var type: MealType {
         get {
             guard let typeString = typeString else {
-                return Type.vegan
+                return MealType.vegan
             }
-            return Type(rawValue: typeString)
+            return MealType(rawValue: typeString)
         }
         set {
             typeString = newValue.stringValue

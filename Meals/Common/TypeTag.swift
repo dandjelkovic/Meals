@@ -9,18 +9,18 @@
 import SwiftUI
 
 struct TypeTag: View {
-    var type: Type
+    var type: MealType
     var color: Color = Color.blue
 
     var body: some View {
         Text(verbatim: self.type.stringValue)
             .font(Font.system(size: 12))
-        .foregroundColor(color)
+            .foregroundColor(color)
             .padding(2)
             .overlay(
                 RoundedRectangle(cornerRadius: 2)
                     .stroke(color, lineWidth: 1)
-        )
+            )
     }
 }
 

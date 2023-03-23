@@ -9,18 +9,32 @@
 /* Begin PBXBuildFile section */
 		2B745C1B29C9B49200C10090 /* MealsOnWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C1A29C9B49200C10090 /* MealsOnWatchApp.swift */; };
 		2B745C1D29C9B49200C10090 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C1C29C9B49200C10090 /* ContentView.swift */; };
-		2B745C1F29C9B49200C10090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B745C1E29C9B49200C10090 /* Assets.xcassets */; };
 		2B745C2229C9B49200C10090 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B745C2129C9B49200C10090 /* Preview Assets.xcassets */; };
 		2B745C2C29C9B49200C10090 /* MealsOnWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C2B29C9B49200C10090 /* MealsOnWatch_Watch_AppTests.swift */; };
-		2B745C3629C9B49200C10090 /* MealsOnWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C3529C9B49200C10090 /* MealsOnWatch_Watch_AppUITests.swift */; };
-		2B745C3829C9B49200C10090 /* MealsOnWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C3729C9B49200C10090 /* MealsOnWatch_Watch_AppUITestsLaunchTests.swift */; };
+		2B745C6329CB188100C10090 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468219235F122100380AFC /* World.swift */; };
+		2B745C6729CB1FAA00C10090 /* WCSessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C6629CB1FAA00C10090 /* WCSessionDelegator.swift */; };
+		2B745C6829CB1FAC00C10090 /* WCSessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C6629CB1FAA00C10090 /* WCSessionDelegator.swift */; };
+		2B745C6D29CB7D0D00C10090 /* MealsOnWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B745C1829C9B49200C10090 /* MealsOnWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B745C7129CC607800C10090 /* AddMealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C7029CC607800C10090 /* AddMealViewModel.swift */; };
+		2B745C7329CC60F300C10090 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C7229CC60F300C10090 /* MealModel.swift */; };
+		2B745C7429CC60F300C10090 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C7229CC60F300C10090 /* MealModel.swift */; };
+		2B745C7529CC611600C10090 /* MealType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155672361B06D00FDF8CA /* MealType.swift */; };
+		2B745C7729CC618400C10090 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468216235F122100380AFC /* Weight.swift */; };
+		2B745C7829CC61A900C10090 /* CaloriesCount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7B95F23A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift */; };
+		2B745C7929CC61DE00C10090 /* CaloriesCount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7B96023A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift */; };
+		2B745C7B29CC620300C10090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B745C7A29CC620300C10090 /* Assets.xcassets */; };
+		2B745C7C29CC803600C10090 /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAECB23993BF900E142AD /* AddMealView.swift */; };
+		2B745C8029CC893700C10090 /* AddMealViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C7F29CC893700C10090 /* AddMealViewModelProtocol.swift */; };
+		2B745C8229CC89CF00C10090 /* AddMealWatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8129CC89CF00C10090 /* AddMealWatchViewModel.swift */; };
+		2B745C8329CC89E400C10090 /* AddMealViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C7F29CC893700C10090 /* AddMealViewModelProtocol.swift */; };
+		2B745C8429CC8A4000C10090 /* AddMealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468215235F122100380AFC /* AddMealButton.swift */; };
+		2B745C8629CC8A4A00C10090 /* AddMealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8529CC8A4600C10090 /* AddMealButton.swift */; };
 		373AAECC23993BF900E142AD /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAECB23993BF900E142AD /* AddMealView.swift */; };
 		374681F6235F11F700380AFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374681F5235F11F700380AFC /* Preview Assets.xcassets */; };
 		374681F9235F11F700380AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374681F7235F11F700380AFC /* LaunchScreen.storyboard */; };
 		37468204235F11F700380AFC /* MealsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468203235F11F700380AFC /* MealsTests.swift */; };
 		3746821F235F122100380AFC /* Meals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37468211235F122000380AFC /* Meals.xcdatamodeld */; };
 		37468220235F122100380AFC /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468213235F122000380AFC /* Meal+CoreDataClass.swift */; };
-		37468221235F122100380AFC /* AddMealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468215235F122100380AFC /* AddMealButton.swift */; };
 		37468222235F122100380AFC /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468216235F122100380AFC /* Weight.swift */; };
 		37468223235F122100380AFC /* MealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468217235F122100380AFC /* MealCell.swift */; };
 		37468224235F122100380AFC /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468219235F122100380AFC /* World.swift */; };
@@ -42,7 +56,7 @@
 		37E7B96123A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7B95F23A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift */; };
 		37E7B96323A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7B96023A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift */; };
 		37F155662361A91F00FDF8CA /* PersistentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155652361A91F00FDF8CA /* PersistentContainer.swift */; };
-		37F155682361B06D00FDF8CA /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155672361B06D00FDF8CA /* Type.swift */; };
+		37F155682361B06D00FDF8CA /* MealType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155672361B06D00FDF8CA /* MealType.swift */; };
 		37F1556C2361B25900FDF8CA /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */; };
 		37F1556E2361D93B00FDF8CA /* TypeTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F1556D2361D93B00FDF8CA /* TypeTag.swift */; };
 		37F155712362244900FDF8CA /* Meal+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F155702362244900FDF8CA /* Meal+Identifiable.swift */; };
@@ -50,13 +64,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		2B745C2829C9B49200C10090 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 374681DE235F11F600380AFC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2B745C1729C9B49200C10090;
-			remoteInfo = "MealsOnWatch Watch App";
-		};
-		2B745C3229C9B49200C10090 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 374681DE235F11F600380AFC /* Project object */;
 			proxyType = 1;
@@ -73,12 +80,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2B745C5B29CB06F000C10090 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		373AAEB82399391200E142AD /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstPath = "$(CONTENTS_FOLDER_PATH)/MealsOnWatch Watch App";
 			dstSubfolderSpec = 16;
 			files = (
+				2B745C6D29CB7D0D00C10090 /* MealsOnWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,13 +107,17 @@
 		2B745C1829C9B49200C10090 /* MealsOnWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MealsOnWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B745C1A29C9B49200C10090 /* MealsOnWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsOnWatchApp.swift; sourceTree = "<group>"; };
 		2B745C1C29C9B49200C10090 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2B745C1E29C9B49200C10090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B745C2129C9B49200C10090 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B745C2729C9B49200C10090 /* MealsOnWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MealsOnWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B745C2B29C9B49200C10090 /* MealsOnWatch_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsOnWatch_Watch_AppTests.swift; sourceTree = "<group>"; };
-		2B745C3129C9B49200C10090 /* MealsOnWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MealsOnWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B745C3529C9B49200C10090 /* MealsOnWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsOnWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
-		2B745C3729C9B49200C10090 /* MealsOnWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsOnWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B745C6629CB1FAA00C10090 /* WCSessionDelegator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCSessionDelegator.swift; sourceTree = "<group>"; };
+		2B745C6E29CB802500C10090 /* MealsOnWatch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MealsOnWatch-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2B745C7029CC607800C10090 /* AddMealViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewModel.swift; sourceTree = "<group>"; };
+		2B745C7229CC60F300C10090 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
+		2B745C7A29CC620300C10090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B745C7F29CC893700C10090 /* AddMealViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewModelProtocol.swift; sourceTree = "<group>"; };
+		2B745C8129CC89CF00C10090 /* AddMealWatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealWatchViewModel.swift; sourceTree = "<group>"; };
+		2B745C8529CC8A4600C10090 /* AddMealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealButton.swift; sourceTree = "<group>"; };
 		373AAECB23993BF900E142AD /* AddMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealView.swift; sourceTree = "<group>"; };
 		374681E6235F11F600380AFC /* Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		374681F5235F11F700380AFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -128,7 +150,7 @@
 		37E7B95F23A91B1800C1FE74 /* CaloriesCount+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaloriesCount+CoreDataClass.swift"; sourceTree = "<group>"; };
 		37E7B96023A91B1800C1FE74 /* CaloriesCount+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CaloriesCount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		37F155652361A91F00FDF8CA /* PersistentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentContainer.swift; sourceTree = "<group>"; };
-		37F155672361B06D00FDF8CA /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		37F155672361B06D00FDF8CA /* MealType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealType.swift; sourceTree = "<group>"; };
 		37F1556A2361B25900FDF8CA /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		37F1556D2361D93B00FDF8CA /* TypeTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTag.swift; sourceTree = "<group>"; };
 		37F155702362244900FDF8CA /* Meal+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+Identifiable.swift"; sourceTree = "<group>"; };
@@ -143,13 +165,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2B745C2429C9B49200C10090 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2B745C2E29C9B49200C10090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -176,9 +191,12 @@
 		2B745C1929C9B49200C10090 /* MealsOnWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				2B745C1A29C9B49200C10090 /* MealsOnWatchApp.swift */,
+				2B745C7A29CC620300C10090 /* Assets.xcassets */,
+				2B745C6E29CB802500C10090 /* MealsOnWatch-Info.plist */,
+				37468215235F122100380AFC /* AddMealButton.swift */,
+				2B745C8129CC89CF00C10090 /* AddMealWatchViewModel.swift */,
 				2B745C1C29C9B49200C10090 /* ContentView.swift */,
-				2B745C1E29C9B49200C10090 /* Assets.xcassets */,
+				2B745C1A29C9B49200C10090 /* MealsOnWatchApp.swift */,
 				2B745C2029C9B49200C10090 /* Preview Content */,
 			);
 			path = "MealsOnWatch Watch App";
@@ -200,13 +218,22 @@
 			path = "MealsOnWatch Watch AppTests";
 			sourceTree = "<group>";
 		};
-		2B745C3429C9B49200C10090 /* MealsOnWatch Watch AppUITests */ = {
+		2B745C4529CA049200C10090 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2B745C3529C9B49200C10090 /* MealsOnWatch_Watch_AppUITests.swift */,
-				2B745C3729C9B49200C10090 /* MealsOnWatch_Watch_AppUITestsLaunchTests.swift */,
 			);
-			path = "MealsOnWatch Watch AppUITests";
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B745C6F29CC604D00C10090 /* AddMeal */ = {
+			isa = PBXGroup;
+			children = (
+				373AAECB23993BF900E142AD /* AddMealView.swift */,
+				2B745C7029CC607800C10090 /* AddMealViewModel.swift */,
+				2B745C8529CC8A4600C10090 /* AddMealButton.swift */,
+				2B745C7F29CC893700C10090 /* AddMealViewModelProtocol.swift */,
+			);
+			path = AddMeal;
 			sourceTree = "<group>";
 		};
 		374681DD235F11F600380AFC = {
@@ -216,8 +243,8 @@
 				37468202235F11F700380AFC /* MealsTests */,
 				2B745C1929C9B49200C10090 /* MealsOnWatch Watch App */,
 				2B745C2A29C9B49200C10090 /* MealsOnWatch Watch AppTests */,
-				2B745C3429C9B49200C10090 /* MealsOnWatch Watch AppUITests */,
 				374681E7235F11F600380AFC /* Products */,
+				2B745C4529CA049200C10090 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -228,7 +255,6 @@
 				374681FF235F11F700380AFC /* MealsTests.xctest */,
 				2B745C1829C9B49200C10090 /* MealsOnWatch Watch App.app */,
 				2B745C2729C9B49200C10090 /* MealsOnWatch Watch AppTests.xctest */,
-				2B745C3129C9B49200C10090 /* MealsOnWatch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -303,6 +329,7 @@
 				3767F7F423A9263A0037C402 /* Int+StringValue.swift */,
 				37B133FE23CCAF450050B376 /* DismissingKeyboard.swift */,
 				37CBA12923CCBAD4005593D6 /* String+ExtractInt.swift */,
+				2B745C6629CB1FAA00C10090 /* WCSessionDelegator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -311,7 +338,8 @@
 			isa = PBXGroup;
 			children = (
 				37CB3421235F191500AAB41D /* Day.swift */,
-				37F155672361B06D00FDF8CA /* Type.swift */,
+				2B745C7229CC60F300C10090 /* MealModel.swift */,
+				37F155672361B06D00FDF8CA /* MealType.swift */,
 				37468216235F122100380AFC /* Weight.swift */,
 			);
 			path = Models;
@@ -328,8 +356,7 @@
 		37F1556F23621DFC00FDF8CA /* MealLog */ = {
 			isa = PBXGroup;
 			children = (
-				373AAECB23993BF900E142AD /* AddMealView.swift */,
-				37468215235F122100380AFC /* AddMealButton.swift */,
+				2B745C6F29CC604D00C10090 /* AddMeal */,
 				37468217235F122100380AFC /* MealCell.swift */,
 				37C5935F235F452500EAEEB7 /* MealLog.swift */,
 				37C89FA323D5A7EC00E7C19D /* EditMeal.swift */,
@@ -347,12 +374,15 @@
 				2B745C1429C9B49200C10090 /* Sources */,
 				2B745C1529C9B49200C10090 /* Frameworks */,
 				2B745C1629C9B49200C10090 /* Resources */,
+				2B745C5B29CB06F000C10090 /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "MealsOnWatch Watch App";
+			packageProductDependencies = (
+			);
 			productName = "MealsOnWatch Watch App";
 			productReference = 2B745C1829C9B49200C10090 /* MealsOnWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -375,24 +405,6 @@
 			productReference = 2B745C2729C9B49200C10090 /* MealsOnWatch Watch AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2B745C3029C9B49200C10090 /* MealsOnWatch Watch AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2B745C4129C9B49200C10090 /* Build configuration list for PBXNativeTarget "MealsOnWatch Watch AppUITests" */;
-			buildPhases = (
-				2B745C2D29C9B49200C10090 /* Sources */,
-				2B745C2E29C9B49200C10090 /* Frameworks */,
-				2B745C2F29C9B49200C10090 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2B745C3329C9B49200C10090 /* PBXTargetDependency */,
-			);
-			name = "MealsOnWatch Watch AppUITests";
-			productName = "MealsOnWatch Watch AppUITests";
-			productReference = 2B745C3129C9B49200C10090 /* MealsOnWatch Watch AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		374681E5235F11F600380AFC /* Meals */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37468208235F11F700380AFC /* Build configuration list for PBXNativeTarget "Meals" */;
@@ -408,6 +420,8 @@
 			dependencies = (
 			);
 			name = Meals;
+			packageProductDependencies = (
+			);
 			productName = Meals;
 			productReference = 374681E6235F11F600380AFC /* Meals.app */;
 			productType = "com.apple.product-type.application";
@@ -447,10 +461,6 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 2B745C1729C9B49200C10090;
 					};
-					2B745C3029C9B49200C10090 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 2B745C1729C9B49200C10090;
-					};
 					374681E5235F11F600380AFC = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -477,7 +487,6 @@
 				374681FE235F11F700380AFC /* MealsTests */,
 				2B745C1729C9B49200C10090 /* MealsOnWatch Watch App */,
 				2B745C2629C9B49200C10090 /* MealsOnWatch Watch AppTests */,
-				2B745C3029C9B49200C10090 /* MealsOnWatch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -488,18 +497,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B745C2229C9B49200C10090 /* Preview Assets.xcassets in Resources */,
-				2B745C1F29C9B49200C10090 /* Assets.xcassets in Resources */,
+				2B745C7B29CC620300C10090 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2B745C2529C9B49200C10090 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2B745C2F29C9B49200C10090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -528,7 +530,6 @@
 /* Begin PBXShellScriptBuildPhase section */
 		373AAECE239A56E100E142AD /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -542,8 +543,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# use swiftlint if installed via homebrew M1 macs: brew install swiftlint\nSWIFTLINT_PATH=\"/opt/homebrew/bin/swiftlint\"\nSWIFTLINT_CONFIG_PATH=\".swiftlint.yml\"\n\nif test -f \"$SWIFTLINT_PATH\"; then\n    \"${SWIFTLINT_PATH}\" autocorrect --config ${SWIFTLINT_CONFIG_PATH}\n    \"${SWIFTLINT_PATH}\" lint --config ${SWIFTLINT_CONFIG_PATH}\nfi\n";
+			shellPath = /bin/zsh;
+			shellScript = "SWIFTLINT_PATH=\"/opt/homebrew/bin/swiftlint\" # depending on your swiftlint install. E.g. this path is for M1 macs using $ brew install swiftlint\nSWIFTLINT_CONFIG_PATH=\".swiftlint.yml\"\n\nif test -f \"$SWIFTLINT_PATH\";\nthen\n    \"${SWIFTLINT_PATH}\" autocorrect --config ${SWIFTLINT_CONFIG_PATH} .\n    \"${SWIFTLINT_PATH}\" lint --config ${SWIFTLINT_CONFIG_PATH} .\nelse\n    echo \"Swiftlint not installed or reachable within the configured SWIFTLINT_PATH. Use `brew install swiftlint`\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -552,8 +553,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B745C7429CC60F300C10090 /* MealModel.swift in Sources */,
+				2B745C8429CC8A4000C10090 /* AddMealButton.swift in Sources */,
+				2B745C8329CC89E400C10090 /* AddMealViewModelProtocol.swift in Sources */,
+				2B745C7829CC61A900C10090 /* CaloriesCount+CoreDataClass.swift in Sources */,
+				2B745C6829CB1FAC00C10090 /* WCSessionDelegator.swift in Sources */,
+				2B745C7929CC61DE00C10090 /* CaloriesCount+CoreDataProperties.swift in Sources */,
+				2B745C8229CC89CF00C10090 /* AddMealWatchViewModel.swift in Sources */,
+				2B745C6329CB188100C10090 /* World.swift in Sources */,
 				2B745C1D29C9B49200C10090 /* ContentView.swift in Sources */,
+				2B745C7529CC611600C10090 /* MealType.swift in Sources */,
+				2B745C7729CC618400C10090 /* Weight.swift in Sources */,
 				2B745C1B29C9B49200C10090 /* MealsOnWatchApp.swift in Sources */,
+				2B745C7C29CC803600C10090 /* AddMealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,28 +577,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2B745C2D29C9B49200C10090 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2B745C3829C9B49200C10090 /* MealsOnWatch_Watch_AppUITestsLaunchTests.swift in Sources */,
-				2B745C3629C9B49200C10090 /* MealsOnWatch_Watch_AppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		374681E2235F11F600380AFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				37CB341A235F140800AAB41D /* AppDelegate.swift in Sources */,
-				37468221235F122100380AFC /* AddMealButton.swift in Sources */,
 				37C89FA423D5A7EC00E7C19D /* EditMeal.swift in Sources */,
+				2B745C6729CB1FAA00C10090 /* WCSessionDelegator.swift in Sources */,
 				37B133FF23CCAF450050B376 /* DismissingKeyboard.swift in Sources */,
 				37CB3422235F191500AAB41D /* Day.swift in Sources */,
-				37F155682361B06D00FDF8CA /* Type.swift in Sources */,
+				37F155682361B06D00FDF8CA /* MealType.swift in Sources */,
 				3764E9AF2371BBF500971781 /* ActivityViewController.swift in Sources */,
 				37CBA12A23CCBAD4005593D6 /* String+ExtractInt.swift in Sources */,
+				2B745C7129CC607800C10090 /* AddMealViewModel.swift in Sources */,
 				37CB341E235F16C300AAB41D /* Statistics.swift in Sources */,
+				2B745C7329CC60F300C10090 /* MealModel.swift in Sources */,
 				37CB3418235F13F400AAB41D /* ContentView.swift in Sources */,
 				3746821F235F122100380AFC /* Meals.xcdatamodeld in Sources */,
 				37C59360235F452500EAEEB7 /* MealLog.swift in Sources */,
@@ -594,6 +599,7 @@
 				37F1556C2361B25900FDF8CA /* Meal+CoreDataProperties.swift in Sources */,
 				3767F7F523A9263A0037C402 /* Int+StringValue.swift in Sources */,
 				37F155662361A91F00FDF8CA /* PersistentContainer.swift in Sources */,
+				2B745C8629CC8A4A00C10090 /* AddMealButton.swift in Sources */,
 				37F1556E2361D93B00FDF8CA /* TypeTag.swift in Sources */,
 				3764E9A92371A6AF00971781 /* Settings.swift in Sources */,
 				37468223235F122100380AFC /* MealCell.swift in Sources */,
@@ -606,6 +612,7 @@
 				37468220235F122100380AFC /* Meal+CoreDataClass.swift in Sources */,
 				37F155712362244900FDF8CA /* Meal+Identifiable.swift in Sources */,
 				37C5935C235F37EB00EAEEB7 /* StatisticsCell.swift in Sources */,
+				2B745C8029CC893700C10090 /* AddMealViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,11 +631,6 @@
 			isa = PBXTargetDependency;
 			target = 2B745C1729C9B49200C10090 /* MealsOnWatch Watch App */;
 			targetProxy = 2B745C2829C9B49200C10090 /* PBXContainerItemProxy */;
-		};
-		2B745C3329C9B49200C10090 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2B745C1729C9B49200C10090 /* MealsOnWatch Watch App */;
-			targetProxy = 2B745C3229C9B49200C10090 /* PBXContainerItemProxy */;
 		};
 		37468201235F11F700380AFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -652,6 +654,7 @@
 		2B745C3929C9B49200C10090 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -661,15 +664,16 @@
 				DEVELOPMENT_TEAM = K5D6HR6W32;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MealsOnWatch-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MealsOnWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.dandjelkovic.Meals;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -683,6 +687,7 @@
 		2B745C3A29C9B49200C10090 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -692,15 +697,16 @@
 				DEVELOPMENT_TEAM = K5D6HR6W32;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MealsOnWatch-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = MealsOnWatch;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = de.dandjelkovic.Meals;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = de.dandjelkovic.Meals.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -751,48 +757,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MealsOnWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MealsOnWatch Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Release;
-		};
-		2B745C3D29C9B49200C10090 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K5D6HR6W32;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.dandjelkovic.MealsOnWatch-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "MealsOnWatch Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		2B745C3E29C9B49200C10090 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K5D6HR6W32;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "de.dandjelkovic.MealsOnWatch-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "MealsOnWatch Watch App";
 				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
@@ -848,7 +812,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -903,7 +867,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1020,15 +984,6 @@
 			buildConfigurations = (
 				2B745C3B29C9B49200C10090 /* Debug */,
 				2B745C3C29C9B49200C10090 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2B745C4129C9B49200C10090 /* Build configuration list for PBXNativeTarget "MealsOnWatch Watch AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2B745C3D29C9B49200C10090 /* Debug */,
-				2B745C3E29C9B49200C10090 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

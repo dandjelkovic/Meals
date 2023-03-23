@@ -14,11 +14,11 @@ struct StatisticsCell: View {
     var managedObjectContext
 
     var day: Day
-    private var typeCounts: [Type: Int] {
+    private var typeCounts: [MealType: Int] {
         [
-            Type.vegan: day.meals.filter { meal in meal.type == Type.vegan }.count,
-            Type.vegetarian: day.meals.filter { meal in meal.type == Type.vegetarian }.count,
-            Type.meat: day.meals.filter { meal in meal.type == Type.meat }.count
+            MealType.vegan: day.meals.filter { meal in meal.type == MealType.vegan }.count,
+            MealType.vegetarian: day.meals.filter { meal in meal.type == MealType.vegetarian }.count,
+            MealType.meat: day.meals.filter { meal in meal.type == MealType.meat }.count
         ]
     }
     private var sumCalories: Int {
@@ -33,13 +33,13 @@ struct StatisticsCell: View {
         HStack {
             VStack {
                 HStack {
-                    Type.vegan.iconScaledBy(count: typeCounts[Type.vegan] ?? 0)
+                    MealType.vegan.iconScaledBy(count: typeCounts[MealType.vegan] ?? 0)
                         .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 0))
                 }
                 HStack {
-                    Type.vegetarian.iconScaledBy(count: typeCounts[Type.vegetarian] ?? 0)
+                    MealType.vegetarian.iconScaledBy(count: typeCounts[MealType.vegetarian] ?? 0)
                         .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 0))
-                    Type.meat.iconScaledBy(count: typeCounts[Type.meat] ?? 0)
+                    MealType.meat.iconScaledBy(count: typeCounts[MealType.meat] ?? 0)
                         .padding(EdgeInsets(top: 0, leading: 2, bottom: 0, trailing: 10))
                 }
             }

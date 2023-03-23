@@ -11,6 +11,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectedTab = 0
+    @Environment(\.managedObjectContext)
+    var managedObjectContext
     @FetchRequest(
         entity: Meal.entity(),
         sortDescriptors: [
@@ -18,6 +20,12 @@ struct ContentView: View {
         ]
     )
     var meals: FetchedResults<Meal>
+
+    // add publisher for meals added from WatchApp
+    private let wcMessagePublisher = NotificationCenter.default.publisher(
+        for: Current.notificationNames[.receiveNewMeal]! // swiftlint:disable:this force_unwrapping
+    )
+
     var days: [Day] {
         var daysDictionary = [Date: [Meal]]()
         var dates = [Date]()
@@ -56,19 +64,40 @@ struct ContentView: View {
                     Image(systemName: "book")
                     Text("Meals")
                 }
-            .tag(0)
+                .tag(0)
             Statistics(days: days)
                 .tabItem {
                     Image(systemName: "chart.bar")
                     Text("Statistics")
                 }
-            .tag(1)
+                .tag(1)
             Settings()
                 .tabItem {
                     Image(systemName: "slider.horizontal.3")
                     Text("Settings")
                 }
-            .tag(2)
+                .tag(2)
+        }
+        .onReceive(wcMessagePublisher) { output in
+            if let userInfo = output.userInfo {
+                saveAddedMeal(userInfo)
+            }
+
+        }
+    }
+
+    private func saveAddedMeal(_ userInfo: [AnyHashable: Any]) {
+        let meal = MealModel.fromDict(dict: userInfo)
+        let newMealEntry = Meal(context: managedObjectContext)
+        newMealEntry.weight = meal.weight
+        newMealEntry.timestamp = meal.timestamp
+        newMealEntry.type = meal.type
+        if managedObjectContext.hasChanges {
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
 

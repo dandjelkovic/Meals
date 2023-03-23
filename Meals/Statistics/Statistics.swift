@@ -43,7 +43,7 @@ struct Statistics: View {
                 .map { $0.meals }
                 .joined()
                 .filter { meal in
-                    meal.type == Type.vegan
+                    meal.type == MealType.vegan
                 }
                 .count,
             days
@@ -51,7 +51,7 @@ struct Statistics: View {
                 .map { $0.meals }
                 .joined()
                 .filter { meal in
-                    meal.type == Type.vegetarian
+                    meal.type == MealType.vegetarian
                 }
                 .count,
             days
@@ -59,7 +59,7 @@ struct Statistics: View {
                 .map { $0.meals }
                 .joined()
                 .filter { meal in
-                    meal.type == Type.meat
+                    meal.type == MealType.meat
                 }
                 .count
         ]
@@ -76,30 +76,30 @@ struct Statistics: View {
             .pickerStyle(SegmentedPickerStyle())
             .id(1)
             HStack {
-                Text("\(Type.vegan.stringValue):")
+                Text("\(MealType.vegan.stringValue):")
                     .frame(width: 100, height: 20, alignment: .leading)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                 Rectangle()
                     .frame(width: multiplierForBars * CGFloat(counts[0]), height: 20, alignment: .leading)
-                    .foregroundColor(Type.vegan.color)
+                    .foregroundColor(MealType.vegan.color)
                 Text(String(counts[0]))
             }
             HStack {
-                Text("\(Type.vegetarian.stringValue):")
+                Text("\(MealType.vegetarian.stringValue):")
                     .frame(width: 100, height: 20, alignment: .leading)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                 Rectangle()
                     .frame(width: multiplierForBars * CGFloat(counts[1]), height: 20, alignment: .leading)
-                    .foregroundColor(Type.vegetarian.color)
+                    .foregroundColor(MealType.vegetarian.color)
                 Text(String(counts[1]))
             }
             HStack {
-                Text("\(Type.meat.stringValue):")
+                Text("\(MealType.meat.stringValue):")
                     .frame(width: 100, height: 20, alignment: .leading)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
                 Rectangle()
                     .frame(width: multiplierForBars * CGFloat(counts[2]), height: 20, alignment: .leading)
-                    .foregroundColor(Type.meat.color)
+                    .foregroundColor(MealType.meat.color)
                 Text(String(counts[2]))
             }
             HStack {

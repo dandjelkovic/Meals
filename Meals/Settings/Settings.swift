@@ -48,9 +48,9 @@ struct Settings: View {
                                 self.updateCaloriesCount()
                             }
                         )
-                            .keyboardType(.default)
-                            .frame(width: 60)
-                            .multilineTextAlignment(.trailing)
+                        .keyboardType(.default)
+                        .frame(width: 60)
+                        .multilineTextAlignment(.trailing)
                         Text("kCal")
                     }
                     HStack {
@@ -63,9 +63,9 @@ struct Settings: View {
                                 self.updateCaloriesCount()
                             }
                         )
-                            .keyboardType(.default)
-                            .frame(width: 60)
-                            .multilineTextAlignment(.trailing)
+                        .keyboardType(.default)
+                        .frame(width: 60)
+                        .multilineTextAlignment(.trailing)
                         Text("kCal")
                     }
                     HStack {
@@ -78,9 +78,9 @@ struct Settings: View {
                                 self.updateCaloriesCount()
                             }
                         )
-                            .keyboardType(.default)
-                            .frame(width: 60)
-                            .multilineTextAlignment(.trailing)
+                        .keyboardType(.default)
+                        .frame(width: 60)
+                        .multilineTextAlignment(.trailing)
                         Text("kCal")
                     }
 

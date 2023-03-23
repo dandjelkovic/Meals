@@ -7,7 +7,7 @@
 //
 import SwiftUI
 
-enum Type {
+enum MealType: CaseIterable {
     case vegan, vegetarian, meat
 
     public var stringValue: String {
@@ -84,8 +84,4 @@ enum Type {
             return 40
         }
     }
-}
-
-extension Type: CaseIterable {
-
 }

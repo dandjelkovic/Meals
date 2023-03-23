@@ -31,7 +31,7 @@ struct MealLog: View {
             }
             Divider()
             Text("What did you eat?").bold()
-            AddMealView(context: managedObjectContext)
+            AddMealView()
         }
     }
 

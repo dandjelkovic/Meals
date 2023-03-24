@@ -8,6 +8,7 @@
 import CoreData
 import UIKit
 
+// This View is shared with WatchApp
 struct AddMealViewModel: AddMealViewModelProtocol {
     private var context: NSManagedObjectContext?
 
@@ -18,7 +19,11 @@ struct AddMealViewModel: AddMealViewModelProtocol {
     }
 
     func addMeal(_ meal: MealModel) {
-        guard let context else { return }
+        guard let context else {
+            print("NSManagedObjectContext is nil")
+            return
+        }
+
         let newMealEntry = Meal(context: context)
         newMealEntry.weight = meal.weight
         newMealEntry.timestamp = meal.timestamp

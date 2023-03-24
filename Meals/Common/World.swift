@@ -34,13 +34,6 @@ public struct World {
 
         return dateFormatter
     }
-    let userDefaults = UserDefaults.standard
-    enum NotificationTypes {
-        case receiveNewMeal
-    }
-    let notificationNames = [
-        NotificationTypes.receiveNewMeal: NSNotification.Name(rawValue: "receiveNewMeal")
-    ]
 }
 
 #if DEBUG

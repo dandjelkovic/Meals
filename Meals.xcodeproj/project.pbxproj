@@ -14,7 +14,6 @@
 		2B745C6329CB188100C10090 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468219235F122100380AFC /* World.swift */; };
 		2B745C6729CB1FAA00C10090 /* WCSessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C6629CB1FAA00C10090 /* WCSessionDelegator.swift */; };
 		2B745C6829CB1FAC00C10090 /* WCSessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C6629CB1FAA00C10090 /* WCSessionDelegator.swift */; };
-		2B745C6D29CB7D0D00C10090 /* MealsOnWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B745C1829C9B49200C10090 /* MealsOnWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B745C7129CC607800C10090 /* AddMealViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C7029CC607800C10090 /* AddMealViewModel.swift */; };
 		2B745C7329CC60F300C10090 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C7229CC60F300C10090 /* MealModel.swift */; };
 		2B745C7429CC60F300C10090 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C7229CC60F300C10090 /* MealModel.swift */; };
@@ -27,8 +26,11 @@
 		2B745C8029CC893700C10090 /* AddMealViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C7F29CC893700C10090 /* AddMealViewModelProtocol.swift */; };
 		2B745C8229CC89CF00C10090 /* AddMealWatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8129CC89CF00C10090 /* AddMealWatchViewModel.swift */; };
 		2B745C8329CC89E400C10090 /* AddMealViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C7F29CC893700C10090 /* AddMealViewModelProtocol.swift */; };
-		2B745C8429CC8A4000C10090 /* AddMealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37468215235F122100380AFC /* AddMealButton.swift */; };
 		2B745C8629CC8A4A00C10090 /* AddMealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8529CC8A4600C10090 /* AddMealButton.swift */; };
+		2B745C8729CDAB8700C10090 /* AddMealButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8529CC8A4600C10090 /* AddMealButton.swift */; };
+		2B745C8A29CDB45900C10090 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8929CDB45900C10090 /* NotificationType.swift */; };
+		2B745C8B29CDB53B00C10090 /* MealsOnWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B745C1829C9B49200C10090 /* MealsOnWatch Watch App.app */; };
+		2B745C8C29CDB5A200C10090 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8929CDB45900C10090 /* NotificationType.swift */; };
 		373AAECC23993BF900E142AD /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAECB23993BF900E142AD /* AddMealView.swift */; };
 		374681F6235F11F700380AFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374681F5235F11F700380AFC /* Preview Assets.xcassets */; };
 		374681F9235F11F700380AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374681F7235F11F700380AFC /* LaunchScreen.storyboard */; };
@@ -96,7 +98,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/MealsOnWatch Watch App";
 			dstSubfolderSpec = 16;
 			files = (
-				2B745C6D29CB7D0D00C10090 /* MealsOnWatch Watch App.app in Embed Watch Content */,
+				2B745C8B29CDB53B00C10090 /* MealsOnWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +120,7 @@
 		2B745C7F29CC893700C10090 /* AddMealViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewModelProtocol.swift; sourceTree = "<group>"; };
 		2B745C8129CC89CF00C10090 /* AddMealWatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealWatchViewModel.swift; sourceTree = "<group>"; };
 		2B745C8529CC8A4600C10090 /* AddMealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealButton.swift; sourceTree = "<group>"; };
+		2B745C8929CDB45900C10090 /* NotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
 		373AAECB23993BF900E142AD /* AddMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealView.swift; sourceTree = "<group>"; };
 		374681E6235F11F600380AFC /* Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		374681F5235F11F700380AFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -128,7 +131,6 @@
 		37468205235F11F700380AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37468212235F122000380AFC /* Loaded.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Loaded.xcdatamodel; sourceTree = "<group>"; };
 		37468213235F122000380AFC /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
-		37468215235F122100380AFC /* AddMealButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMealButton.swift; sourceTree = "<group>"; };
 		37468216235F122100380AFC /* Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		37468217235F122100380AFC /* MealCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealCell.swift; sourceTree = "<group>"; };
 		37468219235F122100380AFC /* World.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
@@ -193,7 +195,6 @@
 			children = (
 				2B745C7A29CC620300C10090 /* Assets.xcassets */,
 				2B745C6E29CB802500C10090 /* MealsOnWatch-Info.plist */,
-				37468215235F122100380AFC /* AddMealButton.swift */,
 				2B745C8129CC89CF00C10090 /* AddMealWatchViewModel.swift */,
 				2B745C1C29C9B49200C10090 /* ContentView.swift */,
 				2B745C1A29C9B49200C10090 /* MealsOnWatchApp.swift */,
@@ -234,6 +235,15 @@
 				2B745C7F29CC893700C10090 /* AddMealViewModelProtocol.swift */,
 			);
 			path = AddMeal;
+			sourceTree = "<group>";
+		};
+		2B745C8829CDB42600C10090 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3767F7F423A9263A0037C402 /* Int+StringValue.swift */,
+				37CBA12923CCBAD4005593D6 /* String+ExtractInt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		374681DD235F11F600380AFC = {
@@ -323,13 +333,13 @@
 		37468218235F122100380AFC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				37F1556D2361D93B00FDF8CA /* TypeTag.swift */,
-				37468219235F122100380AFC /* World.swift */,
+				2B745C8829CDB42600C10090 /* Extensions */,
 				3764E9AE2371BBF500971781 /* ActivityViewController.swift */,
-				3767F7F423A9263A0037C402 /* Int+StringValue.swift */,
 				37B133FE23CCAF450050B376 /* DismissingKeyboard.swift */,
-				37CBA12923CCBAD4005593D6 /* String+ExtractInt.swift */,
+				37F1556D2361D93B00FDF8CA /* TypeTag.swift */,
 				2B745C6629CB1FAA00C10090 /* WCSessionDelegator.swift */,
+				37468219235F122100380AFC /* World.swift */,
+				2B745C8929CDB45900C10090 /* NotificationType.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -553,8 +563,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B745C8C29CDB5A200C10090 /* NotificationType.swift in Sources */,
 				2B745C7429CC60F300C10090 /* MealModel.swift in Sources */,
-				2B745C8429CC8A4000C10090 /* AddMealButton.swift in Sources */,
 				2B745C8329CC89E400C10090 /* AddMealViewModelProtocol.swift in Sources */,
 				2B745C7829CC61A900C10090 /* CaloriesCount+CoreDataClass.swift in Sources */,
 				2B745C6829CB1FAC00C10090 /* WCSessionDelegator.swift in Sources */,
@@ -563,6 +573,7 @@
 				2B745C6329CB188100C10090 /* World.swift in Sources */,
 				2B745C1D29C9B49200C10090 /* ContentView.swift in Sources */,
 				2B745C7529CC611600C10090 /* MealType.swift in Sources */,
+				2B745C8729CDAB8700C10090 /* AddMealButton.swift in Sources */,
 				2B745C7729CC618400C10090 /* Weight.swift in Sources */,
 				2B745C1B29C9B49200C10090 /* MealsOnWatchApp.swift in Sources */,
 				2B745C7C29CC803600C10090 /* AddMealView.swift in Sources */,
@@ -612,6 +623,7 @@
 				37468220235F122100380AFC /* Meal+CoreDataClass.swift in Sources */,
 				37F155712362244900FDF8CA /* Meal+Identifiable.swift in Sources */,
 				37C5935C235F37EB00EAEEB7 /* StatisticsCell.swift in Sources */,
+				2B745C8A29CDB45900C10090 /* NotificationType.swift in Sources */,
 				2B745C8029CC893700C10090 /* AddMealViewModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,11 @@ class WCSessionDelegator: NSObject, WCSessionDelegate {
     }
     func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
         debugPrint(#function, message)
-        // TODO: Implement confirmation of newly added mealm
+        sendNotification(message: message)
+        let replyMessage: [String: Any] = [
+            NotificationType.receiveNewMeal.rawValue: true
+        ]
+        replyHandler(replyMessage)
     }
 
     // WCSessionDelegate methods for iOS only.
@@ -37,7 +41,12 @@ class WCSessionDelegator: NSObject, WCSessionDelegate {
     }
 
     func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
-        guard let notificationName = Current.notificationNames[.receiveNewMeal] else { return }
+        sendNotification(message: message)
+    }
+    #endif
+
+    private func sendNotification(message: [String: Any]) {
+        let notificationName = NotificationType.receiveNewMeal.notification
         DispatchQueue.main.async {
             NotificationCenter.default.post(
                 Notification(
@@ -48,6 +57,5 @@ class WCSessionDelegator: NSObject, WCSessionDelegate {
             )
         }
     }
-    #endif
 
 }

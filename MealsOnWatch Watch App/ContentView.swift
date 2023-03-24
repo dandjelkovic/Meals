@@ -9,9 +9,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.scenePhase) private var scenePhase
-    let wcSessionDelegator = WCSessionDelegator()
-
     var body: some View {
         VStack {
             AddMealView()

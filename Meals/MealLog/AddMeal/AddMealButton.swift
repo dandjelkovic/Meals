@@ -8,8 +8,15 @@
 
 import SwiftUI
 
+// This View is shared with WatchApp
 struct AddMealButton: View {
+#if os(iOS)
     private let viewModel = AddMealViewModel()
+#endif
+#if os(watchOS)
+    private let viewModel = AddMealWatchViewModel()
+#endif
+
     var weight: Weight
     var type: MealType
 

@@ -23,7 +23,7 @@ struct ContentView: View {
 
     // add publisher for meals added from WatchApp
     private let wcMessagePublisher = NotificationCenter.default.publisher(
-        for: Current.notificationNames[.receiveNewMeal]! // swiftlint:disable:this force_unwrapping
+        for: NotificationType.receiveNewMeal.notification
     )
 
     var days: [Day] {

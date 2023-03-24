@@ -31,6 +31,7 @@
 		2B745C8A29CDB45900C10090 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8929CDB45900C10090 /* NotificationType.swift */; };
 		2B745C8B29CDB53B00C10090 /* MealsOnWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B745C1829C9B49200C10090 /* MealsOnWatch Watch App.app */; };
 		2B745C8C29CDB5A200C10090 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8929CDB45900C10090 /* NotificationType.swift */; };
+		2B745C8E29CDB75A00C10090 /* CircleBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8D29CDB75A00C10090 /* CircleBackground.swift */; };
 		373AAECC23993BF900E142AD /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAECB23993BF900E142AD /* AddMealView.swift */; };
 		374681F6235F11F700380AFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374681F5235F11F700380AFC /* Preview Assets.xcassets */; };
 		374681F9235F11F700380AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374681F7235F11F700380AFC /* LaunchScreen.storyboard */; };
@@ -121,6 +122,7 @@
 		2B745C8129CC89CF00C10090 /* AddMealWatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealWatchViewModel.swift; sourceTree = "<group>"; };
 		2B745C8529CC8A4600C10090 /* AddMealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealButton.swift; sourceTree = "<group>"; };
 		2B745C8929CDB45900C10090 /* NotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
+		2B745C8D29CDB75A00C10090 /* CircleBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBackground.swift; sourceTree = "<group>"; };
 		373AAECB23993BF900E142AD /* AddMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealView.swift; sourceTree = "<group>"; };
 		374681E6235F11F600380AFC /* Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		374681F5235F11F700380AFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				37CB341D235F16C300AAB41D /* Statistics.swift */,
 				37C5935B235F37EB00EAEEB7 /* StatisticsCell.swift */,
 				3764E9AC2371A6D600971781 /* FileExporter.swift */,
+				2B745C8D29CDB75A00C10090 /* CircleBackground.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -621,6 +624,7 @@
 				37468222235F122100380AFC /* Weight.swift in Sources */,
 				37CB3416235F13E000AAB41D /* SceneDelegate.swift in Sources */,
 				37468220235F122100380AFC /* Meal+CoreDataClass.swift in Sources */,
+				2B745C8E29CDB75A00C10090 /* CircleBackground.swift in Sources */,
 				37F155712362244900FDF8CA /* Meal+Identifiable.swift in Sources */,
 				37C5935C235F37EB00EAEEB7 /* StatisticsCell.swift in Sources */,
 				2B745C8A29CDB45900C10090 /* NotificationType.swift in Sources */,

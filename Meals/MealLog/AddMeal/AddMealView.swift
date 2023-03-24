@@ -76,8 +76,8 @@ struct AddMealView: View {
     }
 }
 
- struct AddMealView_Previews: PreviewProvider {
+struct AddMealView_Previews: PreviewProvider {
     static var previews: some View {
         AddMealView()
     }
- }
+}

@@ -46,6 +46,7 @@ opt_in_rules:
   - static_operator
   - multiline_literal_brackets
   - weak_delegate
+  - file_types_order
 
 # Exclude pods and vendor sources
 excluded:

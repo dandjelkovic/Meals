@@ -42,7 +42,10 @@ struct AddMealButton: View {
                     Image(systemName: "checkmark")
                         .foregroundColor(.green)
                         .bold()
-                        .animation(.default, value: viewModel.showSavedConfirmation)
+                        .frame(
+                            width: viewModel.iconSizeForWeight(weight),
+                            height: viewModel.iconSizeForWeight(weight)
+                        )
                 case (.ready, false):
                     type.icon
                         .resizable()
@@ -50,7 +53,12 @@ struct AddMealButton: View {
                             width: viewModel.iconSizeForWeight(weight),
                             height: viewModel.iconSizeForWeight(weight)
                         )
-                        .animation(.default, value: viewModel.showSavedConfirmation)
+                        .transition(
+                            .asymmetric(
+                                insertion: .opacity.animation(.easeIn(duration: 0.4)),
+                                removal: .opacity.animation(.none)
+                            )
+                        )
                 }
             }
             .frame(alignment: .center)

@@ -11,7 +11,7 @@ import UIKit
 class AddMealButtonViewModel: AddMealButtonViewModelProtocol, ObservableObject {
     @Published private(set) var showSavedConfirmation = false
     @Published private(set) var viewState = ViewState.ready
-    private var animationDuration = 1.2
+    private var confirmationDuration = 1.2
     private var context: NSManagedObjectContext?
 
     init() {
@@ -38,7 +38,7 @@ class AddMealButtonViewModel: AddMealButtonViewModelProtocol, ObservableObject {
                 print(error.localizedDescription)
             }
             self.showSavedConfirmation = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + self.animationDuration) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + self.confirmationDuration) {
                 self.showSavedConfirmation = false
             }
             self.viewState = .ready

@@ -11,7 +11,7 @@ import WatchConnectivity
 class AddMealButtonWatchViewModel: AddMealButtonViewModelProtocol, ObservableObject {
     @Published private(set) var showSavedConfirmation = false
     @Published private(set) var viewState = ViewState.ready
-    private var animationDuration = 1.2
+    private var confirmationDuration = 1.2
 
     func addMeal(_ meal: MealModel) {
         viewState = .loading
@@ -33,7 +33,7 @@ class AddMealButtonWatchViewModel: AddMealButtonViewModelProtocol, ObservableObj
                     self.showSavedConfirmation = true
                     self.viewState = .ready
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + self.animationDuration) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + self.confirmationDuration) {
                     self.showSavedConfirmation = false
                 }
             },

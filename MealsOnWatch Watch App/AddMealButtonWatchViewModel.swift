@@ -8,7 +8,8 @@
 
 import WatchConnectivity
 
-struct AddMealWatchViewModel: AddMealViewModelProtocol {
+class AddMealButtonWatchViewModel: AddMealButtonViewModelProtocol, ObservableObject {
+    @Published var mealSaved = false
     func addMeal(_ meal: MealModel) {
         sendMealToParent(meal: meal)
     }
@@ -22,9 +23,13 @@ struct AddMealWatchViewModel: AddMealViewModelProtocol {
 
         WCSession.default.sendMessage(
             wcMessage,
-            replyHandler: nil,
+            replyHandler: { [weak self] replyMessage in
+                print(#function, "reply received", replyMessage)
+                guard let self else { return }
+                self.mealSaved = true
+            },
             errorHandler: { error in
-                print(error.localizedDescription)
+                print(#function, error.localizedDescription)
             }
         )
     }

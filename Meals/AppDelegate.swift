@@ -12,13 +12,11 @@ import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    private lazy var wcSessionDelegator: WCSessionDelegator = {
-        WCSessionDelegator()
-    }()
+    let wcSessionDelegator = WCSessionDelegator()
 
     // swiftlint:disable discouraged_optional_collection
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        assert(WCSession.isSupported(), "This sample requires Watch Connectivity support!")
+        assert(WCSession.isSupported())
         WCSession.default.delegate = wcSessionDelegator
         WCSession.default.activate()
 

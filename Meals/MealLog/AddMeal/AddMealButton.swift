@@ -11,10 +11,10 @@ import SwiftUI
 // This View is shared with WatchApp
 struct AddMealButton: View {
     #if os(iOS)
-    private let viewModel = AddMealViewModel()
+    @StateObject private var viewModel = AddMealButtonViewModel()
     #endif
     #if os(watchOS)
-    private let viewModel = AddMealWatchViewModel()
+    @StateObject private var viewModel = AddMealButtonWatchViewModel()
     #endif
 
     var weight: Weight
@@ -31,12 +31,17 @@ struct AddMealButton: View {
             }
         ) {
             VStack {
-                type.icon
-                    .resizable()
-                    .frame(
-                        width: 20 * CGFloat(weight.intValue),
-                        height: 20 * CGFloat(weight.intValue)
-                    )
+                if viewModel.mealSaved {
+                    Image(systemName: "checkmark")
+                    // TODO: Add timer to hide checkmark again
+                } else {
+                    type.icon
+                        .resizable()
+                        .frame(
+                            width: 20 * CGFloat(weight.intValue),
+                            height: 20 * CGFloat(weight.intValue)
+                        )
+                }
             }
             .frame(width: 60, alignment: .center)
         }

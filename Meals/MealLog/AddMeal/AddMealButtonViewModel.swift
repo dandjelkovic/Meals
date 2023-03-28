@@ -8,8 +8,8 @@
 import CoreData
 import UIKit
 
-// This View is shared with WatchApp
-struct AddMealViewModel: AddMealViewModelProtocol {
+class AddMealButtonViewModel: AddMealButtonViewModelProtocol, ObservableObject {
+    @Published var mealSaved = false
     private var context: NSManagedObjectContext?
 
     init() {
@@ -34,6 +34,7 @@ struct AddMealViewModel: AddMealViewModelProtocol {
             } catch {
                 print(error.localizedDescription)
             }
+            self.mealSaved = true
         }
     }
 }

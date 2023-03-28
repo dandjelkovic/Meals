@@ -14,15 +14,24 @@ class WCSessionDelegator: NSObject, WCSessionDelegate {
         if let error {
             print(#function, error.localizedDescription)
         }
-
     }
+
     func session(_ session: WCSession, didReceiveMessage message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {
-        debugPrint(#function, message)
         sendNotification(message: message)
-        let replyMessage: [String: Any] = [
-            NotificationType.receiveNewMeal.rawValue: true
-        ]
-        replyHandler(replyMessage)
+        if !session.isReachable {
+            debugPrint(#function, "Counterpart not reachable")
+        }
+        #if os(iOS)
+        if !session.isWatchAppInstalled {
+            debugPrint(#function, "watch app not installed")
+        }
+        #endif
+        replyHandler(message)
+        debugPrint(#function, "replyHandler called", message)
+    }
+
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
+        debugPrint(#function, applicationContext)
     }
 
     // WCSessionDelegate methods for iOS only.
@@ -40,9 +49,9 @@ class WCSessionDelegator: NSObject, WCSessionDelegate {
         session.activate()
     }
 
-    func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
-        sendNotification(message: message)
-    }
+//    func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
+//        sendNotification(message: message)
+//    }
     #endif
 
     private func sendNotification(message: [String: Any]) {
@@ -51,7 +60,7 @@ class WCSessionDelegator: NSObject, WCSessionDelegate {
             NotificationCenter.default.post(
                 Notification(
                     name: notificationName,
-                    object: message,
+                    object: nil,
                     userInfo: message
                 )
             )

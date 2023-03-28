@@ -7,6 +7,6 @@
 //
 
 // This Protocol is shared with the WatchApp
-protocol AddMealViewModelProtocol {
+protocol AddMealButtonViewModelProtocol {
     func addMeal(_ meal: MealModel)
 }

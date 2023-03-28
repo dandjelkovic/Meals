@@ -82,7 +82,6 @@ struct ContentView: View {
             if let userInfo = output.userInfo {
                 saveAddedMeal(userInfo)
             }
-
         }
     }
 

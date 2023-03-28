@@ -11,18 +11,9 @@ import WatchConnectivity
 
 @main
 struct MealsOnWatchApp: App {
-    @Environment(\.scenePhase) private var scenePhase
-    let wcSessionDelegator = WCSessionDelegator()
-
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onChange(of: scenePhase) { newScenePhase in
-                    if newScenePhase == .active {
-                        WCSession.default.delegate = wcSessionDelegator
-                        WCSession.default.activate()
-                    }
-                }
         }
     }
 }

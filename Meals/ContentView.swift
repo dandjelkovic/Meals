@@ -83,6 +83,7 @@ struct ContentView: View {
                 saveAddedMeal(userInfo)
             }
         }
+        .clipped()
     }
 
     private func saveAddedMeal(_ userInfo: [AnyHashable: Any]) {

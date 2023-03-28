@@ -33,6 +33,8 @@
 		2B745C8C29CDB5A200C10090 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8929CDB45900C10090 /* NotificationType.swift */; };
 		2B745C8E29CDB75A00C10090 /* CircleBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B745C8D29CDB75A00C10090 /* CircleBackground.swift */; };
 		2BDF036F29D2E42F00340AC1 /* MealsOnWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B745C1829C9B49200C10090 /* MealsOnWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2BDF037429D30E5800340AC1 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF037329D30E5800340AC1 /* ViewState.swift */; };
+		2BDF037529D3101C00340AC1 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF037329D30E5800340AC1 /* ViewState.swift */; };
 		373AAECC23993BF900E142AD /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373AAECB23993BF900E142AD /* AddMealView.swift */; };
 		374681F6235F11F700380AFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374681F5235F11F700380AFC /* Preview Assets.xcassets */; };
 		374681F9235F11F700380AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374681F7235F11F700380AFC /* LaunchScreen.storyboard */; };
@@ -142,6 +144,7 @@
 		2B745C8529CC8A4600C10090 /* AddMealButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealButton.swift; sourceTree = "<group>"; };
 		2B745C8929CDB45900C10090 /* NotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
 		2B745C8D29CDB75A00C10090 /* CircleBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleBackground.swift; sourceTree = "<group>"; };
+		2BDF037329D30E5800340AC1 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		373AAECB23993BF900E142AD /* AddMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealView.swift; sourceTree = "<group>"; };
 		374681E6235F11F600380AFC /* Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		374681F5235F11F700380AFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -362,6 +365,7 @@
 				2B745C6629CB1FAA00C10090 /* WCSessionDelegator.swift */,
 				37468219235F122100380AFC /* World.swift */,
 				2B745C8929CDB45900C10090 /* NotificationType.swift */,
+				2BDF037329D30E5800340AC1 /* ViewState.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -407,6 +411,7 @@
 				2B745C1529C9B49200C10090 /* Frameworks */,
 				2B745C1629C9B49200C10090 /* Resources */,
 				2B745C5B29CB06F000C10090 /* Embed ExtensionKit Extensions */,
+				2BDF037629D3290600340AC1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -562,6 +567,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2BDF037629D3290600340AC1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/zsh;
+			shellScript = "SWIFTLINT_PATH=\"/opt/homebrew/bin/swiftlint\" # depending on your swiftlint install. E.g. this path is for M1 macs using $ brew install swiftlint\nSWIFTLINT_CONFIG_PATH=\".swiftlint.yml\"\n\nif test -f \"$SWIFTLINT_PATH\";\nthen\n    \"${SWIFTLINT_PATH}\" autocorrect --config ${SWIFTLINT_CONFIG_PATH} .\n    \"${SWIFTLINT_PATH}\" lint --config ${SWIFTLINT_CONFIG_PATH} .\nelse\n    echo \"Swiftlint not installed or reachable within the configured SWIFTLINT_PATH. Use `brew install swiftlint`\"\nfi\n";
+		};
 		373AAECE239A56E100E142AD /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,6 +612,7 @@
 			files = (
 				2B745C8C29CDB5A200C10090 /* NotificationType.swift in Sources */,
 				2B745C7429CC60F300C10090 /* MealModel.swift in Sources */,
+				2BDF037529D3101C00340AC1 /* ViewState.swift in Sources */,
 				2B745C8329CC89E400C10090 /* AddMealButtonViewModelProtocol.swift in Sources */,
 				2B745C7829CC61A900C10090 /* CaloriesCount+CoreDataClass.swift in Sources */,
 				2B745C6829CB1FAC00C10090 /* WCSessionDelegator.swift in Sources */,
@@ -638,6 +662,7 @@
 				37F1556E2361D93B00FDF8CA /* TypeTag.swift in Sources */,
 				3764E9A92371A6AF00971781 /* Settings.swift in Sources */,
 				37468223235F122100380AFC /* MealCell.swift in Sources */,
+				2BDF037429D30E5800340AC1 /* ViewState.swift in Sources */,
 				3764E9AD2371A6D600971781 /* FileExporter.swift in Sources */,
 				373AAECC23993BF900E142AD /* AddMealView.swift in Sources */,
 				37468224235F122100380AFC /* World.swift in Sources */,

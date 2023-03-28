@@ -34,6 +34,21 @@ public struct World {
 
         return dateFormatter
     }
+    var deviceIsWatch: Bool {
+        #if os(watchOS)
+        return true
+        #else
+        return false
+        #endif
+    }
+
+    var deviceIs_iOS: Bool { // swiftlint:disable:this identifier_name
+        #if os(iOS)
+        return true
+        #else
+        return false
+        #endif
+    }
 }
 
 #if DEBUG

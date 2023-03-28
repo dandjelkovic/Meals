@@ -30,7 +30,7 @@ struct ContentView: View {
                 isWCSessionActivated = WCSession.default.activationState == .activated
             }
         }
-        .onChange(of: scenePhase) { newScenePhase in
+        .onChange(of: scenePhase) { _ in
             isWCSessionActivated = WCSession.default.activationState == .activated
             if WCSession.default.activationState == .notActivated {
                 WCSession.default.delegate = wcSessionDelegator

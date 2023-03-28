@@ -10,12 +10,14 @@ import SwiftUI
 
 // This View is shared with WatchApp
 struct AddMealButton: View {
-    #if os(iOS)
+#if os(iOS)
     @StateObject private var viewModel = AddMealButtonViewModel()
-    #endif
-    #if os(watchOS)
+#endif
+#if os(watchOS)
     @StateObject private var viewModel = AddMealButtonWatchViewModel()
-    #endif
+#endif
+
+    @State var isLoading = false
 
     var weight: Weight
     var type: MealType
@@ -23,6 +25,7 @@ struct AddMealButton: View {
     var body: some View {
         Button(
             action: {
+                isLoading = true
                 let mealModel = MealModel(
                     weight: weight,
                     type: type
@@ -31,19 +34,26 @@ struct AddMealButton: View {
             }
         ) {
             VStack {
-                if viewModel.mealSaved {
+                switch (viewModel.viewState, viewModel.showSavedConfirmation) {
+                case (.loading, _):
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                case (_, true):
                     Image(systemName: "checkmark")
-                    // TODO: Add timer to hide checkmark again
-                } else {
+                        .foregroundColor(.green)
+                        .bold()
+                        .animation(.default, value: viewModel.showSavedConfirmation)
+                case (.ready, false):
                     type.icon
                         .resizable()
                         .frame(
-                            width: 20 * CGFloat(weight.intValue),
-                            height: 20 * CGFloat(weight.intValue)
+                            width: viewModel.iconSizeForWeight(weight),
+                            height: viewModel.iconSizeForWeight(weight)
                         )
+                        .animation(.default, value: viewModel.showSavedConfirmation)
                 }
             }
-            .frame(width: 60, alignment: .center)
+            .frame(alignment: .center)
         }
     }
 }

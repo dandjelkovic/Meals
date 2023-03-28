@@ -9,8 +9,12 @@
 import WatchConnectivity
 
 class AddMealButtonWatchViewModel: AddMealButtonViewModelProtocol, ObservableObject {
-    @Published var mealSaved = false
+    @Published private(set) var showSavedConfirmation = false
+    @Published private(set) var viewState = ViewState.ready
+    private var animationDuration = 1.2
+
     func addMeal(_ meal: MealModel) {
+        viewState = .loading
         sendMealToParent(meal: meal)
     }
 
@@ -23,14 +27,24 @@ class AddMealButtonWatchViewModel: AddMealButtonViewModelProtocol, ObservableObj
 
         WCSession.default.sendMessage(
             wcMessage,
-            replyHandler: { [weak self] replyMessage in
-                print(#function, "reply received", replyMessage)
+            replyHandler: { [weak self] _ in
                 guard let self else { return }
-                self.mealSaved = true
+                DispatchQueue.main.async {
+                    self.showSavedConfirmation = true
+                    self.viewState = .ready
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + self.animationDuration) {
+                    self.showSavedConfirmation = false
+                }
             },
             errorHandler: { error in
                 print(#function, error.localizedDescription)
+                self.viewState = .ready
             }
         )
+    }
+
+    func iconSizeForWeight(_ weight: Weight) -> CGFloat {
+        20 * CGFloat(weight.intValue) / 1.8
     }
 }

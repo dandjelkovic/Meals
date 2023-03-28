@@ -9,7 +9,9 @@ import CoreData
 import UIKit
 
 class AddMealButtonViewModel: AddMealButtonViewModelProtocol, ObservableObject {
-    @Published var mealSaved = false
+    @Published private(set) var showSavedConfirmation = false
+    @Published private(set) var viewState = ViewState.ready
+    private var animationDuration = 1.2
     private var context: NSManagedObjectContext?
 
     init() {
@@ -23,6 +25,7 @@ class AddMealButtonViewModel: AddMealButtonViewModelProtocol, ObservableObject {
             print("NSManagedObjectContext is nil")
             return
         }
+        viewState = .loading
 
         let newMealEntry = Meal(context: context)
         newMealEntry.weight = meal.weight
@@ -34,7 +37,15 @@ class AddMealButtonViewModel: AddMealButtonViewModelProtocol, ObservableObject {
             } catch {
                 print(error.localizedDescription)
             }
-            self.mealSaved = true
+            self.showSavedConfirmation = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + self.animationDuration) {
+                self.showSavedConfirmation = false
+            }
+            self.viewState = .ready
         }
+    }
+
+    func iconSizeForWeight(_ weight: Weight) -> CGFloat {
+        20 * CGFloat(weight.intValue)
     }
 }

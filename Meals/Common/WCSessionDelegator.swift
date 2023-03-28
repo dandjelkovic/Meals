@@ -30,10 +30,6 @@ class WCSessionDelegator: NSObject, WCSessionDelegate {
         debugPrint(#function, "replyHandler called", message)
     }
 
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
-        debugPrint(#function, applicationContext)
-    }
-
     // WCSessionDelegate methods for iOS only.
     #if os(iOS)
     func sessionWatchStateDidChange(_ session: WCSession) {

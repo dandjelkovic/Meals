@@ -92,7 +92,7 @@ struct Settings: View {
                             self.actionSheetPresented = true
                         }
                     ) {
-                        Text("Backup as CSV file").bold().padding(5).border(Color.secondary)
+                        Text("Backup as CSV file").bold()
                     }
                     .sheet(
                         isPresented: $actionSheetPresented,

@@ -16,7 +16,7 @@ public class Meal: NSManagedObject {
 
     var weight: Weight {
         get {
-            guard let weightString = weightString else {
+            guard let weightString else {
                 return Weight.light
             }
             return Weight(rawValue: weightString)
@@ -28,7 +28,7 @@ public class Meal: NSManagedObject {
 
     var type: MealType {
         get {
-            guard let typeString = typeString else {
+            guard let typeString else {
                 return MealType.vegan
             }
             return MealType(rawValue: typeString)
